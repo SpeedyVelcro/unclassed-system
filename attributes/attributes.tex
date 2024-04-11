@@ -15,35 +15,42 @@
         ACU & Acumen & Practical wisdom and good judgement; "street-smarts" \\
         CHA & Charisma & Social graces \\
     \end{tabular}
-    \label{tab:attributes}
     \caption{Attributes}
+    \label{tab:attributes}
 \end{table}
 
 \section{Starting Attributes}
 Generate a character's starting attributes using one of the following methods:
 \begin{itemize}
-    \item Roll 4d6. Sum the results, ignoring the lowest. Subtract 10 (you may
-        get a negative result). Repeat for each of the 9 attributes.
     \item Refer to table \ref{tab:point-buy}, and choose values for all your
-        attributes, summing up to a maximum of 100 points.
+        attributes, summing up to a maximum of 60 points. This is the
+        recommended method.
+        % NB: The point buy for a peasant would be 24, as they have all 0s,
+        % except sorcery, which would be -3.
+    \item Set each attribute to -6, then for each attribute roll 4d4 and add
+        the sum of the highest 3 dice. You may then swap any attributes you
+        choose. This method skews towards more powerful characters than
+        point buy, but comes with a risk of lower attributes.
+    \item As above, but you are not allowed to swap attributes. This method
+        makes every character a surprise.
 \end{itemize}
+Your GM may require you to use a specific method, so check before generating
+your attributes.
 
 \begin{table}[h!]
     \begin{tabular}{l l}
         \bfseries{Value} & \bfseries{Points} \\
-        -4 & 0 \\
-        -3 & 1 \\
-        -2 & 2 \\
-        -1 & 4 \\
-        0 & 9 \\
-        1 & 16 \\
-        2 & 25 \\
-        3 & 36 \\
-        4 & 49 \\
-        5 & 64 \\
-        6 & 81 \\
-        7 & 100 \\
+        -3 & 0 \\
+        -2 & 1 \\
+        -1 & 2 \\
+        0 & 3 \\
+        1 & 5 \\
+        2 & 8 \\
+        3 & 12 \\
+        4 & 18 \\
+        5 & 30 \\
+        6 & 54 \\
     \end{tabular}
-    \label{tab:point-buy}
     \caption{Point-buy}
+    \label{tab:point-buy}
 \end{table}
