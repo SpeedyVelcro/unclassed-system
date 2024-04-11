@@ -5,8 +5,18 @@
 \usepackage{fontspec}
 \usepackage{tocbibind}
 \usepackage[a4paper]{geometry}
+\usepackage[table]{xcolor}
 
 \setmainfont{Open Sans}
 
 \makeindex[intoc]
 \makeglossaries
+
+% Alternating row colors for all tables
+\let\defaulttabular\tabular % Backup
+\let\enddefaulttabular\endtabular % Backup
+
+\renewenvironment{tabular}[1][]{
+    \rowcolors{1}{white}{gray!30}
+    \defaulttabular
+}{\enddefaulttabular}
