@@ -1,56 +1,81 @@
+Attributes govern a character's general capabilities and affect nearly all
+aspects of gameplay. All skill checks include an attribute in their formulae,
+and some attributes have direct impacts on specific aspects of gameplay.
+
+While the Skills chapter (see pg. \ref{skills}) covers the effect of attributes
+on skill checks, this chapter outlines the direct impact of attributes on
+gameplay. A summary can be found in table \ref{tab:attributes}.
 
 \begin{table}[h!]
     \begin{tabular}{l l l}
-        \multicolumn{3}{l}{\bfseries{Physical Skills}} \\
-        \bfseries{ATT} & \bfseries{Attribute} & \bfseries{Description} \\
+        \multicolumn{3}{l}{\textbf{Physical Attributes}} \\
+        \textbf{ATT} & \textbf{Attribute} & \textbf{Description} \\
         STR & Strength & Raw physical strength; affects encumbrance and attack damage \\
         DEX & Dexterity & Agility and reflexes; affects combat order \\
         VIT & Vitality & Overall health and physical condition; affects hit points \\
         SEN & Senses & Sharpness and quality of physical senses; affects sight and hearing \\
-        \multicolumn{3}{l}{\bfseries{Mental Skills}} \\
-        \bfseries{ATT} & \bfseries{Attribute} & \bfseries{Description} \\
+        \multicolumn{3}{l}{\bfseries{Mental Attributes}} \\
+        \textbf{ATT} & \textbf{Attribute} & \textbf{Description} \\
         INT & Intelligence & Logic, reasoning, and ability to learn; affects skill gain \\
         WIL & Willpower & Mental discipline and fortitude \\
-        SOR & Sorcery & The ability to tap into and use magic \\
         ACU & Acumen & Practical wisdom and good judgement; "street-smarts" \\
         CHA & Charisma & Social graces \\
+        \multicolumn{3}{l}{\textbf{Special Attributes}}
+        SOR & Sorcery & The ability to tap into and use magic \\
     \end{tabular}
     \caption{Attributes}
     \label{tab:attributes}
 \end{table}
 
-\section{Starting Attributes}
-Generate a character's starting attributes using one of the following methods:
-\begin{itemize}
-    \item Refer to table \ref{tab:point-buy}, and choose values for all your
-        attributes, summing up to a maximum of 60 points. This is the
-        recommended method.
-        % NB: The point buy for a peasant would be 24, as they have all 0s,
-        % except sorcery, which would be -3.
-    \item Set each attribute to -6, then for each attribute roll 4d4 and add
-        the sum of the highest 3 dice. You may then swap any attributes you
-        choose. This method skews towards more powerful characters than
-        point buy, but comes with a risk of lower attributes.
-    \item As above, but you are not allowed to swap attributes. This method
-        makes every character a surprise.
-\end{itemize}
-Your GM may require you to use a specific method, so check before generating
-your attributes.
+\subsection{Character Creation}
+All physical and mental attributes start at 0. Characters start without any
+special attributes, which can be marked with a hyphen (-) on your character
+sheet. In order to gain special attributes, you will usually need a specific
+feat.
 
-\begin{table}[h!]
-    \begin{tabular}{l l}
-        \bfseries{Value} & \bfseries{Points} \\
-        -3 & 0 \\
-        -2 & 1 \\
-        -1 & 2 \\
-        0 & 3 \\
-        1 & 5 \\
-        2 & 8 \\
-        3 & 12 \\
-        4 & 18 \\
-        5 & 30 \\
-        6 & 54 \\
-    \end{tabular}
-    \caption{Point-buy}
-    \label{tab:point-buy}
-\end{table}
+During character creation, you will raise and lower your attributes by 
+selecting a species (see pg. \ref{species}), culture (see pg. \ref{species}),
+background (see pg. \ref{background}), and feats (see pg. \ref{feats}).
+
+The effect of these choices on your attributes are detailed in their respective
+chapters.
+
+
+% NB: Commented out below is an earlier system for generating starting
+% attributes
+%\section{Starting Attributes}
+
+%Generate a character's starting attributes using one of the following methods:
+%\begin{itemize}
+%    \item Refer to table \ref{tab:point-buy}, and choose values for all your
+%        attributes, summing up to a maximum of 60 points. This is the
+%        recommended method.
+%        % NB: The point buy for a peasant would be 24, as they have all 0s,
+%        % except sorcery, which would be -3.
+%    \item Set each attribute to -6, then for each attribute roll 4d4 and add
+%        the sum of the highest 3 dice. You may then swap any attributes you
+%        choose. This method skews towards more powerful characters than
+%        point buy, but comes with a risk of lower attributes.
+%    \item As above, but you are not allowed to swap attributes. This method
+%        makes every character a surprise.
+%\end{itemize}
+%Your GM may require you to use a specific method, so check before generating
+%your attributes.
+%
+%\begin{table}[h!]
+%    \begin{tabular}{l l}
+%        \bfseries{Value} & \bfseries{Points} \\
+%        -3 & 0 \\
+%        -2 & 1 \\
+%        -1 & 2 \\
+%        0 & 3 \\
+%        1 & 5 \\
+%        2 & 8 \\
+%        3 & 12 \\
+%        4 & 18 \\
+%        5 & 30 \\
+%        6 & 54 \\
+%    \end{tabular}
+%    \caption{Point-buy}
+%    \label{tab:point-buy}
+%\end{table}
