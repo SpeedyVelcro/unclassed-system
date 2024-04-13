@@ -1,13 +1,63 @@
 Money can be exchanged for goods and services.
 
 \section{Weapons}
-\import{./}{weapons}
 
+\begin{multicols}{2}
 \section{Armor}
-\import{./}{armor}
+The \textbf{cover rating} of a piece of armor represents the difficulty of
+finding a weak point and bypassing it. A higher cover rating means a greater \textit{chance}
+of reducing damage (see pg. \ref{combat} for how attacking works). The cover
+rating of a \textbf{shield} acts as a modifier to your block check (see pg.
+\ref{skill:block} for blocking).
+
+The \textbf{Armor Rating} of a piece of armor represents the difficulty of
+penetrating it. A higher armor rating means a greated \textit{damage reduction}
+when a piece of armor successfully covers you. Shields do not have an armor
+rating.
+
+The only penalty from armor is its weight. If you are not strong enough to
+carry your armor and all your equipment, you will incur potentially
+crippling encumbrance penalties. See the rules on encumbrance (pg.
+\ref{encumbrance}).
+
+Table \ref{tab:armor} shows the cost and weight of a full suit of armor. A full
+suit of armor is made of a helmet, a cuirass, greaves, a left boot, a right
+boot, a left gauntlet, a right gauntlet, a left pauldron and a right pauldron.
+All of these pieces have the same cover rating and armor rating as the full
+suit. Their cost and weight is a fixed proportion of that of a full suit, as
+shown in \ref{tab:armor-pieces}. Do not round.
+\end{multicols}
+
+\begin{table}[h]
+    \unclassedrowcolors
+    \begin{tabular*}{\textwidth}{l l l l l}
+        \multicolumn{5}{l}{Suits of Armor} \\
+        \textbf{Armor} & \textbf{Cost} & \textbf{Cover Rating} & \textbf{Armor Rating} & \textbf{Weight} \\
+        Leather & & & & \\
+        Plate & 12 & & 16 & \\
+        \multicolumn{5}{l}{Shields} \\
+        \textbf{Armor} & \textbf{Cost} & \textbf{Cover Rating} & \textbf{Armor Rating} & \textbf{Weight} \\
+        Light steel shield & & & - & \\
+    \end{tabular*}
+    \caption{Armor}
+    \label{tab:armor}
+\end{table}
+
+\begin{table}[h]
+    \unclassedrowcolors
+    \begin{tabular}{l l l}
+        \textbf{Armor piece} & \textbf{Cost} & \textbf{Weight} \\
+        Helmet & 0.1$\times$ & 0.1$\times$ \\
+        Cuirass & 0.4$\times$ & 0.4$\times$ \\
+        Greaves & 0.3$\times$ & 0.3$\times$ \\
+        Boot & 0.05$\times$ & 0.05$\times$ \\
+        Pauldron & 0.05$\times$ & 0.05$\times$ \\
+        Gauntlet & 0.05$\times$ & 0.05$\times$ \\
+    \end{tabular}
+    \caption{Armor Pieces}
+    \label{tab:armor-pieces}
+\end{table}
 
 \section{Goods}
-\import{./}{goods}
 
 \section{Services}
-\import{./}{services}

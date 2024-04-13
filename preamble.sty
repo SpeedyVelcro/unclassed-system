@@ -5,6 +5,7 @@
 \usepackage{fontspec}
 \usepackage{tocbibind}
 \usepackage{caption}
+\usepackage{multicol}
 \usepackage[a4paper]{geometry}
 \usepackage[table]{xcolor}
 
@@ -13,13 +14,12 @@
 \makeindex[intoc]
 \makeglossaries
 
-% Alternating row colors for all tables
-\let\defaulttabular\tabular % Backup
-\let\enddefaulttabular\endtabular % Backup
-
-\renewenvironment{tabular}[1][]{
+% Alternating row colors
+\newcommand{\unclassedrowcolors}{
     \rowcolors{1}{white}{gray!30}
-    \defaulttabular
-}{\enddefaulttabular}
+}
 
 \captionsetup{justification=raggedright,singlelinecheck=false}
+
+% Forces neat ragged-bottom multicols
+\setlength{\parskip}{0pt plus0pt minus0pt}
