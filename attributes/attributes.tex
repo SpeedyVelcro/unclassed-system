@@ -28,18 +28,66 @@
     on skill checks, this chapter outlines the direct impact of attributes on
     gameplay. A summary can be found in table \ref{tab:attributes}.
 
-    \section{Character Creation}
-    All physical and mental attributes start at 0. Characters start without any
-    special attributes, which can be marked with a hyphen (-) on your character
-    sheet. In order to gain special attributes, you will usually need a specific
-    feat.
+    The human average for any non-special attribute is 0.
 
-    During character creation, you will raise and lower your attributes by 
-    selecting a species (see pg. \ref{species}), culture (see pg. \ref{species}),
-    background (see pg. \ref{background}), and feats (see pg. \ref{feats}).
+    \section{Generation}
+    By default, you may choose between two methods when generating attributes
+    for a new character: point-buy and random. Point-buy allows you maximum
+    control over your character and generally leads to more balanced
+    attributes. Random has a chance of generating very powerful attributes, but
+    at the risk of leaving you with much lower ones.
+    
+    \textbf{Point-Buy}: Pick attribute values from table \ref{tab:point-buy}
+    for each attribute, up to a total point cost of 60.
 
-    The effect of these choices on your attributes are detailed in their respective
-    chapters.
+    \textbf{Random}: Set each attribute to -10. For each attribute, roll 3d6
+    and add the result. You may then swap attributes as you please.
+
+    {
+        \setlength\parindent{0pt}
+        \unclassedrowcolors
+        \begin{tabularx}{0.5\textwidth}{l X}
+            \textbf{Attribute} & \textbf{Point Cost} \\
+            -4 & 0 \\
+            -3 & 1 \\
+            -2 & 2 \\
+            -1 & 3 \\
+            0 & 4 \\
+            1 & 5 \\
+            2 & 7 \\
+            3 & 10 \\
+            4 & 15 \\
+        \end{tabularx}
+        \captionof{table}{Point-Buy}
+        \label{tab:point-buy}
+    }
+
+    \subsection{Alternative Methods}
+    The GM may decide to require the use of a specific method. In more balanced
+    campaigns it is recommended to require all characters use point-buy. If a
+    more chaotic or free-form campaign is desired, it is recommended all
+    characters use random.
+
+    The GM may also choose to allow or require  one of these alternative
+    methods of attribute generation:
+    
+    \textbf{Balanced Random}: Set each attribute to -7. For each attribute,
+    roll 3d4. You may then swap attributes as you please.
+
+    \textbf{Powerful Random}: As random, but you roll 4d6 and drop the lowest.
+    This method is skewed towards very powerful characters as there are many
+    attributes so you are much more likely to get at least one extremely high
+    attribute than in other systems with similar methods.
+
+    \textbf{Fixed Random}: As random, but you may not swap attributes. This
+    makes your character a surprise, and forces you to explore unexpected
+    character builds.
+
+    \textbf{Fixed Balanced Random}: As balanced random, but you may not swap
+    attributes.
+
+    \textbf{Fixed Powerful Random}: As powerful random, but you may not swap
+    attributes.
 
 \end{multicols*}
 
@@ -83,3 +131,16 @@
 %    \caption{Point-buy}
 %    \label{tab:point-buy}
 %\end{table}
+
+% NB: Another earlier method of stat-rolling
+%All physical and mental attributes start at 0. Characters start without any
+%special attributes, which can be marked with a hyphen (-) on your character
+%sheet. In order to gain special attributes, you will usually need a specific
+%feat.
+%
+%During character creation, you will raise and lower your attributes by 
+%selecting a species (see pg. \ref{species}), culture (see pg. \ref{species}),
+%background (see pg. \ref{background}), and feats (see pg. \ref{feats}).
+%
+%The effect of these choices on your attributes are detailed in their respective
+%chapters.
