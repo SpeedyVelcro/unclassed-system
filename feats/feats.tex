@@ -1,26 +1,40 @@
 \begin{multicols*}{2}
-    Feats are permanent effects you can add to your character during character creation (see
-    pg. \ref{character-creation}) and during level-up (see pg.
+    \begin{table*}[ht]
+        \unclassedrowcolors
+        \begin{tabularx}{\textwidth}{l X X l l}
+            \multicolumn{5}{l}{\textbf{Feats}} \\
+            \textbf{Name} & \textbf{Prerequisites} & \textbf{Summary} & \textbf{Point Cost} & \textbf{Page} \\
+            Toughness I & - & Increase hit dice to d6 & 1 & pg. \pageref{feat:toughness1} \\
+            Toughness II & Toughness I & Increase hit dice to d8 & 1 & pg. \pageref{feat:toughness2} \\
+            Toughness III & Toughness II & Increase hit dice to d10 & 1 & pg. \pageref{feat:toughness3} \\
+            Toughness IV & Toughness III & Increase hit dice to d12 & 1 & pg. \pageref{feat:toughness4} \\
+            Toughness V & Toughness IV & Increase hit dice to d20 & 4 & pg. \pageref{feat:toughness5} \\
+            \multicolumn{5}{l}{\textbf{Flaws}} \\
+            \textbf{Name} & \textbf{Prerequisites} & \textbf{Summary} & \textbf{Point Cost} & \textbf{Page} \\
+        \end{tabularx}
+        \caption{Feats}
+        \label{tab:feats}
+    \end{table*}
+
+    Feats are permanent effects you can add to your character during character
+    creation (see pg. \ref{character-creation}) and during level-up (see pg.
     \ref{advancement}).
 
-    There are two types of feats: positive and negative. Positive feats give
-    bonuses and can be selected during character creation \textit{or} level-up.
-    Negative feats can \textit{only} be selected during level-up, and apply
-    penalties to your character.
+    Feats have a feat point cost associated with them. You must spend feat
+    points to unlock them. Most charcters get 1 feat point at character
+    creation, plus any extra gained from their species, culture and background.
 
-    During character creation you can select a maximum number of positive
-    feats - usually exactly 1. There is no limit to the number of negative
-    feats you can select.
+    Flaws are a special kind of feat you can only chose during character
+    creation. Rather than costing feat points, flaws give you extra feat
+    points to spend. Up to 4 extra feat points can be gained this way, after
+    which any further flaws do not give extra feat points.
 
-    Selecting a negative feat increases your maximum number of positive feats
-    by 1. You can increase your maximum number of positive feats by up to
-    4 in this way. Further negative feat selections no longer increase your
-    maximum number of positive feats.
+    \section{Feat List}
+    \import{./}{toughness1}
+    \import{./}{toughness2}
+    \import{./}{toughness3}
+    \import{./}{toughness4}
+    \import{./}{toughness5}
 
-    The above rules on maximums do not apply to level-ups, where you select
-    exactly one feat, positive or negative.
-
-    \section{Positive Feats}
-
-    \section{Negative Feats}
+    \section{Flaw List}
 \end{multicols*}
