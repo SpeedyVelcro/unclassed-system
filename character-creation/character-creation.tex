@@ -1,11 +1,53 @@
+\begin{multicols}{2}
+    To create a character, follow these steps:
+    \begin{enumerate}
+        \item Distribute your attributes (pg. \pageref{attributes})
+        \item Choose your species (pg. \pageref{species})
+        \item Choose your culture (pg. \pageref{culture})
+        \item Choose your background (pg. \pageref{background})
+        \item Distribute your skill points (pg. \pageref{skills})
+        \item Choose your feats (pg. \pageref{feats})
+        \item Buy your starting equipment (pg. \pageref{equipment})
+        \item Choose your starting spells, if applicable (pg. \pageref{magic})
+    \end{enumerate}
 
-\begin{enumerate}
-    \item Distribute your attributes (pg. \pageref{attributes})
-    \item Choose your species (pg. \pageref{species})
-    \item Choose your culture (pg. \pageref{culture})
-    \item Choose your background (pg. \pageref{background})
-    \item Distribute your skill points (pg. \pageref{skills})
-    \item Choose your feats (pg. \pageref{feats})
-    \item Buy your starting equipment (pg. \pageref{equipment})
-    \item Choose your starting spells, if applicable (pg. \pageref{magic})
-\end{enumerate}
+    \subsection{Advancement}
+    % Rewards for a level 1 monster is 60 XP split among the party.
+    % Rewards for a level 2 monster is 120 XP split among the party. etc.
+    Characters advance by gaining levels, and they gain levels by gaining enough
+    experience points (XP). XP is awarded by the GM for overcoming challenges.
+    \begin{table*}[ht]
+        \unclassedrowcolors
+        \begin{tabularx}{\textwidth}{l X l X}
+            \textbf{Level} & \textbf{Threshold} & \textbf{Level} & \textbf{Threshold} \\
+            1 & 100 & 12 & 2400 \\
+            2 & 250 & 13 & 2600 \\
+            3 & 450 & 14 & 2800 \\
+            4 & 650 & 15 & 3000 \\
+            5 & 900 & 16 & 3200 \\
+            6 & 1200 & 17 & 3400 \\
+            7 & 1400 & 18 & 3600 \\
+            8 & 1600 & 19 & 3800 \\
+            9 & 1800 & 20 & 4000 \\
+            10 & 2000 & 21 & 4200 \\
+            11 & 2200 & 22+ & Level $\times$ 200 \\
+        \end{tabularx}
+        \caption{Levels}
+        \label{tab:levels}
+    \end{table*}
+
+    Once a character has gained enough XP to meet its current threshold (see table
+    \ref{tab:levels}), it becomes able to level up. A character can only level
+    up when sleeping. Upon levelling up, a character makes the following changes:
+    \begin{itemize}
+        \item The character rolls its health die, and then adds health die +
+            VIT to their maximum health (their health also increases by this
+            amount).
+        \item The character increases any attribute by 1.
+        \item The character increases the potential of X different skills by 1,
+            where 1 is their INT (at least 1).
+        \item The character gains 1 feat point.
+        \item XP is reduced by the threshold of their current level (see table
+            \ref{tab:levels}), and their level is increase by 1.
+    \end{itemize}
+\end{multicols}
