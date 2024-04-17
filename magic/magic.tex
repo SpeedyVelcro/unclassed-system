@@ -1,0 +1,74 @@
+
+\begin{multicols*}{2}
+    \section{Spellcrafting}
+    All spells in the spell list were originally created using spellcrafting.
+    Characters can also create their own custom spells through spellcrafting.
+    See the spellcrafting skill (pg. \pageref{skill:spellcrafting}) for
+    instructions.
+
+    Spells are constructed by specifying a list of spell effects, configuring
+    those spell effects, and specifying a target. The mana cost is calculated
+    based on these choices.
+
+    \subsection{Spell Effects}
+    Spell effects are chosen from the spell effect list (see pg.
+    \pageref{spell-effect-list}). A spell can have any number of spell effects
+    (though high numbers may make the spell difficult to cast or craft).
+
+    To configure a spell, replace the values in square brackets. [number] should
+    be replaced with a whole number, [duration] should be replaced with a number
+    of rounds, and [die] should be replaced with a
+    dice size. Valid dice sizes include d4, d6, d8, d10, d12, d20 and d100.
+    The GM may allow exotic dice sizes, in which case any dice size is allowed.
+
+    \subsection{Target}
+    The target of a spell can be self, touch, ranged, location, area, or cone.
+    \begin{itemize}
+        \item Spells with the "self" target affect the caster
+        \item Spells with the "touch" target affect an object or creature in
+            touch range, subject to the caster succeeding on a skill check
+            contested by the target's defence check.
+        \item Spells with the "ranged" target affect any object or creature
+            within a range specified by the spell crafter, subject to the caster
+            succeeding on a skill check contested by the target's defence check.
+        \item Spells with the "location" target affect a specific location
+            within a range specified by the spell crafter.
+            This target choice can only be applied to spells with spell effects
+            that create or summon something, and cannot be applied to spell
+            effects that require a target.
+        \item Spells with the "area" target affect an area. The spell crafter
+            specifies the range within which the origin of the area can be
+            placed, the shape of the area (must be a cube or sphere), and the
+            size of the area. The defenders make their defence checks against
+            the caster's skill check.
+        \item Spells with the "cone" target affect a cone originating from
+            the caster. The spell crafter specifies the length of the cone.
+            defenders make their defence checks against the caster's skill
+            check.
+    \end{itemize}
+
+    \subsection{Mana Cost}
+    To calculate the mana cost of a spell, first calculate the mana cost of
+    each effect. A formula is given in the description of each spell effect.
+    The total mana cost of the spell is then calculated using a formula given
+    by the spell target, and rounded up:
+    
+    \noindent
+    \textbf{Self:} $\text{Sum of effect costs} \times \text{No. of effects}$
+
+    \noindent
+    \textbf{Touch:} $\text{Sum of effect costs} \times \text{No. of effects}$
+
+    \noindent
+    \textbf{Ranged:} $(\text{Sum of effect costs} \times \text{No. of effects}) + \text{range in tiles} - 1$
+
+    \noindent
+    \textbf{Location:} $(\text{Sum of effect costs} \times \text{No. of effects}) + \text{range in tiles} - 1$
+
+    \noindent
+    \textbf{Area:} $(2 \times \text{Sum of effect costs} \times \text{No. of effects} \times \text{longest dimension in tiles}) + \text{range in tiles}$
+
+    \noindent
+    \textbf{Cone:} $1.5 \times \text{Sum of effect costs} \times \text{No. of effects} \times \text{length}$
+
+\end{multicols*}{2}
