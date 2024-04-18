@@ -36,59 +36,69 @@
     To configure a spell, replace the values in square brackets. [number] should
     be replaced with a whole number, [duration] should be replaced with a number
     of rounds, and [dice] should be replaced with one of the dice from table
-    \ref{tab:spellcrafting-dice}
-    The GM may allow exotic dice sizes, in which case any dice size is allowed.
+    \ref{tab:spellcrafting-dice}.
+
 
     \subsection{Target}
+    Spell effects can be corporeal or incorporeal. Generally, if a target succeeds on a
+    defence roll, no corporeal effects are applied to them. Incorporeal effects
+    are applied regardless, however their descriptions often call for checks
+    to determine whether they actually do anything.
+
     The target of a spell can be self, touch, ranged, location, area, or cone.
+    You may only choose targets that are valid for all of a spell's spell
+    effects.
     \begin{itemize}
-        \item Spells with the "self" target affect the caster
+        \item Spells with the "self" target affect the caster.
         \item Spells with the "touch" target affect an object or creature in
-            touch range, subject to the caster succeeding on a skill check
-            contested by the target's defence check.
+            touch range.
+            % NB: Touch spells will not provoke attacks of opportunity. This
+            % is their advantage over ranged spells.
         \item Spells with the "ranged" target affect any object or creature
-            within a range specified by the spell crafter, subject to the caster
-            succeeding on a skill check contested by the target's defence check.
+            within a range specified by the spellcrafter.
+            Corporeal effects only apply if the caster has line of effect
+            to the target. Incorporeal effects only apply if the caster is
+            aware of the specific location of the target (e.g. if they can see
+            them).
         \item Spells with the "location" target affect a specific location
-            within a range specified by the spell crafter.
-            This target choice can only be applied to spells with spell effects
-            that create or summon something, and cannot be applied to spell
-            effects that require a target.
-        \item Spells with the "area" target affect an area. The spell crafter
-            specifies the range within which the origin of the area can be
-            placed, the shape of the area (must be a cube or sphere), and the
-            size of the area. The defenders make their defence checks against
-            the caster's skill check.
-        \item Spells with the "cone" target affect a cone originating from
-            the caster. The spell crafter specifies the length of the cone.
-            defenders make their defence checks against the caster's skill
-            check.
+            within a range specified by the spell crafter. The caster must have
+            line of effect to the target location.
+        \item Spells with the "area" target affect all objects or creatures
+            in an area chosen by the caster. The area's origin must be within
+            a range specified by the spellcrafter. The area's shape is a cube
+            or sphere, as specified by the spellcrafter. The area's size is
+            specified by the spellcrafter.
+        \item Spells with the "cone" target affect all objects or creatures
+            caught within a cone originating from the caster. The length of
+            the cone is specified by the spellcrafter.
     \end{itemize}
+
+    Corporeal effects of area and cone spells cannot be parried. Dodging such
+    spells only avoids their corporeal effects if the target is standing next
+    to an unaffected space. Otherwise, dodging only reduces corporeal effects
+    by half. Blocking such spells only reduces corporeal effects by half.
 
     \subsection{Mana Cost}
     To calculate the mana cost of a spell, first calculate the mana cost of
     each effect. A formula is given in the description of each spell effect.
     The total mana cost of the spell is then calculated using a formula given
     by the spell target, and rounded up:
+
+    The mana cost of a spell can be calculated by following these steps:
+    \begin{itemize}
+        \item Calculate the mana cost of each spell effect as per its
+            description.
+        \item Sum the cost of all spell effects together.
+        \item Multiply by the number of spell effects on the spell.
+        \item If the target of the spell is area, multiply by the area's
+            longest dimension divided by 5 ft.
+        \item If the target of the spell is cone, multiply by the length of
+            the cone.
+        \item If the target of the spell is ranged, location, or area,
+            add the range divided by 10 ft. and rounded up to the nearest
+            whole number.
+    \end{itemize}
     
-    \noindent
-    \textbf{Self:} $\text{Sum of effect costs} \times \text{No. of effects}$
-
-    \noindent
-    \textbf{Touch:} $\text{Sum of effect costs} \times \text{No. of effects}$
-
-    \noindent
-    \textbf{Ranged:} $(\text{Sum of effect costs} \times \text{No. of effects}) + \text{range in tiles} - 1$
-
-    \noindent
-    \textbf{Location:} $(\text{Sum of effect costs} \times \text{No. of effects}) + \text{range in tiles} - 1$
-
-    \noindent
-    \textbf{Area:} $(2 \times \text{Sum of effect costs} \times \text{No. of effects} \times \text{longest dimension in tiles}) + \text{range in tiles}$
-
-    \noindent
-    \textbf{Cone:} $1.5 \times \text{Sum of effect costs} \times \text{No. of effects} \times \text{length}$
-
     \section{Spell List}
 
     \section{Spell Effect List}
