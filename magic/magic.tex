@@ -78,6 +78,34 @@
     to an unaffected space. Otherwise, dodging only reduces corporeal effects
     by half. Blocking such spells only reduces corporeal effects by half.
 
+    \subsection{Casting Time}
+    \begin{table*}[ht]
+        \unclassedrowcolors
+        \begin{tabularx}{\textwidth}{l X l X l X}
+            \textbf{Casting Time} & \textbf{Mana Cost} & \textbf{Casting Time} & \textbf{Mana Cost} & \textbf{Casting Time} & \textbf{Mana Cost} \\
+            1 round  & $\times$0.95 & 1 minute   & $\times$0.5  & 1 hour  & $\times$0.25 \\
+            2 rounds & $\times$0.9  & 2 minutes  & $\times$0.45 & 2 hours & $\times$0.2  \\
+            3 rounds & $\times$0.85 & 3 minutes  & $\times$0.4  & 3 hours & $\times$0.15 \\
+            4 rounds & $\times$0.8  & 5 minutes  & $\times$0.35 & 4 hours & $\times$0.1  \\
+            5 rounds & $\times$0.75 & 10 minutes & $\times$0.3  & 8 hours & $\times$0.05 \\
+            6 rounds & $\times$0.7  & & & & \\
+            7 rounds & $\times$0.65 & & & & \\
+            8 rounds & $\times$0.6  & & & & \\
+            9 rounds & $\times$0.55 & & & & \\
+        \end{tabularx}
+        \caption{Spellcrafting Casting Time}
+        \label{tab:spellcrafting-casting-time}
+    \end{table*}
+    The default casting time of a spell is one action. This casting time
+    can be increased to any length of time listed in table
+    \ref{tab:spellcrafting-casting-time} in exchange for a reduced mana cost.
+
+    If a spell has spell effects with triggers, that spell can be cast
+    instantly - even out of turn - when the trigger condition is met. If a
+    spell is cast in response to a trigger like this, only spell effects
+    that have the same trigger are applied. This also means spell effects
+    with no trigger are skipped.
+
     \subsection{Mana Cost}
     To calculate the mana cost of a spell, first calculate the mana cost of
     each effect. A formula is given in the description of each spell effect.
@@ -95,13 +123,17 @@
         \item If the target of the spell is cone, multiply by the length of
             the cone.
         \item If the target of the spell is ranged, location, or area,
-            add the range divided by 10 ft. and rounded up to the nearest
+            add the range divided by 10 ft. and rounded up to a
             whole number.
+        \item If the casting time is greater than 1 action, adjust the mana
+            cost according to table \ref{tab:spellcrafting-casting-time} and
+            then round up to a whole number.
     \end{itemize}
     
     \section{Spell List}
 
     \section{Spell Effect List}
     \import{./spell-effects}{fire-damage}
+    \import{./spell-effects}{shield}
 
 \end{multicols*}{2}
