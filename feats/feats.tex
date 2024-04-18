@@ -4,6 +4,7 @@
         \begin{tabularx}{\textwidth}{l X X l l}
             \multicolumn{5}{l}{\textbf{Feats}} \\
             \textbf{Name} & \textbf{Prerequisites} & \textbf{Summary} & \textbf{Point Cost} & \textbf{Page} \\
+            Attractive & Character creation & Situational bonuses based on gender & 1 & pg. \pageref{feat:attractive} \\
             Rage & - & Enter a rage for strength bonuses & 1 & pg. \pageref{feat:rage} \\
             \quad Repeat Rage I & Rage & Rage 2 times per day & 1 & pg. \pageref{feat:repeatrage1} \\
             \quad Repeat Rage II & Repeat Rage I & Rage 3 times per day & 1 & pg. \pageref{feat:repeatrage2} \\
@@ -15,8 +16,22 @@
             \quad Toughness III & Toughness II & Increase hit dice to d10 & 1 & pg. \pageref{feat:toughness3} \\
             \quad Toughness IV & Toughness III & Increase hit dice to d12 & 1 & pg. \pageref{feat:toughness4} \\
             \quad Toughness V & Toughness IV & Increase hit dice to d20 & 4 & pg. \pageref{feat:toughness5} \\
-            \multicolumn{5}{l}{\textbf{Flaws}} \\
+            \multicolumn{5}{l}{\textbf{Disadvantages}} \\
             \textbf{Name} & \textbf{Prerequisites} & \textbf{Summary} & \textbf{Point Cost} & \textbf{Page} \\
+            Blind & - & Cannot see & 1 & pg. \pageref{flaw:blind} \\
+            Deaf & - & Cannot hear & 1 & pg. \pageref{flaw:deaf} \\
+            Illiterate & - & Cannot read or write & 1 & pg. \pageref{flaw:illiterate} \\
+            Ugly & - & Situational penalties based on gender & 1 & pg. \pageref{flaw:ugly} \\
+            % Clumsy?
+            % Old?
+            % Young?
+            % Insomniac?
+            % Depressed?
+            % Mute?
+            % Missing leg?
+            % Missing arm?
+            % Missing hand?
+            % Sickly?
         \end{tabularx}
         \caption{Feats}
         \label{tab:feats}
@@ -30,23 +45,26 @@
     points to unlock them. Most charcters get 1 feat point at character
     creation, plus any extra gained from their species, culture and background.
 
-    Flaws are a special kind of feat you can only chose during character
-    creation. Rather than costing feat points, flaws give you extra feat
-    points to spend. Up to 4 extra feat points can be gained this way, after
-    which any further flaws do not give extra feat points.
+    Disadvantages are a special kind of feat you can only chose during
+    character creation. Rather than costing feat points, disadvantages give you
+    extra feat points to spend. Up to 4 extra feat points can be gained this
+    way, after which any further disadvantages do not give extra feat points.
 
     \section{Feat List}
-    \import{./}{rage}
-    \import{./}{repeatrage1}
-    \import{./}{repeatrage2}
-    \import{./}{repeatrage3}
-    \import{./}{repeatrage4}
-    \import{./}{repeatrage5}
-    \import{./}{toughness1}
-    \import{./}{toughness2}
-    \import{./}{toughness3}
-    \import{./}{toughness4}
-    \import{./}{toughness5}
+    \import{./feats/}{attractive}
+    \import{./feats/}{rage}
+    \import{./feats/}{repeatrage1}
+    \import{./feats/}{repeatrage2}
+    \import{./feats/}{repeatrage3}
+    \import{./feats/}{repeatrage4}
+    \import{./feats/}{repeatrage5}
+    \import{./feats/}{toughness1}
+    \import{./feats/}{toughness2}
+    \import{./feats/}{toughness3}
+    \import{./feats/}{toughness4}
+    \import{./feats/}{toughness5}
 
-    \section{Flaw List}
+    \section{Disadvantage List}
+    \import{./disadvantages/}{ugly}
+
 \end{multicols*}
