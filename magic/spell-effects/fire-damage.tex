@@ -4,6 +4,8 @@
 \textbf{School:} Pyromancy
 
 \noindent
-\textbf{Mana Cost:} Cost of spellcrafting dice
+\textbf{Mana Cost:} $(\text{spellcrafting dice cost} \times \text{duration}) + 1 - \text{duration}$
 
-Deals [dice] fire damage to target(s).
+Deals [dice] fire damage to target(s) per round for [duration] rounds. If
+multiple Fire Damage effects are active on a target, only the most powerful (by
+average damage) takes effect each round.
