@@ -13,79 +13,111 @@
         \begin{tabularx}{\textwidth}{l l X l l}
             \multicolumn{5}{l}{\bfseries{General Skills}} \\
             \bfseries{ATT} & \bfseries{Skill} & \bfseries{Description} & \bfseries{Potential} & \bfseries{page} \\
-            DEX & Climbing & Climb surfaces & ?? & pg. \pageref{skill:climbing} \\
-            CHA & Deception & Lie & ?? & pg. \pageref{skill:deception} \\
-            SEN & Hearing & Ability to hear sounds & ?? & pg. \pageref{skill:hearing} \\
-            CHA & Intimidation & Make oneself appear more dangerous & ?? & pg. \pageref{skill:intimidation} \\
-            DEX & Lockpicking & Bypass locks without the key & ?? & pg. \pageref{skill:lockpicking} \\
-            CHA & Persuasion & Persuade people to do things & ?? & pg. \pageref{skill:persuasion} \\
-            SEN & Sight & Ability to see things & ?? & pg. \pageref{skill:sight} \\
-            DEX & Sleight of Hand & Pickpocket or cheat at games & ?? & pg. \pageref{skill:sleight-of-hand} \\
-            SEN & Smell & Ability to smell things & ?? & pg. \pageref{skill:smell} \\
-            DEX & Stealth & Ability to evade detection & ?? & pg. \pageref{skill:stealth} \\
+            DEX & Climbing & Climb surfaces & 4 & pg. \pageref{skill:climbing} \\
+            SEN & Hearing & Ability to hear sounds & 4 & pg. \pageref{skill:hearing} \\
+            DEX & Lockpicking & Bypass locks without the key & 4 & pg. \pageref{skill:lockpicking} \\
+            SEN & Sight & Ability to see things & 4 & pg. \pageref{skill:sight} \\
+            DEX & Sleight of Hand & Pickpocket or cheat at games & 4 & pg. \pageref{skill:sleight-of-hand} \\
+            SEN & Smell & Ability to smell things & 4 & pg. \pageref{skill:smell} \\
+            DEX & Stealth & Ability to evade detection & 4 & pg. \pageref{skill:stealth} \\
+            \multicolumn{5}{l}{\bfseries{Speechcraft Skills}} \\
+            \bfseries{ATT} & \bfseries{Skill} & \bfseries{Description} & \bfseries{Potential} & \bfseries{Page} \\
+            CHA & Deception & Lie & 4 & pg. \pageref{skill:deception} \\
+            CHA & Intimidation & Make oneself appear more dangerous & 4 & pg. \pageref{skill:intimidation} \\
+            CHA & Persuasion & Persuade people to do things & 4 & pg. \pageref{skill:persuasion} \\
+            CHA & Seduction & Seduce people & 4 & pg. \pageref{skill:seduction} \\
             \multicolumn{5}{l}{\bfseries{Combat Skills}} \\
             \bfseries{ATT} & \bfseries{Skill} & \bfseries{Description} & \bfseries{Potential} & \bfseries{Page} \\
-            DEX & Block & Block attacks with a shield & ?? & pg. \pageref{skill:block} \\
-            DEX & Dodge & Dodge out of the way of attacks & ?? & pg. \pageref{skill:dodge} \\
-            DEX & Parry & Parry attacks with a melee weapon & ?? & pg. \pageref{skill:parry} \\
+            DEX & Block & Block attacks with a shield & 4 & pg. \pageref{skill:block} \\
+            DEX & Dodge & Dodge out of the way of attacks & 4 & pg. \pageref{skill:dodge} \\
+            DEX & Parry & Parry attacks with a melee weapon & 4 & pg. \pageref{skill:parry} \\
             \multicolumn{5}{l}{\bfseries{Weapon Skills}} \\
             \bfseries{ATT} & \bfseries{Skill} & \bfseries{Description} & \bfseries{Potential} & \bfseries{Page} \\
-            STR & Hand-to-Hand & Fighting with fists & ?? & pg. \pageref{skill:hand-to-hand} \\
-            STR & Handaxe & Smaller axe & ?? & pg. \pageref{skill:handaxe} \\
-            DEX & Dagger & Easily-concealed blade & ?? & pg. \pageref{skill:dagger} \\
-            STR & Greataxe & Large two-handed axe & ?? & pg. \pageref{skill:greataxe} \\
-            DEX & Longbow & Large bow & ?? & pg. \pageref{skill:longbow} \\
-            STR & Longsword & Heavy sword with a long blade & ?? & pg. \pageref{skill:longsword} \\
-            DEX & Shortsword & Lighter sword with a short blade & ?? & pg. \pageref{skill:shortsword} \\
+            STR & Hand-to-Hand & Fighting with fists & 4 & - \\
+            STR & Handaxe & Smaller axe & 4 & - \\
+            DEX & Dagger & Easily-concealed blade & 4 & - \\
+            DEX & Flail & Weapon with a spinning head & 4 & - \\ % TODO: In equipment, requires STR 3 to use
+            STR & Greataxe & Large two-handed axe & 4 & - \\
+            DEX & Greatsword & Large two-handed sword & 4 & - \\ % TODO: In equipment, requires STR 2 to use
+            % TODO: Are we including a hand crossbow?
+            DEX & Heavy Crossbow & Heavy Crossbow & 4 & - \\
+            DEX & Light Crossbow & Light crossbow & 4 & - \\
+            STR & Longbow & Large bow & 4 & - \\ % TODO: In equipment, Requires STR 3 to use
+            DEX & Longspear & Long spear & 4 & - \\
+            DEX & Longsword & Sword with a long blade & 4 & - \\
+            STR & Mace & Weapon with a heavy head & 4 & - \\ % Includes morningstar
+            DEX & Shortbow & Smaller bow & 4 & - \\ % TODO: In equipment, Requires STR 1 to use
+            DEX & Shortspear & Short spear & 4 & - \\
+            DEX & Shortsword & Lighter sword with a short blade & 4 & - \\
+            \multicolumn{5}{l}{\bfseries{Spell Schools}} \\
+            \bfseries{ATT} & \bfseries{Skill} & \bfseries{Description} & \bfseries{Potential} & \bfseries{Page} \\
+            SOR & Aeromancy & Command of wind & 4 & - \\
+            SOR & Conjuration & Summoning & 4 & - \\
+            SOR & Cryomancy & Command of ice & 4 & - \\
+            SOR & Divination & Revelation of knowledge & 4 & - \\
+            SOR & Hydromancy & Command of water & - \\
+            SOR & Illusion & Misdirection of the senses & 4 & - \\
+            SOR & Necromancy & Command of the dead and undead & - \\
+            SOR & Pyromancy & Command of fire & 4 & - \\
+            SOR & Restoration & Healing & 4 & - \\
+            SOR & Warding & Protection & 4 & - \\
         \end{tabularx}
         \caption{Skills}
         \label{tab:skills}
     \end{table*}
-    \Blindtext\Blindtext\Blindtext\Blindtext
+
+    \section{General Skills}
+
+    \subsection{Climbing}\label{skill:climbing}
+
+    \subsection{Deception}\label{skill:deception}
+
+    \subsection{Hearing}\label{skill:hearing}
+
+    \subsection{Intimidation}\label{skill:intimidation}
+
+    \subsection{Lockpicking}\label{skill:lockpicking}
+
+    \subsection{Persuasion}\label{skill:persuasion}
+
+    \subsection{Sight}\label{skill:sight}
+
+    \subsection{Sleight of Hand}\label{skill:sleight-of-hand}
+
+    \subsection{Smell}\label{skill:smell}
+
+    \subsection{Stealth}\label{skill:stealth}
+
+    \section{Speechcraft Skills}\label{speechcraft-skills}
+    Speechcraft skills govern interactions with other characters using language.
+    You must speak the same language as a character to use a speechcraft skill.
+
+    Many speechcraft skills have modifiers according to discrimination or fear of
+    a species, culture, or background. These only apply if the target is aware and
+    convinced of the character's species, culture, or background. For species and
+    culture, this is is usually as simple as seeing the character or hearing the
+    character talk, but for background, this may require some persuasion or
+    deception.
+
+    \section{Combat Skills}
+
+    \subsection{Block}\label{skill:block}
+
+    \subsection{Dodge}\label{skill:dodge}
+
+    \subsection{Parry}\label{skill:parry}
+
+    \section{Weapon Skills}\label{weapon-skills}
+    Characters have weapon skills in each type of weapon. Weapon skills are used in
+    combat. As there is not much else they can be used for, weapon skills are only
+    listed in table \ref{tab:skills}.
+
+    % TODO: cross-skill effectiveness. e.g. longsword users having some skill in shortsword
+
+    \section{Spell Schools}\label{spell-schools}
+    Skills for spell schools are used in the casting of spells. If a spell requires
+    a skill check, it will be mentioned in the spell's description. As spell
+    schools have no further use beyond casting spells, they are only listed in
+    table \ref{tab:skills}.
 \end{multicols*}
 
-\section{General Skills}
-
-\subsection{Climbing}\label{skill:climbing}
-
-\subsection{Deception}\label{skill:deception}
-
-\subsection{Hearing}\label{skill:hearing}
-
-\subsection{Intimidation}\label{skill:intimidation}
-
-\subsection{Lockpicking}\label{skill:lockpicking}
-
-\subsection{Persuasion}\label{skill:persuasion}
-
-\subsection{Sight}\label{skill:sight}
-
-\subsection{Sleight of Hand}\label{skill:sleight-of-hand}
-
-\subsection{Smell}\label{skill:smell}
-
-\subsection{Stealth}\label{skill:stealth}
-
-\section{Combat Skills}
-
-\subsection{Block}\label{skill:block}
-
-\subsection{Dodge}\label{skill:dodge}
-
-\subsection{Parry}\label{skill:parry}
-
-\section{Weapon Skills}
-
-\subsection{Hand-to-Hand}\label{skill:hand-to-hand}
-
-\subsection{Handaxe}\label{skill:handaxe}
-
-\subsection{Dagger}\label{skill:dagger}
-
-\subsection{Greataxe}\label{skill:greataxe}
-
-\subsection{Longsword}\label{skill:longsword}
-
-\subsection{Longbow}\label{skill:longbow}
-
-\subsection{Shortsword}\label{skill:shortsword}
