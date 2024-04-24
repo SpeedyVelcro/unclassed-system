@@ -5,24 +5,25 @@
     \section{Rounds, Turns, and Actions}\index{round}\index{turn}\index{action}
 
     \begin{table*}[ht]
+        \unclassedrowcolors
         \begin{tabularx}{\textwidth}{X l l}
             \textbf{Activity} & \textbf{Cost} & \textbf{Provokes OA} \\
             Attack & 1 action & No \\
             Cast touch spell & Varies & No \\
             Cast ranged, cone, or area spell & Varies & Yes \\
             Cast self spell (or touch spell on self) & Varies & Yes \\
-            Close door & \textonehalf action & No \\
-            Draw weapon or take out item & \textonehalf action & No \\
+            Close door & \textonehalf\ action & No \\
+            Draw weapon or take out item & \textonehalf\ action & No \\
             Drink potion & 1 action & Yes \\
             Drop weapon or item & Free action & No \\
-            Dual-wield attack & 1 \textonehalf action & No \\
-            Go prone & \textonehalf action & No \\
-            Get up from prone & \textonehalf action & Yes \\
-            Move half of speed & \textonehalf action & Yes \\
-            Move full speed & 1 action & Yes \\
-            Open door & \textonehalf action & Yes \\
-            Sheathe weapon or stow item & \textonehalf action & Yes \\
-            Sprint & Full turn & Yes \\
+            Dual-wield attack & 1 \textonehalf\ action & No \\
+            Go prone & \textonehalf\ action & No \\
+            Get up from prone & \textonehalf\ action & Yes \\
+            Move half of speed & \textonehalf\ action & Varies \\
+            Move full speed & 1 action & Varies \\
+            Open door & \textonehalf\ action & Yes \\
+            Sheathe weapon or stow item & \textonehalf\ action & Yes \\
+            Sprint & Full turn & Varies \\
         \end{tabularx}
         \caption{Combat Actions}
         \label{tab:combat-actions}
@@ -30,16 +31,16 @@
 
     Combat in the Unclassed System is turn-based; each round, characters take
     turns in a specific order determined by initiative. Each character can
-    take a default of 1 \textonehalf actions during their turn.
+    take a default of 1 \textonehalf\ actions during their turn.
 
-    Notice the extra \textonehalf action. Most characters will make 1 important
+    Notice the extra \textonehalf\ action. Most characters will make 1 important
     action per turn - such as attacking or casting a spell - and then make a
-    smaller \textonehalf action - such as moving half their speed or drawing a
+    smaller \textonehalf\ action - such as moving half their speed or drawing a
     weapon. Actions can be done in any order, for example a character may first
-    take a \textonehalf action to draw their sword and then take 1 action to
+    take a \textonehalf\ action to draw their sword and then take 1 action to
     attack. Any combination of actions can be taken up to a character's
     allottment of actions for that turn. For example, it is perfectly valid
-    to take no actions or to take 3 separate \textonehalf actions in a turn.
+    to take no actions or to take 3 separate \textonehalf\ actions in a turn.
 
     The length of various actions is listed on table \ref{tab:combat-actions}.
 
@@ -87,7 +88,7 @@
         \item Apply damage
     \end{itemize}
 
-    The attacker can use 1 \textonehalf actions to make a dual-wielding
+    The attacker can use 1 \textonehalf\ actions to make a dual-wielding
     attack. A dual-wielding attack can only be made if the attacker has
     two weapons equipped. A free hand used with the hand-to-hand skill counts
     as a weapon for this purpose. To make a dual-wielding attack, follow the
@@ -101,8 +102,29 @@
     An attacker with an exotic configuration of hands, natural weapons,
     and/or double-ended weapons may be able to make a triple, quadruple,
     or even greater multi-wield attack. For such an attack, follow the rules
-    for a dual-wielding attack and add an extra cost of a \textonehalf action
+    for a dual-wielding attack and add an extra cost of a \textonehalf\ action
     for each extra attack that is made.
+
+    \section{Moving}
+    During combat, a character can use 1 action to move a distance up to their
+    speed rounded down to a multiple of 5 ft. (but always at least 5 ft.).
+    Alternatively, they can use a \textonehalf\ action to move a distance up
+    to half their speed rounded in the same way.
+
+    A character can also cover large distances in a turn by sprinting.
+    Sprinting costs the entire turn, and can only be done if the character has
+    not yet spent any of their action allottment. By default, a character can
+    move 4 times their speed by sprinting. A character cannot move a distance
+    greater than they can sprint in a turn by using multiple actions to move.
+
+    Moving provokes opportunity attacks if and only if moving \textit{away}
+    from other creatures. The opportunity attack is provoked only at the
+    point where the moving character is moving from a space in melee range of
+    the provoked character to a space further away.
+
+    Moving from a space in melee range of another creature to a space further
+    away from that creature provokes an opportunity attack. Only one such
+    movement provokes an opportunity attack per other creature per turn.
 
     \section{Opportunity Attacks}
     Certain actions trigger opportunity attacks. When a character (the
