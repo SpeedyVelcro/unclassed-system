@@ -3,6 +3,31 @@
 \begin{multicols*}{2}
 
     \section{Rounds, Turns, and Actions}\index{round}\index{turn}\index{action}
+
+    \begin{table*}[ht]
+        \begin{tabularx}{\textwidth}{X l l}
+            \textbf{Activity} & \textbf{Cost} & \textbf{Provokes OA} \\
+            Attack & 1 action & No \\
+            Cast touch spell & Varies & No \\
+            Cast ranged, cone, or area spell & Varies & Yes \\
+            Cast self spell (or touch spell on self) & Varies & Yes \\
+            Close door & \textonehalf action & No \\
+            Draw weapon or take out item & \textonehalf action & No \\
+            Drink potion & 1 action & Yes \\
+            Drop weapon or item & Free action & No \\
+            Dual-wield attack & 1 \textonehalf action & No \\
+            Go prone & \textonehalf action & No \\
+            Get up from prone & \textonehalf action & Yes \\
+            Move half of speed & \textonehalf action & Yes \\
+            Move full speed & 1 action & Yes \\
+            Open door & \textonehalf action & Yes \\
+            Sheathe weapon or stow item & \textonehalf action & Yes \\
+            Sprint & Full turn & Yes \\
+        \end{tabularx}
+        \caption{Combat Actions}
+        \label{tab:combat-actions}
+    \end{table*}
+
     Combat in the Unclassed System is turn-based; each round, characters take
     turns in a specific order determined by initiative. Each character can
     take a default of 1 \textonehalf actions during their turn.
@@ -15,6 +40,8 @@
     attack. Any combination of actions can be taken up to a character's
     allottment of actions for that turn. For example, it is perfectly valid
     to take no actions or to take 3 separate \textonehalf actions in a turn.
+
+    The length of various actions is listed on table \ref{tab:combat-actions}.
 
     One round represents 6 seconds of combat, however the turn system is an
     abstraction of this time. Although in game terms characters take turns to
@@ -35,7 +62,8 @@
     \begin{itemize}
         \item Player characters and their allies go first
         \item Characters with the highest initiative modifier go first
-        \item Characters who are still tied make a second initiative check.
+        \item Characters who are still tied make another initiative check,
+            following the tie-breaking steps again if necessary..
             This is not used as their actual initiative, but is just for
             comparison.
     \end{itemize}
@@ -75,4 +103,17 @@
     or even greater multi-wield attack. For such an attack, follow the rules
     for a dual-wielding attack and add an extra cost of a \textonehalf action
     for each extra attack that is made.
+
+    \section{Opportunity Attacks}
+    Certain actions trigger opportunity attacks. When a character (the
+    defender) makes such an action in melee range of another character (the
+    attacker), the attacker may choose to make an opportunity attack. If they
+    do, the attacker immediately makes an attack with a wielded melee weapon
+    of choice against the defender. This attack takes place \textit{before}
+    the defender carries out the action that triggered the opportunity attack.
+
+    Certain combat skills can be used in place of an opportunity attack. These
+    skills are grapple, trip, and disarm.
+
+    By default each character can only make one opportunity attack per round.
 \end{multicols*}
