@@ -1,15 +1,78 @@
 \chapter{Combat}\label{combat}
 
-\begin{itemize}
-    \item Attacker makes an attack roll (weapon skill check)
-    \item Defender makes a defence roll (dodge, block, or parry check)
-    \item If the attack roll is less than or equal to the defense roll, the
-            attack fails. Otherwise, subtract the defense roll from the
-            attack roll.
-    \item If the remainder of the attack roll is less than or equal to the
-            defender's armor rating, the armor's damage reduction will be
-            subtracted from the attack damage.
-    \item Roll for damage
-    \item Subtract damage reduction if applicable
-    \item Apply damage
-\end{itemize}
+\begin{multicols*}{2}
+
+    \section{Rounds, Turns, and Actions}\index{round}\index{turn}\index{action}
+    Combat in the Unclassed System is turn-based; each round, characters take
+    turns in a specific order determined by initiative. Each character can
+    take a default of 1 \textonehalf actions during their turn.
+
+    Notice the extra \textonehalf action. Most characters will make 1 important
+    action per turn - such as attacking or casting a spell - and then make a
+    smaller \textonehalf action - such as moving half their speed or drawing a
+    weapon. Actions can be done in any order, for example a character may first
+    take a \textonehalf action to draw their sword and then take 1 action to
+    attack. Any combination of actions can be taken up to a character's
+    allottment of actions for that turn. For example, it is perfectly valid
+    to take no actions or to take 3 separate \textonehalf actions in a turn.
+
+    One round represents 6 seconds of combat, however the turn system is an
+    abstraction of this time. Although in game terms characters take turns to
+    act, all the turns in a round are considered, in a narrative sense, to have
+    some overlap. The order of turns is simply a representation of who's fast
+    enough to make the first serious impact in combat.
+
+    \section{Initiative}
+    The order of turns in combat is determined by initiative. Each character
+    involved in combat makes an initiative check at the start of combat by
+    rolling 1d20 and adding their initiative modifier. By default, a
+    character's initiative modifier is DEX + SEN, representing both the acrity
+    of their senses and the speed at which their body reacts.
+
+    Characters act in turn starting from the highest initiative and going to
+    the lowest. Where two or more characters have the same initiative, ties
+    are broken by the following heirarchy:
+    \begin{itemize}
+        \item Player characters and their allies go first
+        \item Characters with the highest initiative modifier go first
+        \item Characters who are still tied make a second initiative check.
+            This is not used as their actual initiative, but is just for
+            comparison.
+    \end{itemize}
+
+    \section{Attacking}
+    A character (the attacker) can use 1 action to attack another character
+    (the defender). The attacker must have the appropriate weapon equipped
+    for the weapon skill they are using, or a free hand if they are using
+    the hand-to-hand skill. The process of attacking is as follows:
+    \begin{itemize}
+        \item Attacker makes an attack roll (weapon skill check)
+        \item Defender makes a defence roll (dodge, block, or parry check)
+        \item If the attack roll is less than or equal to the defense roll, the
+                attack fails. Otherwise, subtract the defense roll from the
+                attack roll.
+        \item If the remainder of the attack roll is less than or equal to the
+                defender's armor rating, the armor's damage reduction will be
+                subtracted from the attack damage.
+        \item Roll for damage
+        \item Subtract damage reduction if applicable
+        \item Apply damage
+    \end{itemize}
+
+    The attacker can use 1 \textonehalf actions to make a dual-wielding
+    attack. A dual-wielding attack can only be made if the attacker has
+    two weapons equipped. A free hand used with the hand-to-hand skill counts
+    as a weapon for this purpose. To make a dual-wielding attack, follow the
+    process above for making an attack once for each weapon.
+
+    Attacks made with an off-hand take a -4 penalty to the weapon skill check.
+    An off-hand is considered to be any hand other than a character's
+    main-hand, as specified during character creation. Most characters'
+    main-hand is their right hand.
+
+    An attacker with an exotic configuration of hands, natural weapons,
+    and/or double-ended weapons may be able to make a triple, quadruple,
+    or even greater multi-wield attack. For such an attack, follow the rules
+    for a dual-wielding attack and add an extra cost of a \textonehalf action
+    for each extra attack that is made.
+\end{multicols*}
