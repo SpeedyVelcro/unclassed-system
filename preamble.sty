@@ -1,5 +1,6 @@
 \usepackage{import}
 \usepackage{textcomp} % fractions
+\usepackage{makecell}
 \usepackage{imakeidx} % Must load before hyperref else index isn't linked
 \usepackage[acronym,toc]{glossaries}
 \usepackage{hyperref}
@@ -18,8 +19,21 @@
 \makeglossaries
 
 % Alternating row colors
+\newcommand{\unclassedblankrowcolor}{\rowcolor{white}}
 \newcommand{\unclassedrowcolors}{
     \rowcolors{1}{white}{gray!30}
+}
+
+% Formatting for sub-table title
+% Argument 1: number of columns for multicolumn
+% Argument 2: subtable title
+\newcommand{\unclassedsubtabletitle}[2]{
+    \unclassedblankrowcolor
+    \multicolumn{#1}{l}{
+        \Gape[6pt][0pt]{
+            \textbf{\textit{#2}}
+        }
+    }
 }
 
 \captionsetup{justification=raggedright,singlelinecheck=false}
