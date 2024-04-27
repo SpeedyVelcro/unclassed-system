@@ -1,0 +1,42 @@
+\chapter{Details}
+
+\begin{multicols*}{2}
+    This chapter covers any remaining details you need to calculate to finish
+    making a character.
+
+    \section{Encumbrance}\index{encumbrance}
+    A character's encumbrance threshold\index{encumbrance threshold} is 10 + STR.
+
+    For each multiple of the encumbrance threshold a character exceeds, that
+    character has 1 encumbrance. For example, if a character has an encumbrance
+    threshold of 10 and is carrying exactly 30 lb. of equipment, they have an
+    encumbrance of 2. If they pick up a 1 lb. item, they are carrying 31 lb. and
+    have an encumbrance of 3.
+
+    A character's encumbrance is used as a penalty on certain mobility-related
+    skills, chief of which is dodge. For a full list of penalised skills, see the
+    skills chapter (pg. \ref{skills}).
+
+    A character has their base move speed reduced by 5 ft. for every 3
+    encumbrance. Characters with exotic base move speeds, however, have their
+    base move speed reduced according to table \ref{tab:encumbered-move}.
+    A character's base move speed can only be reduced as far as 5 ft. in this
+    way.
+
+    A character whose encumbrance encumbrance is 10 or more cannot walk
+    and cannot use skills which are penalised by encumbrance.
+
+    \begin{center}
+        \unclassedrowcolors
+        \begin{tabularx}{0.5\textwidth}{X l}
+            \textbf{Base move speed} & \textbf{Reduction} \\
+            0 - 45 ft. & -5 ft. \\
+            50 - 75 ft. & -10 ft. \\
+            80 - 105 ft. & -15 ft. \\
+            110 - 135 ft. & -20 ft. \\
+            etc. & etc. \\
+        \end{tabularx}
+        \captionof{table}{Encumbered Move Speeds}
+        \label{tab:encumbered-move}
+    \end{center}
+\end{multicols*}
