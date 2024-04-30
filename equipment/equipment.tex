@@ -5,60 +5,77 @@ Money can be exchanged for goods and services.
 \section{Weapons}
 
 \begin{multicols}{2}
-\section{Armor}
-The \textbf{cover rating} of a piece of armor represents the difficulty of
-finding a weak point and bypassing it. A higher cover rating means a greater \textit{chance}
-of reducing damage (see pg. \ref{combat} for how attacking works). The cover
-rating of a \textbf{shield} acts as a modifier to your block check (see pg.
-\ref{skill:block} for blocking).
+    \section{Armor}
 
-The \textbf{Armor Rating} of a piece of armor represents the difficulty of
-penetrating it. A higher armor rating means a greated \textit{damage reduction}
-when a piece of armor successfully covers you. Shields do not have an armor
-rating.
+    \begin{table*}[ht!]
+        \unclassedrowcolors
+        \begin{tabularx}{\textwidth}{X l l l l}
+            \unclassedsubtabletitle{5}{Suits of Armor} \\
+            \textbf{Armor} & \textbf{Cost} & \textbf{Cover} & \textbf{Resistance} & \textbf{Weight} \\
+            Hide & 5 sp & 4 & 1p/1s & 5 lb. \\
+            Padded & 5 gp & 6 & 4b/2p/2s & 15 lb. \\
+            Leather & 15 gp & 6 & 2b/1p/1s & 10 lb. \\
+            % Following armors assume some sort of additional padding underneath, hence at least 4b
+            Chain & 150 gp & 8 & 4b/2p/6s & 30 lb. \\ % Chain mail is highly resistant to slashing irl, weaker to piercing as you can force the rings apart
+            Scale & 300 gp & 10 & 4b/4p/8s & 60 lb. \\ % Like chain mail, but improved resistance against thrusts and glances at certain angles
+            Brigandine & 600 gp & 10 & 6b/8p/8s & 50 lb. \\
+            Half Plate & 800 gp & 10 & 6b/16p/16s & 55 lb. \\ % Kinda like "munitions armor" - more gaps than full plate
+            Full Plate & 1,500 gp & 14 & 8b/16p/16s/4m & 60 lb. \\ % Magical resistance only when wearing full plate in all slots
+            \unclassedsubtabletitle{5}{Shields} \\
+            \textbf{Armor} & \textbf{Cost} & \textbf{Cover} & \textbf{Resistance} & \textbf{Weight} \\
+            Light steel shield & & & - & \\
+        \end{tabularx}
+        \caption{Armor}
+        \label{tab:armor}
+    \end{table*}
 
-The only penalty from armor is its weight. If you are not strong enough to
-carry your armor and all your equipment, you will incur potentially
-crippling encumbrance penalties. See the rules on encumbrance (pg.
-\ref{encumbrance}).
+    The \textbf{cover rating} of a piece of armor represents the difficulty of
+    finding a weak point and bypassing it. A higher cover rating means a greater \textit{chance}
+    of reducing damage (see pg. \ref{combat} for how attacking works). The cover
+    rating of a \textbf{shield} acts as a modifier to your block check (see pg.
+    \ref{skill:block} for blocking).
 
-Table \ref{tab:armor} shows the cost and weight of a full suit of armor. A full
-suit of armor is made of a helmet, a cuirass, greaves, a left boot, a right
-boot, a left gauntlet, a right gauntlet, a left pauldron and a right pauldron.
-All of these pieces have the same cover rating and armor rating as the full
-suit. Their cost and weight is a fixed proportion of that of a full suit, as
-shown in \ref{tab:armor-pieces}. Do not round.
+    The \textbf{Armor Rating} of a piece of armor represents the difficulty of
+    penetrating it. A higher armor rating means a greated \textit{damage reduction}
+    when a piece of armor successfully covers you. Shields do not have an armor
+    rating.
+
+    The only penalty from armor is its weight. If you are not strong enough to
+    carry your armor and all your equipment, you will incur potentially
+    crippling encumbrance penalties. See the rules on encumbrance (pg.
+    \ref{encumbrance}).
+
+    Table \ref{tab:armor} shows the cost and weight of a full suit of armor. A full
+    suit of armor is made of a helmet, a cuirass, greaves, a left boot, a right
+    boot, a left gauntlet, a right gauntlet, a left pauldron and a right pauldron.
+    All of these pieces have the same cover rating and armor rating as the full
+    suit. Their cost and weight is a fixed proportion of that of a full suit, as
+    shown in \ref{tab:armor-pieces}. Do not round.
+    \begin{center}
+        \unclassedrowcolors
+        \begin{tabularx}{0.5\textwidth}{l l l}
+            \textbf{Armor piece} & \textbf{Cost} & \textbf{Weight} \\
+            Helmet & 0.1$\times$ & 0.1$\times$ \\
+            Cuirass & 0.4$\times$ & 0.4$\times$ \\
+            Greaves & 0.3$\times$ & 0.3$\times$ \\
+            Boot & 0.05$\times$ & 0.05$\times$ \\
+            Pauldron & 0.05$\times$ & 0.05$\times$ \\
+            Gauntlet & 0.05$\times$ & 0.05$\times$ \\
+        \end{tabularx}
+        \captionof{table}{Armor Pieces}
+        \label{tab:armor-pieces}
+    \end{center}
+
+    \section{Weapons}
+
+    \section{Gear}
+
+    \section{Goods}
+
+    \section{Services}
 \end{multicols}
 
-\begin{table}[h]
-    \unclassedrowcolors
-    \begin{tabular*}{\textwidth}{l l l l l}
-        \unclassedsubtabletitle{5}{Suits of Armor} \\
-        \textbf{Armor} & \textbf{Cost} & \textbf{Cover Rating} & \textbf{Armor Rating} & \textbf{Weight} \\
-        Leather & & & & \\
-        Plate & 12 & & 16 & \\
-        \unclassedsubtabletitle{5}{Shields} \\
-        \textbf{Armor} & \textbf{Cost} & \textbf{Cover Rating} & \textbf{Armor Rating} & \textbf{Weight} \\
-        Light steel shield & & & - & \\
-    \end{tabular*}
-    \caption{Armor}
-    \label{tab:armor}
-\end{table}
 
-\begin{table}[h]
-    \unclassedrowcolors
-    \begin{tabular}{l l l}
-        \textbf{Armor piece} & \textbf{Cost} & \textbf{Weight} \\
-        Helmet & 0.1$\times$ & 0.1$\times$ \\
-        Cuirass & 0.4$\times$ & 0.4$\times$ \\
-        Greaves & 0.3$\times$ & 0.3$\times$ \\
-        Boot & 0.05$\times$ & 0.05$\times$ \\
-        Pauldron & 0.05$\times$ & 0.05$\times$ \\
-        Gauntlet & 0.05$\times$ & 0.05$\times$ \\
-    \end{tabular}
-    \caption{Armor Pieces}
-    \label{tab:armor-pieces}
-\end{table}
 
 \section{Goods}
 
