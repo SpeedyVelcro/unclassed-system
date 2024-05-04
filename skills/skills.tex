@@ -9,6 +9,10 @@
 
 
 \begin{multicols}{2}
+    A skill governs a character's ability to do a specific chance, usually
+    impacting their chance of success. For example, a character with a high
+    lockpicking skill is more likely to succeed at picking a lock on a chest.
+
     Skills include things you might expect such as climbing or lockpicking,
     however in the Unclassed System almost everything you do is governed by
     skill checks. For instance, rather than bespoke attack rolls, you make
@@ -22,6 +26,21 @@
     and thievery skills) start at negative ratings. The starting rating for
     a given skill is the first number in the "Starting" column of table
     \ref{tab:skills}.
+
+    \section{Using Skills}
+    When a player declares what they want to do, the GM may call for a skill
+    check. To make a skill check, the player rolls 1d20 and calculates the
+    result using the following formula:
+
+    \begin{center}
+        Skill check = 1d20 + governing attribute + skill rating (+ modifiers)
+    \end{center}
+
+    The skill check is successful if it meets a particular target value. This
+    may be a set value for a particular task as outlined in this chapter, it
+    may be set by the GM, or it may be based on an opposed skill check made at
+    the same time by another character. Unless otherwise noted, the skill
+    check must be more than or equal to this target value to be successful.
 
     \section{Potential}
     All skills have a potential. This is the second number in the "Starting"
@@ -125,27 +144,14 @@
 
 \begin{multicols*}{2}
 
-    \section{General Skills}
+    \section{Athletic Skills}
 
-    \subsection*{Climbing}\label{skill:climbing}
+    \section{Physical Skills}
 
-    \subsection*{Deception}\label{skill:deception}
+    \section{Mental Skills}
+    \import{./skills/}{knowledge}
 
-    \subsection*{Hearing}\label{skill:hearing}
-
-    \subsection*{Intimidation}\label{skill:intimidation}
-
-    \subsection*{Lockpicking}\label{skill:lockpicking}
-
-    \subsection*{Persuasion}\label{skill:persuasion}
-
-    \subsection*{Sight}\label{skill:sight}
-
-    \subsection*{Sleight of Hand}\label{skill:sleight-of-hand}
-
-    \subsection*{Smell}\label{skill:smell}
-
-    \subsection*{Stealth}\label{skill:stealth}
+    \section{Thievery Skills}
 
     \section{Speechcraft Skills}\label{speechcraft-skills}
     Speechcraft skills govern interactions with other characters using language.
@@ -159,12 +165,6 @@
     deception.
 
     \section{Combat Skills}
-
-    \subsection*{Block}\label{skill:block}
-
-    \subsection*{Dodge}\label{skill:dodge}
-
-    \subsection*{Parry}\label{skill:parry}
 
     \section{Weapon Skills}\label{weapon-skills}
     Characters have weapon skills in each type of weapon. Weapon skills are used in
