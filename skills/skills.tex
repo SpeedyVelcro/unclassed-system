@@ -8,85 +8,122 @@
 
 
 
+\begin{multicols}{2}
+    Skills include things you might expect such as climbing or lockpicking,
+    however in the Unclassed System almost everything you do is governed by
+    skill checks. For instance, rather than bespoke attack rolls, you make
+    a skill check for the weapon you are using. Rather than making a saving
+    throw to dodge a trap, you make a dodge skill check. Rather than making
+    a saving throw to resist mind control, you make a discipline skill check.
+    For this reason, the Unclassed System has a very large list of skills.
+
+    Skills have a rating that represents a character's aptitude at that skill.
+    This rating usually starts at 0, but some skills (particularly weapon
+    and thievery skills) start at negative ratings. The starting rating for
+    a given skill is the first number in the "Starting" column of table
+    \ref{tab:skills}.
+
+    \section{Potential}
+    All skills have a potential. This is the second number in the "Starting"
+    column of table \ref{tab:skills}. A skill can only be raised as high as
+    its potential.
+
+    Whenever a character levels up, they raise the potential of a number of
+    skills equal to their INT by 1. A character cannot pick the same skill more
+    than once per level. No matter how low their INT, a character always raises
+    the potential of at least 1 skill in this way.
+
+    \section{Skill Points}
+    On character creation, a character starts with a number of skill points
+    equal to 12 + (INT $\times$ 8). Each skill point can be spent to increase
+    a skill's rating by 1, up to a maximum of that skill's potential.
+
+    Characters do not gain skill points as they level up. Instead, they must
+    train in order to raise their skills. If creating a character at a higher
+    level than 1, you should simulate training by spending the character's
+    extra starting gold and adding any time spent training to the character's
+    age.
+\end{multicols}{2}
+
+\begin{center}
+    \unclassedrowcolors
+    \begin{xltabular}{\textwidth}{l l X l l}
+        \caption{Skills}\label{tab:skills} \endfoot
+        \unclassedsubtabletitle{5}{Athletic Skills} \\*
+        \textbf{ATT} & \textbf{Skill} & \textbf{Description} & \textbf{Starting} & \textbf{page} \\*
+        DEX & Balance & Stay upright & 0/4 & pg. \pageref{skill:balance} \\
+        DEX & Climbing & Climb surfaces & 0/4 & pg. \pageref{skill:climbing} \\
+        DEX & Jumping & Jump & 0/4 & pg. \pageref{skill:jumping} \\
+        END & Running & Run long distances & 0/4 & pg. \pageref{skill:running} \\
+        Var. & Sport & Proficiency at physical games & 0/4 & pg. \pageref{skill:sport} \\
+        END & Swimming & Swim & 0/4 & pg. \pageref{skill:swimming} \\
+        \unclassedsubtabletitle{5}{Physical Skills} \\*
+        \textbf{ATT} & \textbf{Skill} & \textbf{Description} & \textbf{Starting} & \textbf{page} \\*
+        END & Breath Control & Hold breath & 0/4 & pg. \pageref{skill:hearing} \\
+        SEN & Hearing & Ability to hear sounds & 0/4 & pg. \pageref{skill:hearing} \\
+        SEN & Sight & Ability to see things & 0/4 & pg. \pageref{skill:sight} \\
+        SEN & Smell & Ability to smell things & 0/4 & pg. \pageref{skill:smell} \\
+        END & Tolerance & Toxin resistance & 0/4 & pg. \pageref{skill:tolerance} \\
+        \unclassedsubtabletitle{5}{Mental Skills} \\*
+        \textbf{ATT} & \textbf{Skill} & \textbf{Description} & \textbf{Starting} & \textbf{page} \\*
+        WIL & Discipline & Ability to resist mental effects & 0/4 & pg. \pageref{skill:self-control} \\
+        WIL & Focus & Concentration on tasks in distracting or dangerous conditions & 0/4 & pg. \pageref{skill:concentration} \\
+        INT & Gaming (...) & Proficiency at card, board, and dice games & 0/4 & pg. \pageref{skill:gaming} \\
+        INT & Knowledge (...) & Recall of facts and information & 0/4 & pg. \pageref{skill:knowledge} \\
+        \unclassedsubtabletitle{5}{Thievery Skills} \\*
+        \textbf{ATT} & \textbf{Skill} & \textbf{Description} & \textbf{Starting} & \textbf{page} \\*
+        DEX & Device & Disable, arm, and manipulate traps and other devices & -4/4 & pg. \pageref{skill:device} \\
+        DEX & Lockpicking & Bypass locks without the key & -4/4 & pg. \pageref{skill:lockpicking} \\
+        DEX & Sleight of Hand & Pickpocket or cheat at games & -4/4 & pg. \pageref{skill:sleight-of-hand} \\
+        DEX & Stealth & Ability to evade detection & 0/4 & pg. \pageref{skill:stealth} \\
+        \unclassedsubtabletitle{5}{Speechcraft Skills} \\*
+        \textbf{ATT} & \textbf{Skill} & \textbf{Description} & \textbf{Starting} & \textbf{page} \\*
+        CHA & Deception & Lie & 0/4 & pg. \pageref{skill:deception} \\
+        CHA & Intimidation & Make oneself appear more dangerous & 0/4 & pg. \pageref{skill:intimidation} \\
+        CHA & Persuasion & Persuade people to do things & 0/4 & pg. \pageref{skill:persuasion} \\
+        CHA & Seduction & Seduce people & 0/4 & pg. \pageref{skill:seduction} \\
+        \unclassedsubtabletitle{5}{Combat Skills} \\*
+        \textbf{ATT} & \textbf{Skill} & \textbf{Description} & \textbf{Starting} & \textbf{page} \\*
+        DEX & Block & Block attacks with a shield & 0/4 & pg. \pageref{skill:block} \\
+        DEX & Dodge & Dodge out of the way of attacks & 0/4 & pg. \pageref{skill:dodge} \\
+        DEX & Parry & Parry attacks with a melee weapon & 0/4 & pg. \pageref{skill:parry} \\
+        \unclassedsubtabletitle{5}{Weapon Skills} \\*
+        \textbf{ATT} & \textbf{Skill} & \textbf{Description} & \textbf{Starting} & \textbf{page} \\*
+        STR & Hand-to-Hand & Fighting with fists & 0/4 & - \\
+        STR & Handaxe & Smaller axe & 0/2 & - \\
+        STR & Club & Blunt weapon & 0/2 & - \\
+        DEX & Dagger & Easily-concealed blade & -2/2 & - \\
+        DEX & Flail & Weapon with a spinning head & -2/2 & - \\ % TODO: In equipment, requires STR 1 to use
+        STR & Greataxe & Large two-handed axe & 0/2 & - \\
+        DEX & Greatsword & Large two-handed sword & -4/4 & - \\ % TODO: In equipment, requires STR 2 to use
+        DEX & Hand Crossbow & Hand Crossbow & -1/2 & - \\
+        DEX & Heavy Crossbow & Heavy Crossbow & -1/2 & - \\
+        Var. & Improvised (...) & Random objects such as cutlery and furniture & -2/1 & - \\
+        DEX & Light Crossbow & Light crossbow & -1/2 & - \\
+        STR & Longbow & Large bow & -4/4 & - \\ % TODO: In equipment, Requires STR 3 to use
+        DEX & Longspear & Long spear & 0/2 & - \\
+        DEX & Longsword & Sword with a long blade & -4/4 & - \\
+        STR & Mace & Weapon with a heavy head & 0/2 & - \\ % Includes morningstar
+        DEX & Staff & Quarterstaves and other staves & 0/4 & - \\
+        DEX & Shortbow & Smaller bow & -4/4 & - \\ % TODO: In equipment, Requires STR 1 to use
+        DEX & Shortspear & Short spear & 0/2 & - \\
+        DEX & Shortsword & Lighter sword with a short blade & -4/4 & - \\
+        \unclassedsubtabletitle{5}{Spell Schools} \\*
+        \textbf{ATT} & \textbf{Skill} & \textbf{Description} & \textbf{Starting} & \textbf{page} \\*
+        SOR & Aeromancy & Command of wind & 0/4 & - \\
+        SOR & Conjuration & Summoning & 0/4 & - \\
+        SOR & Cryomancy & Command of ice & 0/4 & - \\
+        SOR & Divination & Revelation of knowledge & 0/4 & - \\
+        SOR & Hydromancy & Command of water & 0/4 & - \\
+        SOR & Illusion & Misdirection of the senses & 0/4 & - \\
+        SOR & Necromancy & Command of the dead and undead & 0/4 & - \\
+        SOR & Pyromancy & Command of fire & 0/4 & - \\
+        SOR & Restoration & Healing & 0/4 & - \\
+        SOR & Warding & Protection & 0/4 & - \\
+    \end{xltabular}
+\end{center}
+
 \begin{multicols*}{2}
-    \begin{table*}[ht!]
-        \unclassedrowcolors
-        \begin{tabularx}{\textwidth}{l l X l l}
-            \unclassedsubtabletitle{5}{Athletic Skills} \\
-            \textbf{ATT} & \textbf{Skill} & \textbf{Description} & \textbf{Starting} & \textbf{page} \\
-            DEX & Balance & Stay upright & 0/4 & pg. \pageref{skill:balance} \\
-            DEX & Climbing & Climb surfaces & 0/4 & pg. \pageref{skill:climbing} \\
-            DEX & Jumping & Jump & 0/4 & pg. \pageref{skill:jumping} \\
-            END & Running & Run long distances & 0/4 & pg. \pageref{skill:running} \\
-            Var. & Sport & Proficiency at physical games & 0/4 & pg. \pageref{skill:sport} \\
-            END & Swimming & Swim & 0/4 & pg. \pageref{skill:swimming} \\
-            \unclassedsubtabletitle{5}{Physical Skills} \\
-            \textbf{ATT} & \textbf{Skill} & \textbf{Description} & \textbf{Starting} & \textbf{page} \\
-            END & Breath Control & Hold breath & 0/4 & pg. \pageref{skill:hearing} \\
-            SEN & Hearing & Ability to hear sounds & 0/4 & pg. \pageref{skill:hearing} \\
-            SEN & Sight & Ability to see things & 0/4 & pg. \pageref{skill:sight} \\
-            SEN & Smell & Ability to smell things & 0/4 & pg. \pageref{skill:smell} \\
-            END & Tolerance & Toxin resistance & 0/4 & pg. \pageref{skill:tolerance} \\
-            \unclassedsubtabletitle{5}{Mental Skills} \\
-            \textbf{ATT} & \textbf{Skill} & \textbf{Description} & \textbf{Starting} & \textbf{page} \\
-            WIL & Discipline & Ability to resist mental effects & 0/4 & pg. \pageref{skill:self-control} \\
-            WIL & Focus & Concentration on tasks in distracting or dangerous conditions & 0/4 & pg. \pageref{skill:concentration} \\
-            INT & Gaming (...) & Proficiency at card, board, and dice games & 0/4 & pg. \pageref{skill:gaming} \\
-            INT & Knowledge (...) & Recall of facts and information & 0/4 & pg. \pageref{skill:knowledge} \\
-            \unclassedsubtabletitle{5}{Thievery Skills} \\
-            \textbf{ATT} & \textbf{Skill} & \textbf{Description} & \textbf{Starting} & \textbf{page} \\
-            DEX & Device & Disable, arm, and manipulate traps and other devices & -4/4 & pg. \pageref{skill:device} \\
-            DEX & Lockpicking & Bypass locks without the key & -4/4 & pg. \pageref{skill:lockpicking} \\
-            DEX & Sleight of Hand & Pickpocket or cheat at games & -4/4 & pg. \pageref{skill:sleight-of-hand} \\
-            DEX & Stealth & Ability to evade detection & 0/4 & pg. \pageref{skill:stealth} \\
-            \unclassedsubtabletitle{5}{Speechcraft Skills} \\
-            \textbf{ATT} & \textbf{Skill} & \textbf{Description} & \textbf{Starting} & \textbf{page} \\
-            CHA & Deception & Lie & 0/4 & pg. \pageref{skill:deception} \\
-            CHA & Intimidation & Make oneself appear more dangerous & 0/4 & pg. \pageref{skill:intimidation} \\
-            CHA & Persuasion & Persuade people to do things & 0/4 & pg. \pageref{skill:persuasion} \\
-            CHA & Seduction & Seduce people & 0/4 & pg. \pageref{skill:seduction} \\
-            \unclassedsubtabletitle{5}{Combat Skills} \\
-            \textbf{ATT} & \textbf{Skill} & \textbf{Description} & \textbf{Starting} & \textbf{page} \\
-            DEX & Block & Block attacks with a shield & 0/4 & pg. \pageref{skill:block} \\
-            DEX & Dodge & Dodge out of the way of attacks & 0/4 & pg. \pageref{skill:dodge} \\
-            DEX & Parry & Parry attacks with a melee weapon & 0/4 & pg. \pageref{skill:parry} \\
-            \unclassedsubtabletitle{5}{Weapon Skills} \\
-            \textbf{ATT} & \textbf{Skill} & \textbf{Description} & \textbf{Starting} & \textbf{page} \\
-            STR & Hand-to-Hand & Fighting with fists & 0/4 & - \\
-            STR & Handaxe & Smaller axe & 0/2 & - \\
-            STR & Club & Blunt weapon & 0/2 & - \\
-            DEX & Dagger & Easily-concealed blade & -2/2 & - \\
-            DEX & Flail & Weapon with a spinning head & -2/2 & - \\ % TODO: In equipment, requires STR 1 to use
-            STR & Greataxe & Large two-handed axe & 0/2 & - \\
-            DEX & Greatsword & Large two-handed sword & -4/4 & - \\ % TODO: In equipment, requires STR 2 to use
-            DEX & Hand Crossbow & Hand Crossbow & -1/2 & - \\
-            DEX & Heavy Crossbow & Heavy Crossbow & -1/2 & - \\
-            Var. & Improvised (...) & Random objects such as cutlery and furniture & -2/1 & - \\
-            DEX & Light Crossbow & Light crossbow & -1/2 & - \\
-            STR & Longbow & Large bow & -4/4 & - \\ % TODO: In equipment, Requires STR 3 to use
-            DEX & Longspear & Long spear & 0/2 & - \\
-            DEX & Longsword & Sword with a long blade & -4/4 & - \\
-            STR & Mace & Weapon with a heavy head & 0/2 & - \\ % Includes morningstar
-            DEX & Staff & Quarterstaves and other staves & 0/4 & - \\
-            DEX & Shortbow & Smaller bow & -4/4 & - \\ % TODO: In equipment, Requires STR 1 to use
-            DEX & Shortspear & Short spear & 0/2 & - \\
-            DEX & Shortsword & Lighter sword with a short blade & -4/4 & - \\
-            \unclassedsubtabletitle{5}{Spell Schools} \\
-            \textbf{ATT} & \textbf{Skill} & \textbf{Description} & \textbf{Starting} & \textbf{page} \\
-            SOR & Aeromancy & Command of wind & 0/4 & - \\
-            SOR & Conjuration & Summoning & 0/4 & - \\
-            SOR & Cryomancy & Command of ice & 0/4 & - \\
-            SOR & Divination & Revelation of knowledge & 0/4 & - \\
-            SOR & Hydromancy & Command of water & 0/4 & - \\
-            SOR & Illusion & Misdirection of the senses & 0/4 & - \\
-            SOR & Necromancy & Command of the dead and undead & 0/4 & - \\
-            SOR & Pyromancy & Command of fire & 0/4 & - \\
-            SOR & Restoration & Healing & 0/4 & - \\
-            SOR & Warding & Protection & 0/4 & - \\
-        \end{tabularx}
-        \caption{Skills}
-        \label{tab:skills}
-    \end{table*}
 
     \section{General Skills}
 
