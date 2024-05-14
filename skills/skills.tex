@@ -21,16 +21,17 @@
     a saving throw to resist mind control, you make a discipline skill check.
     For this reason, the Unclassed System has a very large list of skills.
 
-    Skills have a rating that represents a character's aptitude at that skill.
-    This rating usually starts at 0, but some skills (particularly weapon
-    and thievery skills) start at negative ratings. The starting rating for
-    a given skill is the first number in the "Starting" column of table
-    \ref{tab:skills}.
+    All skills have a rating which starts at 0. This rating determines how
+    good a character is at that skill. If a character's rating in a skill is
+    0, that character is said to be "untrained" in that skill. They can still
+    use that skill, but they use a default value in place of the skill's
+    rating. This value is in the "Def." column of table \ref{tab:skills}.
 
     \section{Using Skills}
     When a player declares what they want to do, the GM may call for a skill
     check. To make a skill check, the player rolls 1d20 and calculates the
-    result using the following formula:
+    result using the following formula, substituting "skill rating" for the
+    default if the rating is 0:
 
     \begin{center}
         Skill check = 1d20 + governing attribute + skill rating (+ modifiers)
@@ -43,7 +44,7 @@
     check must be more than or equal to this target value to be successful.
 
     \section{Potential}
-    All skills have a potential. This is the second number in the "Starting"
+    All skills have a potential. This is the number in the "Pot."
     column of table \ref{tab:skills}. A skill can only be raised as high as
     its potential.
 
@@ -62,83 +63,118 @@
     level than 1, you should simulate training by spending the character's
     extra starting gold and adding any time spent training to the character's
     age.
+
+    \section{Training}
+    To improve skills after character creation, a character must train. This
+    takes time and potentially money or resources.
+
+    The easiest way to train is to find a trainer - a non-player character
+    who has a higher skill rating and is willing to train the character.
+    Training with a trainer takes a number of days listed in the "Training"
+    column of table \ref{tab:skills}, and most trainers charge a daily fee
+    for training. In the absence of any other factors that would affect the
+    price, the GM may use the formula below:
+
+    \begin{center}
+        Training Fee = (Trainer's skill rating + Trainer's Teaching skill rating) $\times$ 1 sp / day
+    \end{center}
+
+    Characters can also self-study to train any skill without a trainer.
+    Certain skills require access to specific resources for self-study, and
+    these are listed in the respective skill descriptions. Self-study takes 4
+    times as long as training with a trainer. This multiplication is done
+    before applying any other time reductions.
+
+    Weapon and combat skills can be trained with a special kind of self study
+    called sparring. Sparring is a two-person activity, and each character
+    involved can train a weapon or combat skill of their choice. They do not
+    have to train the same skill. Sparring takes 2 times as long as training
+    with a trainer, instead of the usual 4.
+
+    Spell schools and mental, thievery, and speechcraft skills can have their
+    training time reduced using the academia skill (see pg. \pageref{skill:academia}).
+    Athletic, physical, combat, and weapon skills can similarly have their training
+    time reduced using the focus skill (see pg. \pageref{skill:focus}). If
+    training with a trainer, the trainer reduces the time spent training using
+    the teaching skill (see pg. \pageref{skill:teaching}).
 \end{multicols}{2}
 
 \begin{center}
     \unclassedrowcolors
-    \begin{xltabular}{\textwidth}{l l X l l}
+    \begin{xltabular}{\textwidth}{l l X l l l l}
         \caption{Skills}\label{tab:skills} \endfoot
         \unclassedsubtabletitle{5}{Athletic Skills} \\*
-        \textbf{ATT} & \textbf{Skill} & \textbf{Description} & \textbf{Starting} & \textbf{page} \\*
-        DEX & Balance & Stay upright & 0/4 & pg. \pageref{skill:balance} \\
-        DEX & Climbing & Climb surfaces & 0/4 & pg. \pageref{skill:climbing} \\
-        DEX & Jumping & Jump & 0/4 & pg. \pageref{skill:jumping} \\
-        END & Running & Run long distances & 0/4 & pg. \pageref{skill:running} \\
-        Var. & Sport & Proficiency at physical games & 0/4 & pg. \pageref{skill:sport} \\
-        END & Swimming & Swim & 0/4 & pg. \pageref{skill:swimming} \\
+        \textbf{ATT} & \textbf{Skill} & \textbf{Description} & \textbf{Def.} & \textbf{Pot.} & \textbf{Training} & \textbf{page} \\*
+        DEX & Balance & Stay upright & 0 & 4 & 10 days & pg. \pageref{skill:balance} \\
+        DEX & Climbing & Climb surfaces & 0 & 4 & 10 days & pg. \pageref{skill:climbing} \\
+        DEX & Jumping & Jump & 0 & 4 & 10 days & pg. \pageref{skill:jumping} \\
+        END & Running & Run long distances & 0 & 4 & 10 days & pg. \pageref{skill:running} \\
+        Var. & Sport & Proficiency at physical games & 0 & 4 & 30 days & pg. \pageref{skill:sport} \\
+        END & Swimming & Swim & -10 & 4 & 30 days & pg. \pageref{skill:swimming} \\
         \unclassedsubtabletitle{5}{Physical Skills} \\*
-        \textbf{ATT} & \textbf{Skill} & \textbf{Description} & \textbf{Starting} & \textbf{page} \\*
-        END & Breath Control & Hold breath & 0/4 & pg. \pageref{skill:hearing} \\
-        SEN & Hearing & Ability to hear sounds & 0/4 & pg. \pageref{skill:hearing} \\
-        SEN & Sight & Ability to see things & 0/4 & pg. \pageref{skill:sight} \\
-        SEN & Smell & Ability to smell things & 0/4 & pg. \pageref{skill:smell} \\
-        END & Tolerance & Toxin resistance & 0/4 & pg. \pageref{skill:tolerance} \\
+        \textbf{ATT} & \textbf{Skill} & \textbf{Description} & \textbf{Def.} & \textbf{Pot.} & \textbf{Training} & \textbf{page} \\*
+        END & Breath Control & Hold breath & 0 & 4 & 10 days & pg. \pageref{skill:hearing} \\
+        SEN & Hearing & Ability to hear sounds & 0 & 4 & 30 days & pg. \pageref{skill:hearing} \\
+        SEN & Sight & Ability to see things & 0 & 4 & 30 days & pg. \pageref{skill:sight} \\
+        SEN & Smell & Ability to smell things & 0 & 4 & 30 days & pg. \pageref{skill:smell} \\
+        END & Tolerance & Toxin resistance & 0 & 4 & 30 days & pg. \pageref{skill:tolerance} \\
         \unclassedsubtabletitle{5}{Mental Skills} \\*
-        \textbf{ATT} & \textbf{Skill} & \textbf{Description} & \textbf{Starting} & \textbf{page} \\*
-        WIL & Discipline & Ability to resist mental effects & 0/4 & pg. \pageref{skill:self-control} \\
-        WIL & Focus & Concentration on tasks in distracting or dangerous conditions & 0/4 & pg. \pageref{skill:concentration} \\
-        INT & Gaming (...) & Proficiency at card, board, and dice games & 0/4 & pg. \pageref{skill:gaming} \\
-        INT & Knowledge (...) & Recall of facts and information & 0/4 & pg. \pageref{skill:knowledge} \\
+        \textbf{ATT} & \textbf{Skill} & \textbf{Description} & \textbf{Def.} & \textbf{Pot.} & \textbf{Training} & \textbf{page} \\*
+        WIL & Discipline & Ability to resist mental effects & 0 & 4 & 30 days & pg. \pageref{skill:self-control} \\
+        WIL & Focus & Concentration on tasks in distracting or dangerous conditions & 0 & 4 & 30 days & pg. \pageref{skill:concentration} \\
+        INT & Gaming (...) & Proficiency at card, board, and dice games & 0 & 4 & 30 days & pg. \pageref{skill:gaming} \\
+        INT & Knowledge (...) & Recall of facts and information & 0 & 10 & 30 days & pg. \pageref{skill:knowledge} \\
+        INT & Academia & Study and research ability & 0 & 4 & 30 days & pg. \pageref{skill:academia} \\
         \unclassedsubtabletitle{5}{Thievery Skills} \\*
-        \textbf{ATT} & \textbf{Skill} & \textbf{Description} & \textbf{Starting} & \textbf{page} \\*
-        DEX & Device & Disable, arm, and manipulate traps and other devices & -4/4 & pg. \pageref{skill:device} \\
-        DEX & Lockpicking & Bypass locks without the key & -4/4 & pg. \pageref{skill:lockpicking} \\
-        DEX & Sleight of Hand & Pickpocket or cheat at games & -4/4 & pg. \pageref{skill:sleight-of-hand} \\
-        DEX & Stealth & Ability to evade detection & 0/4 & pg. \pageref{skill:stealth} \\
+        \textbf{ATT} & \textbf{Skill} & \textbf{Description} & \textbf{Def.} & \textbf{Pot.} & \textbf{Training} & \textbf{page} \\*
+        DEX & Device & Disable, arm, and manipulate traps and other devices & -8 & 4 & 30 days & pg. \pageref{skill:device} \\
+        DEX & Lockpicking & Bypass locks without the key & -8 & 4 & 30 days & pg. \pageref{skill:lockpicking} \\
+        DEX & Sleight of Hand & Pickpocket or cheat at games & 0 & 4 & 30 days & pg. \pageref{skill:sleight-of-hand} \\
+        DEX & Stealth & Ability to evade detection & 0 & 4 & 30 days & pg. \pageref{skill:stealth} \\
         \unclassedsubtabletitle{5}{Speechcraft Skills} \\*
-        \textbf{ATT} & \textbf{Skill} & \textbf{Description} & \textbf{Starting} & \textbf{page} \\*
-        CHA & Deception & Lie & 0/4 & pg. \pageref{skill:deception} \\
-        CHA & Intimidation & Make oneself appear more dangerous & 0/4 & pg. \pageref{skill:intimidation} \\
-        CHA & Persuasion & Persuade people to do things & 0/4 & pg. \pageref{skill:persuasion} \\
-        CHA & Seduction & Seduce people & 0/4 & pg. \pageref{skill:seduction} \\
+        \textbf{ATT} & \textbf{Skill} & \textbf{Description} & \textbf{Def.} & \textbf{Pot.} & \textbf{Training} & \textbf{page} \\*
+        CHA & Deception & Lie & 0 & 4 & 30 days & pg. \pageref{skill:deception} \\
+        CHA & Intimidation & Make oneself appear more dangerous & 0 & 4 & 30 days & pg. \pageref{skill:intimidation} \\
+        CHA & Persuasion & Persuade people to do things & 0 & 4 & 30 days & pg. \pageref{skill:persuasion} \\
+        CHA & Seduction & Seduce people & 0 & 4 & 30 days& pg. \pageref{skill:seduction} \\
         \unclassedsubtabletitle{5}{Combat Skills} \\*
-        \textbf{ATT} & \textbf{Skill} & \textbf{Description} & \textbf{Starting} & \textbf{page} \\*
-        DEX & Block & Block attacks with a shield & 0/4 & pg. \pageref{skill:block} \\
-        DEX & Dodge & Dodge out of the way of attacks & 0/4 & pg. \pageref{skill:dodge} \\
-        DEX & Parry & Parry attacks with a melee weapon & 0/4 & pg. \pageref{skill:parry} \\
+        \textbf{ATT} & \textbf{Skill} & \textbf{Description} & \textbf{Def.} & \textbf{Pot.} & \textbf{Training} & \textbf{page} \\*
+        DEX & Block & Block attacks with a shield & 0 & 4 & 30 days & pg. \pageref{skill:block} \\
+        DEX & Dodge & Dodge out of the way of attacks & 0 & 4 & 30 days & pg. \pageref{skill:dodge} \\
+        DEX & Parry & Parry attacks with a melee weapon & 0 & 4 & 30 days & pg. \pageref{skill:parry} \\
         \unclassedsubtabletitle{5}{Weapon Skills} \\*
-        \textbf{ATT} & \textbf{Skill} & \textbf{Description} & \textbf{Starting} & \textbf{page} \\*
-        STR & Hand-to-Hand & Fighting with fists & 0/4 & - \\
-        STR & Handaxe & Smaller axe & 0/2 & - \\
-        STR & Club & Blunt weapon & 0/2 & - \\
-        DEX & Dagger & Easily-concealed blade & -2/2 & - \\
-        DEX & Flail & Weapon with a spinning head & -2/2 & - \\ % TODO: In equipment, requires STR 1 to use
-        STR & Greataxe & Large two-handed axe & 0/2 & - \\
-        DEX & Greatsword & Large two-handed sword & -4/4 & - \\ % TODO: In equipment, requires STR 2 to use
-        DEX & Hand Crossbow & Hand Crossbow & -1/2 & - \\
-        DEX & Heavy Crossbow & Heavy Crossbow & -1/2 & - \\
-        Var. & Improvised (...) & Random objects such as cutlery and furniture & -2/1 & - \\
-        DEX & Light Crossbow & Light crossbow & -1/2 & - \\
-        STR & Longbow & Large bow & -4/4 & - \\ % TODO: In equipment, Requires STR 3 to use
-        DEX & Longspear & Long spear & 0/2 & - \\
-        DEX & Longsword & Sword with a long blade & -4/4 & - \\
-        STR & Mace & Weapon with a heavy head & 0/2 & - \\ % Includes morningstar
-        DEX & Staff & Quarterstaves and other staves & 0/4 & - \\
-        DEX & Shortbow & Smaller bow & -4/4 & - \\ % TODO: In equipment, Requires STR 1 to use
-        DEX & Shortspear & Short spear & 0/2 & - \\
-        DEX & Shortsword & Lighter sword with a short blade & -4/4 & - \\
+        \textbf{ATT} & \textbf{Skill} & \textbf{Description} & \textbf{Def.} & \textbf{Pot.} & \textbf{Training} & \textbf{page} \\*
+        STR & Hand-to-Hand & Fighting with fists & 0 & 4 & 20 days & - \\
+        STR & Handaxe & Smaller axe & 0 & 2 & 10 days & - \\
+        STR & Club & Blunt weapon & 0 & 2 & 10 days & - \\
+        DEX & Dagger & Easily-concealed blade & -2 & 2 & 20 days & - \\
+        DEX & Flail & Weapon with a spinning head & -2 & 2 & 30 days & - \\ % TODO: In equipment, requires STR 1 to use
+        STR & Greataxe & Large two-handed axe & 0 & 2 & 20 days & - \\
+        DEX & Greatsword & Large two-handed sword & -4 & 4 & 30 days & - \\ % TODO: In equipment, requires STR 2 to use
+        DEX & Hand Crossbow & Hand Crossbow & -1 & 2 & 10 days & - \\
+        DEX & Heavy Crossbow & Heavy Crossbow & -1 & 2 & 10 days & - \\
+        Var. & Improvised (...) & Random objects such as cutlery and furniture & -2 & 1 & 10 days & - \\
+        DEX & Light Crossbow & Light crossbow & -1 & 2 & 10 days & - \\
+        STR & Longbow & Large bow & -4 & 4 & 30 days & - \\ % TODO: In equipment, Requires STR 3 to use
+        DEX & Longspear & Long spear & 0 & 2 & 10 days & - \\
+        DEX & Longsword & Sword with a long blade & -4 & 4 & 30 days & - \\
+        STR & Mace & Weapon with a heavy head & 0 & 2 & 10 days & - \\ % Includes morningstar
+        DEX & Staff & Quarterstaves and other staves & 0 & 4 & 20 days & - \\
+        DEX & Shortbow & Smaller bow & -4 & 4 & 30 days & - \\ % TODO: In equipment, Requires STR 1 to use
+        DEX & Shortspear & Short spear & 0 & 2 & 10 days & - \\
+        DEX & Shortsword & Lighter sword with a short blade & -4 & 4 & 30 days & - \\
         \unclassedsubtabletitle{5}{Spell Schools} \\*
-        \textbf{ATT} & \textbf{Skill} & \textbf{Description} & \textbf{Starting} & \textbf{page} \\*
-        SOR & Aeromancy & Command of wind & 0/4 & - \\
-        SOR & Conjuration & Summoning & 0/4 & - \\
-        SOR & Cryomancy & Command of ice & 0/4 & - \\
-        SOR & Divination & Revelation of knowledge & 0/4 & - \\
-        SOR & Hydromancy & Command of water & 0/4 & - \\
-        SOR & Illusion & Misdirection of the senses & 0/4 & - \\
-        SOR & Necromancy & Command of the dead and undead & 0/4 & - \\
-        SOR & Pyromancy & Command of fire & 0/4 & - \\
-        SOR & Restoration & Healing & 0/4 & - \\
-        SOR & Warding & Protection & 0/4 & - \\
+        \textbf{ATT} & \textbf{Skill} & \textbf{Description} & \textbf{Def.} & \textbf{Pot.} & \textbf{Training} & \textbf{page} \\*
+        SOR & Aeromancy & Command of wind & 0 & 4 & 30 days & - \\
+        SOR & Conjuration & Summoning & 0 & 4 & 30 days & - \\
+        SOR & Cryomancy & Command of ice & 0 & 4 & 30 days & - \\
+        SOR & Divination & Revelation of knowledge & 0 & 4 & 30 days & - \\
+        SOR & Hydromancy & Command of water & 0 & 4 & 30 days & - \\
+        SOR & Illusion & Misdirection of the senses & 0 & 4 & 30 days & - \\
+        SOR & Necromancy & Command of the dead and undead & 0 & 4 & 30 days & - \\
+        SOR & Pyromancy & Command of fire & 0 & 4 & 30 days & - \\
+        SOR & Restoration & Healing & 0 & 4 & 30 days & - \\
+        SOR & Warding & Protection & 0 & 4 & 30 days & - \\
     \end{xltabular}
 \end{center}
 
