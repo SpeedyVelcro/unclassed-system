@@ -120,11 +120,11 @@
         END & Tolerance & Toxin resistance & 0 & 4 & 30 days & pg. \pageref{skill:tolerance} \\
         \unclassedsubtabletitle{5}{Mental Skills} \\*
         \textbf{ATT} & \textbf{Skill} & \textbf{Description} & \textbf{Def.} & \textbf{Pot.} & \textbf{Training} & \textbf{page} \\*
+        INT & Academia & Study and research ability & 0 & 4 & 30 days & pg. \pageref{skill:academia} \\
         WIL & Discipline & Ability to resist mental effects & 0 & 4 & 30 days & pg. \pageref{skill:self-control} \\
         WIL & Focus & Concentration on tasks in distracting or dangerous conditions & 0 & 4 & 30 days & pg. \pageref{skill:concentration} \\
         INT & Gaming (...) & Proficiency at card, board, and dice games & 0 & 4 & 30 days & pg. \pageref{skill:gaming} \\
         INT & Knowledge (...) & Recall of facts and information & 0 & 10 & 30 days & pg. \pageref{skill:knowledge} \\
-        INT & Academia & Study and research ability & 0 & 4 & 30 days & pg. \pageref{skill:academia} \\
         \unclassedsubtabletitle{5}{Thievery Skills} \\*
         \textbf{ATT} & \textbf{Skill} & \textbf{Description} & \textbf{Def.} & \textbf{Pot.} & \textbf{Training} & \textbf{page} \\*
         DEX & Device & Disable, arm, and manipulate traps and other devices & -8 & 4 & 30 days & pg. \pageref{skill:device} \\
@@ -181,13 +181,29 @@
 \begin{multicols*}{2}
 
     \section{Athletic Skills}
+    Athletic skills are those which involve physical exertion, such as running
+    or jumping. Training physical skills uses the focus skill.
 
     \section{Physical Skills}
+    Physical skills use the functions of the body to perform basic tasks. The
+    most important physical skills are the senses, such as vision and hearing,
+    but there are other useful physical skills such as breath control.
+
+    Physical skills are trained using the focus skill.
 
     \section{Mental Skills}
+    Mental skills are those that involve using the mind in a mundane (i.e. not
+    supernatural, magical, or psionic) way. Training mental skills uses the
+    academia skill.
+
+    \import{./skills/}{Academia}
+    \import{./skills/}{focus}
     \import{./skills/}{knowledge}
 
     \section{Thievery Skills}
+    Thievery skills are typically practiced by thieves and rogues, and
+    encompass those skills which are particularly suited for stealthy
+    gameplay. Thievery skills are trained using the focus skill.
 
     \section{Speechcraft Skills}\label{speechcraft-skills}
     Speechcraft skills govern interactions with other characters using language.
@@ -199,13 +215,20 @@
     culture, this is is usually as simple as seeing the character or hearing the
     character talk, but for background, this may require some persuasion or
     deception.
+    
+    Training speechcraft skills uses the academia skill.
 
     \section{Combat Skills}
+    Combat skills are a specific set of skills that are used in combat to pull
+    of unique maneuvers other than simple attacks (which are governed by weapon
+    skills). Training combat skills uses the focus skill.
 
     \section{Weapon Skills}\label{weapon-skills}
     Characters have weapon skills in each type of weapon. Weapon skills are used in
     combat. As there is not much else they can be used for, weapon skills are only
     listed in table \ref{tab:skills}.
+
+    Training weapon skills uses the focus skill.
 
     % TODO: cross-skill effectiveness. e.g. longsword users having some skill in shortsword
 
@@ -214,5 +237,7 @@
     a skill check, it will be mentioned in the spell's description. As spell
     schools have no further use beyond casting spells, they are only listed in
     table \ref{tab:skills}.
+
+    Training spell schools uses the academia skill.
 \end{multicols*}
 
