@@ -18,9 +18,9 @@ Money can be exchanged for goods and services.
             % Following armors assume some sort of additional padding underneath, hence at least 4b
             Chain & 150 gp & 8 & 4b/2p/6s & 30 lb. \\ % Chain mail is highly resistant to slashing irl, weaker to piercing as you can force the rings apart
             Scale & 300 gp & 10 & 4b/4p/8s & 60 lb. \\ % Like chain mail, but improved resistance against thrusts and glances at certain angles
-            Brigandine & 600 gp & 10 & 6b/8p/8s & 50 lb. \\
-            Half Plate & 800 gp & 10 & 6b/16p/16s & 55 lb. \\ % Kinda like "munitions armor" - more gaps than full plate
-            Full Plate & 1,500 gp & 14 & 8b/16p/16s/4m & 60 lb. \\ % Magical resistance only when wearing full plate in all slots
+            Brigandine & 600 gp & 10 & 6b/8p/8s/1m & 50 lb. \\
+            Munition & 800 gp & 10 & 6b/16p/16s/2m & 55 lb. \\ % A type of "half/three-quarter" plate - more gaps than full plate and not fitted
+            Plate & 1,500 gp & 14 & 8b/16p/16s/4m & 60 lb. \\
             \unclassedsubtabletitle{5}{Shields} \\
             \textbf{Armor} & \textbf{Cost} & \textbf{Cover} & \textbf{Resistance} & \textbf{Weight} \\
             Light steel shield & & & - & \\
@@ -28,6 +28,9 @@ Money can be exchanged for goods and services.
         \caption{Armor}
         \label{tab:armor}
     \end{table*}
+    % NB: Area of effect attacks like fireballs should only check the
+    % least-armoured slot. e.g. plate won't help you against a fireball if
+    % you're not wearing a helmet
 
     The \textbf{cover rating} of a piece of armor represents the difficulty of
     finding a weak point and bypassing it. A higher cover rating means a greater \textit{chance}
@@ -67,6 +70,34 @@ Money can be exchanged for goods and services.
     \end{center}
 
     \section{Weapons}
+    \begin{table*}[ht!]
+        \unclassedrowcolors
+        \begin{tabularx}{\textwidth}{X l l l l l}
+            \unclassedsubtabletitle{5}{One-Handed Melee Weapons} \\
+            \textbf{Weapon} & \textbf{Cost} & \textbf{Damage} & \textbf{Critical} & \textbf{Range} & \textbf{Weight} \\
+            Dagger & ? & 1d4 + STR p/s & 19-20, $\times$2 & - & 1 lb. \\
+            Shortsword & ? & 1d6 + STR p/s & 20, $\times$2 & - & 2 lb. \\
+            Longsword & ? & 1d8 + STR s & 20, $\times$2 & - & 3 lb. \\
+            Bastard Sword* & ? & 1d6 + STR s & 20, $\times$2 & - & 4 lb. \\ % Switching from 1 to 2 handed is free
+            \unclassedsubtabletitle{5}{Two-Handed Melee Weapons} \\
+            \textbf{Weapon} & \textbf{Cost} & \textbf{Damage} & \textbf{Critical} & \textbf{Range} & \textbf{Weight} \\
+            Bastard Sword* & ? & 1d10 + STR s & 20, $\times$2 & - & 4 lb. \\
+            Greatsword & ? & 1d12 + STR s & 20, $\times$2 & - & 6 lb. \\
+            \unclassedsubtabletitle{5}{One-Handed Ranged Weapons} \\
+            \textbf{Weapon} & \textbf{Cost} & \textbf{Damage} & \textbf{Critical} & \textbf{Range} & \textbf{Weight} \\
+            Hand Crossbow & ? & 1d6 p & 20, $\times$2 & ? & 3 lb. \\
+            \unclassedsubtabletitle{5}{Two-Handed Ranged Weapons} \\
+            \textbf{Weapon} & \textbf{Cost} & \textbf{Damage} & \textbf{Critical} & \textbf{Range} & \textbf{Weight} \\
+            Light Crossbow & ? & 1d6 + 2 p & 20, $\times$2 & ? & 4 lb. \\
+            Heavy Crossbow & ? & 1d6 + 4 p & 20, $\times$2 & ? & 6 lb. \\
+            Siege Crossbow* & ? & 1d6 + 8 p & 20, $\times$2 & ? & 10 lb. \\ % More complex reloading
+        \end{tabularx}
+        \caption{Weapons}
+        \label{tab:weapons}
+    \end{table*}
+    % Asterisk given when there is complexity you need to read in the description
+    % Critical hits: If natural result meets crit range, auto-hit and bypass armour.
+    % If result would have hit AND bypassed armour anyway, apply damage multiplier.
 
     \section{Gear}
 
