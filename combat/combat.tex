@@ -69,7 +69,7 @@
             comparison.
     \end{itemize}
 
-    \section{Attacking}
+    \section{Attacking}\label{combat:attacking}
     A character (the attacker) can use 1 action to attack another character
     (the defender). The attacker must have the appropriate weapon equipped
     for the weapon skill they are using, or a free hand if they are using
@@ -88,24 +88,42 @@
         \item Apply damage
     \end{itemize}
 
-    The attacker can use 1 \textonehalf\ actions to make a dual-wielding
-    attack. A dual-wielding attack can only be made if the attacker has
-    two weapons equipped. A free hand used with the hand-to-hand skill counts
-    as a weapon for this purpose. To make a dual-wielding attack, follow the
-    process above for making an attack once for each weapon.
+    Attacks made with a one-hand weapon being wielded in an off-hand take a -4
+    penalty to the weapon skill check. An off-hand is considered to be any hand
+    other than a character's main-hand, as specified during character creation.
+    Most characters' main-hand is their right hand. An unarmed attack with an
+    off-hand fist does not have such a penalty.
 
-    Attacks made with an off-hand take a -4 penalty to the weapon skill check.
-    An off-hand is considered to be any hand other than a character's
-    main-hand, as specified during character creation. Most characters'
-    main-hand is their right hand.
+    A two-handed weapon does not have an off-hand penalty unless you choose to
+    equip it backwards for some reason.
 
-    An attacker with an exotic configuration of hands, natural weapons,
-    and/or double-ended weapons may be able to make a triple, quadruple,
-    or even greater multi-wield attack. For such an attack, follow the rules
-    for a dual-wielding attack and add an extra cost of a \textonehalf\ action
-    for each extra attack that is made.
+    \subsection{Dual-wielding}\label{combat:dual-wielding}
+    A character can use 1 \textonehalf\ actions to make a dual-wielding
+    attack. A dual-wielding attack is made with two separate weapons - or a
+    double-ended weapons - that are currently equipped. This can include
+    natural weapons that aren't being used to wield a weapon. In a
+    dual-wielding attack, a character simply makes a separate attack with each
+    weapon.
 
-    \section{Moving}
+    An attacker with three or more equipped weapons may be able to make a
+    triple, quadruple, or even greater multi-wield attack. For such an attack,
+    follow the rules for a dual-wielding attack and add an extra cost of a
+    \textonehalf\ action for each extra attack that is made.
+
+    \subsection{Exotic wields}
+    Two-handed weapons can be wielded one-handed. A two-handed melee weapon
+    wielded one-handed has a -4 penalty to the attack roll in a character's
+    main hand, and a -6 penalty in their off-hand. Two-handed ranged weapons
+    cannot be wielded one-handed with only one hand or body part.
+
+    Weapons can be wielded with body parts other than hands. If the body part
+    can conceivably "grip" the weapon if enough force were applied (e.g. teeth,
+    feet, or two body parts in combination such as elbows or knees) apply a -5
+    penalty multiplied by the weapon's weight in lb. and rounded to a whole
+    number in the negative direction. For two-handed weapons, double this
+    penalty unless one of the body parts is a hand.
+
+    \section{Moving}\label{combat:moving}
     During combat, a character can use 1 action to move a distance up to their
     speed rounded down to a multiple of 5 ft. (but always at least 5 ft.).
     Alternatively, they can use a \textonehalf\ action to move a distance up
@@ -128,7 +146,7 @@
     away from that creature provokes an opportunity attack. Only one such
     movement provokes an opportunity attack per other creature per turn.
 
-    \section{Opportunity Attacks}
+    \section{Opportunity Attacks}\label{combat:opportunity-attacks}
     Certain actions trigger opportunity attacks. When a character (the
     defender) makes such an action in melee range of another character (the
     attacker), the attacker may choose to make an opportunity attack. If they
@@ -140,4 +158,31 @@
     skills are grapple, trip, and disarm.
 
     By default each character can only make one opportunity attack per round.
+
+    \section{Critical Hits}\label{combat:critical-hits}
+    Critical hits represent especially well-made attacks, e.g. at a weak point
+    or a chink in an opponent's armor.
+
+    To make a critical hit, a character must first score a critical threat on
+    an attack. An attack scores a critical threat if the natural roll (i.e. the
+    number displayed on the d20 itself without modifiers) is within the
+    weapon's critical range. Most weapons have a critical range of 20, in which
+    case only a natural 20 scores a critical threat. Other critical ranges are
+    listed in table \ref{tab:weapons} on page \pageref{tab:weapons}.
+
+    On a critical threat, an attack that would have missed instead hits
+    and is reduced by armor. An attack that would have hit anyway bypasses
+    armor. An attack that would have bypassed armor anyway instead becomes a
+    critical hit.
+
+    A critical hit has its damage is multiplied by the weapon's damage
+    multiplier. The multiplier is applied to each term of the damage
+    formula individually, rolling dice multiple times if need be. For example,
+    a damage formula of 1d8 + 4 with a critical multiplier of $\times$2 would
+    become 2d8 + 8 on a critical hit.
+
+    For the purposess of calculating critical hits, an attack is
+    considered to "bypass armor" if the attack roll is strictly greater than
+    the defence roll plus cover rating, or just the defence roll if the armor
+    does not have any reduction for the weapon's damage type.
 \end{multicols*}

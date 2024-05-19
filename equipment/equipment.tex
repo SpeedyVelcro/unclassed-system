@@ -9,21 +9,21 @@ Money can be exchanged for goods and services.
 
     \begin{table*}[ht!]
         \unclassedrowcolors
-        \begin{tabularx}{\textwidth}{X l l l l}
-            \unclassedsubtabletitle{5}{Suits of Armor} \\
-            \textbf{Armor} & \textbf{Cost} & \textbf{Cover} & \textbf{Resistance} & \textbf{Weight} \\
-            Hide & 5 sp & 4 & 1p/1s & 5 lb. \\
-            Padded & 5 gp & 6 & 4b/2p/2s & 15 lb. \\
-            Leather & 15 gp & 6 & 2b/1p/1s & 10 lb. \\
+        \begin{tabularx}{\textwidth}{X l l l l l}
+            \unclassedsubtabletitle{6}{Suits of Armor} \\
+            \textbf{Armor} & \textbf{Cost} & \textbf{Cover} & \textbf{Resistance} & \textbf{Weight} & \textbf{Page}\\
+            Hide & 5 sp & 4 & 1p/1s & 5 lb. & pg. \pageref{armor:hide} \\
+            Padded & 5 gp & 6 & 4b/2p/2s & 15 lb. & \pageref{armor:padded} \\
+            Leather & 15 gp & 6 & 2b/2p/2s & 10 lb. & \pageref{armor:leather}  \\
             % Following armors assume some sort of additional padding underneath, hence at least 4b
-            Chain & 150 gp & 8 & 4b/2p/6s & 30 lb. \\ % Chain mail is highly resistant to slashing irl, weaker to piercing as you can force the rings apart
-            Scale & 300 gp & 10 & 4b/4p/8s & 60 lb. \\ % Like chain mail, but improved resistance against thrusts and glances at certain angles
-            Brigandine & 600 gp & 10 & 6b/8p/8s/1m & 50 lb. \\
-            Munition & 800 gp & 10 & 6b/16p/16s/2m & 55 lb. \\ % A type of "half/three-quarter" plate - more gaps than full plate and not fitted
-            Plate & 1,500 gp & 14 & 8b/16p/16s/4m & 60 lb. \\
-            \unclassedsubtabletitle{5}{Shields} \\
-            \textbf{Armor} & \textbf{Cost} & \textbf{Cover} & \textbf{Resistance} & \textbf{Weight} \\
-            Light steel shield & & & - & \\
+            Chain & 150 gp & 8 & 4b/3p/6s & 30 lb. & \pageref{armor:chain} \\ % Chain mail is highly resistant to slashing irl, weaker to piercing as you can force the rings apart
+            Scale & 300 gp & 10 & 4b/4p/8s & 60 lb. & \pageref{armor:scale} \\ % Like chain mail, but improved resistance against thrusts and glances at certain angles
+            Brigandine & 600 gp & 10 & 6b/8p/8s/1m & 50 lb. & \pageref{armor:brigandine} \\
+            Munition & 800 gp & 10 & 6b/16p/16s/2m & 55 lb. & \pageref{armor:munition} \\ % A type of "half/three-quarter" plate - more gaps than full plate and not fitted. Worn by samurai and early modern European soldiers
+            Plate & 1,500 gp & 14 & 8b/16p/16s/4m & 60 lb. & \pageref{armor:plate} \\
+            \unclassedsubtabletitle{6}{Shields} \\
+            \textbf{Armor} & \textbf{Cost} & \textbf{Cover} & \textbf{Resistance} & \textbf{Weight} & \textbf{Page} \\
+            Light steel shield & & & - & & \pageref{armor:light-steel-shield} \\
         \end{tabularx}
         \caption{Armor}
         \label{tab:armor}
@@ -72,32 +72,76 @@ Money can be exchanged for goods and services.
     \section{Weapons}
     \begin{table*}[ht!]
         \unclassedrowcolors
-        \begin{tabularx}{\textwidth}{X l l l l l}
-            \unclassedsubtabletitle{5}{One-Handed Melee Weapons} \\
-            \textbf{Weapon} & \textbf{Cost} & \textbf{Damage} & \textbf{Critical} & \textbf{Range} & \textbf{Weight} \\
-            Dagger & ? & 1d4 + STR p/s & 19-20, $\times$2 & - & 1 lb. \\
-            Shortsword & ? & 1d6 + STR p/s & 20, $\times$2 & - & 2 lb. \\
-            Longsword & ? & 1d8 + STR s & 20, $\times$2 & - & 3 lb. \\
-            Bastard Sword* & ? & 1d6 + STR s & 20, $\times$2 & - & 4 lb. \\ % Switching from 1 to 2 handed is free
-            \unclassedsubtabletitle{5}{Two-Handed Melee Weapons} \\
-            \textbf{Weapon} & \textbf{Cost} & \textbf{Damage} & \textbf{Critical} & \textbf{Range} & \textbf{Weight} \\
-            Bastard Sword* & ? & 1d10 + STR s & 20, $\times$2 & - & 4 lb. \\
-            Greatsword & ? & 1d12 + STR s & 20, $\times$2 & - & 6 lb. \\
-            \unclassedsubtabletitle{5}{One-Handed Ranged Weapons} \\
-            \textbf{Weapon} & \textbf{Cost} & \textbf{Damage} & \textbf{Critical} & \textbf{Range} & \textbf{Weight} \\
-            Hand Crossbow & ? & 1d6 p & 20, $\times$2 & ? & 3 lb. \\
-            \unclassedsubtabletitle{5}{Two-Handed Ranged Weapons} \\
-            \textbf{Weapon} & \textbf{Cost} & \textbf{Damage} & \textbf{Critical} & \textbf{Range} & \textbf{Weight} \\
-            Light Crossbow & ? & 1d6 + 2 p & 20, $\times$2 & ? & 4 lb. \\
-            Heavy Crossbow & ? & 1d6 + 4 p & 20, $\times$2 & ? & 6 lb. \\
-            Siege Crossbow* & ? & 1d6 + 8 p & 20, $\times$2 & ? & 10 lb. \\ % More complex reloading
+        \begin{tabularx}{\textwidth}{X l l l l l l}
+            \unclassedsubtabletitle{6}{Natural Weapons} \\
+            \textbf{Weapon} & \textbf{Cost} & \textbf{Damage} & \textbf{Critical} & \textbf{Range} & \textbf{Weight} & \textbf{Page} \\
+            Fist & - & 1d4 + STR b & 19-20, $\times$2 & - & - & \pageref{weapon:fist} \\
+            Slap & - & 1d2 + STR b & 18-20, $\times$2 & - & - & \pageref{weapon:slap} \\
+            Foot* & - & 1d6 + STR b & 20, $\times$2 & - & - & \pageref{weapon:foot} \\ % Penalty when attacking anything at torso height, even bigger penalty at head height
+            Head* & - & 1d8 + STR b & 20, $\times$2 & - & - & \pageref{weapon:head} \\ % Headbutting should come with serious risk of concussion, or opportunity attacks or something
+            Teeth & - & 1d3 p & 20, $\times$2 & - & - & \pageref{weapon:teeth} \\ % Human teeth are not suited to biting live prey, TODO: orcs get tusks
+            \unclassedsubtabletitle{6}{One-Handed Melee Weapons} \\
+            \textbf{Weapon} & \textbf{Cost} & \textbf{Damage} & \textbf{Critical} & \textbf{Range} & \textbf{Weight} & \textbf{Page} \\
+            Dagger & ? & 1d4 + STR p/s & 19-20, $\times$2 & - & 1 lb. & \pageref{weapon:dagger} \\
+            Shortsword & ? & 1d6 + STR p/s & 20, $\times$2 & - & 2 lb. & \pageref{weapon:shortsword} \\
+            Longsword & ? & 1d8 + STR s & 20, $\times$2 & - & 3 lb. & \pageref{weapon:longsword} \\
+            Bastard Sword* & ? & 1d6 + STR s & 20, $\times$2 & - & 4 lb. \pageref{weapon:bastard-sword} \\ % Switching from 1 to 2 handed is free
+            \unclassedsubtabletitle{6}{Two-Handed Melee Weapons} \\
+            \textbf{Weapon} & \textbf{Cost} & \textbf{Damage} & \textbf{Critical} & \textbf{Range} & \textbf{Weight} & \textbf{Page} \\
+            Bastard Sword* & ? & 1d10 + STR s & 20, $\times$2 & - & 4 lb. & \pageref{weapon:bastard-sword} \\
+            Greatsword & ? & 1d12 + STR s & 20, $\times$2 & - & 6 lb. & \pageref{weapon:greatsword} \\
+            \unclassedsubtabletitle{6}{One-Handed Ranged Weapons} \\
+            \textbf{Weapon} & \textbf{Cost} & \textbf{Damage} & \textbf{Critical} & \textbf{Range} & \textbf{Weight} & \textbf{Page} \\
+            Hand Crossbow & ? & 1d6 p & 20, $\times$2 & 30 ft. & 3 lb. & \pageref{weapon:hand-crossbow} \\
+            \unclassedsubtabletitle{6}{Two-Handed Ranged Weapons} \\
+            \textbf{Weapon} & \textbf{Cost} & \textbf{Damage} & \textbf{Critical} & \textbf{Range} & \textbf{Weight} & \textbf{Page} \\
+            Shortbow & ? & 1d6 + 1 p & 20, $\times$2 & 30 + STR $\times$ 10 ft. & ? & \pageref{weapon:shortbow} \\ % If the range is 0 or less, you are simply not strong enough to draw the string
+            Longbow & ? & 1d6 + 3 p & 20, $\times$2 & 40 + STR $\times$ 20 ft. & ? & \pageref{weapon:longbow} \\
+            Light Crossbow & ? & 1d6 + 2 p & 20, $\times$2 & 30 ft. & 4 lb. & \pageref{weapon:light-crossbow} \\
+            Heavy Crossbow & ? & 1d6 + 4 p & 20, $\times$2 & 30 ft. & 6 lb. & \pageref{weapon:heavy-crossbow} \\
+            Siege Crossbow* & ? & 1d6 + 8 p & 20, $\times$2 & 60 ft. & 10 lb. & \pageref{weapon:siege-crossbow} \\ % More complex and time-consuming reloading
+            Repeating Crossbow* & ? & 1d6 + 2 p & 20, $\times$2 & 30 ft. & 6 lb. & \pageref{weapon:repeating-crossbow} \\ % a.k.a. Chu Ko Nu. No reload because reload is part of the same motion as firing.
+            Sling & ? & 1d4 + 1 b & 20, $\times$2 & 20 + STR $\times$ 5 ft. & ? & \pageref{weapon:sling} \\
         \end{tabularx}
+
+        * This weapon is affected by special rules explained in its description.
+
         \caption{Weapons}
         \label{tab:weapons}
     \end{table*}
     % Asterisk given when there is complexity you need to read in the description
     % Critical hits: If natural result meets crit range, auto-hit and bypass armour.
     % If result would have hit AND bypassed armour anyway, apply damage multiplier.
+
+    Weapons are enumerated in table \ref{tab:weapons}. Natural weapons are
+    those which typical humanoids have access to. Otherwise, characters must
+    buy and wield a weapon in order to use it.
+
+    See the combat chapter for information on attacking with weapons.
+
+    \subsection{Damage}
+    Damage in table \ref{tab:weapons} is listed as a formula, usually
+    including a dice roll and the character's strength. The result is the
+    amount of damage a weapon deals.
+
+    All weapons have one or more damage types. Each damage type is listed as
+    a single letter at the end of the damage column: b for bludgeoning, p for
+    piercing, and s for slashing.
+
+    Where damage types are listed with a slash, the weapon deals one damage
+    type OR the other. This means the weapon uses whichever damage type
+    would deal the most damage. A plus means the weapon deals one damage
+    type AND the other. Such a weapon uses whichever damage type would deal
+    the least damage.
+
+    \subsection{Critical}
+    Weapons have a critical range and a critical multiplier, listed together
+    in table \ref{tab:weapons} under the the "Critical" column. The critical
+    range is the natural roll needed for a critical threat, and the critical
+    multiplier is applied to damage on a critical hit. For exactly how critical
+    threats and critical hits work, see pg. \pageref{combat:critical-hits}.
+
+    \subsection{Weapon List}
 
     \section{Gear}
 
