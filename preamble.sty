@@ -52,3 +52,15 @@
 % Reduce itemize separation (relies on package enumitem)
 \setlist[itemize]{nosep}
 \setlist[enumerate]{nosep}
+
+% Chapter title formatting (basically reduced space)
+\titleformat
+{\chapter}
+[display]
+{\normalfont\bfseries\Huge} % Size here applies to whole chapter heading
+{\itshape\huge \chaptertitlename \ \thechapter} % Size here just applies to "Chapter X"
+{0pt}
+{}
+{}
+
+\titlespacing*{\chapter}{0pt}{0pt}{0pt} % Star stops next line being indented
