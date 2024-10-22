@@ -1,0 +1,150 @@
+\section{Designing Spells}
+
+\begin{table*}[ht]
+    \unclassedrowcolors
+    \begin{tabularx}{\textwidth}{l X l X l X l X l X l X}
+        \textbf{Dice} & \textbf{Cost} & \textbf{Dice} & \textbf{Cost} & \textbf{Dice} & \textbf{Cost} & \textbf{Dice} & \textbf{Cost} & \textbf{Dice} & \textbf{Cost} & \textbf{Dice} & \textbf{Cost} \\
+        1d4 & 1   & 1d6 & 2    & 1d8 & 3    & 1d10 & 4    & 1d12 & 5    & 1d20 & 10    \\
+        2d4 & 4   & 2d6 & 8    & 2d8 & 12   & 2d10 & 16   & 2d12 & 20   & 2d20 & 40    \\
+        3d4 & 12  & 3d6 & 24   & 3d8 & 36   & 3d10 & 48   & 3d12 & 60   & 3d20 & 120   \\
+        4d4 & 16  & 4d6 & 32   & 4d8 & 48   & 4d10 & 64   & 4d12 & 80   & 4d20 & 160   \\
+        5d4 & 25  & 5d6 & 50   & 5d8 & 75   & 5d10 & 100  & 5d12 & 125  & 5d20 & 250   \\
+        6d4 & 36  & 6d6 & 72   & 6d8 & 108  & 6d10 & 144  & 6d12 & 180  & 6d20 & 360   \\
+        7d4 & 49  & 7d6 & 98   & 7d8 & 147  & 7d10 & 196  & 7d12 & 245  & 7d20 & 490   \\
+        8d4 & 64  & 8d6 & 128  & 8d8 & 192  & 8d10 & 256  & 8d12 & 320  & 8d20 & 640   \\
+        Xd4 & $\text{X}^\text{2}$ & Xd6 & $\text{2X}^\text{2}$ & Xd8 & $\text{3X}^\text{2}$ & Xd10 & $\text{4X}^\text{2}$ & Xd12 & $\text{5X}^\text{2}$ & Xd20 & $\text{10X}^\text{2}$ \\
+    \end{tabularx}
+    \caption{Spellcrafting Dice}
+    \label{tab:spellcrafting-dice}
+\end{table*}
+
+This section contains advanced rules for designing spells. GMs may use these
+rules as guidelines when creating their own spells, and players may craft
+spells designed using this rules using the spellcrafting skill. (p.g.
+\pageref{skill:spellcrafting}).
+
+All spells in the spell list where created using these rules. The mana cost was
+then adjusted (usually halved) to reflect that the most popular spells are the
+ones crafted by powerful wizards to be as efficient as possible.
+
+To design a minimal spell, you must choose at least one spell effect, specify
+a target, and set the mana cost accordingly. There are additional decisions
+you may make, which can effect the mana cost further.
+
+\subsection{Spell Effects}
+Spell effects are chosen from the spell effect list (see pg.
+\pageref{spell-effect-list}). Some spell effects can be customised, in which
+case instructions for doing so are usually within the spell effect description.
+
+You may choose multiple spell effects for your spells. If you do, you add
+together the mana costs, and then multiply the total by the number of spell
+effects you have chosen (reflecting the added convenience of having multiple
+effects on one spell). This multiplication comes after determining the mana
+costs of individual spell effects, but before any other adjustments (such as
+those based on the target).
+
+You can determine the order in which the spell effects trigger.
+
+\subsection{Spell School}
+Each spell effect lists a spell school, which it confers on the spell itself.
+Ideally, for easier casting, a spell should only use spell effects that share
+a spell school.
+
+If a spell uses spell effects of multiple different spells schools, its school
+is all of those. If the spell calls for a skill check of the spell school of
+the spell, the caster makes the skill check using their worst spell school out
+of those.
+
+\subsection{Target}
+Broadly, there are two types of targeting: corporeal and incorporeal. Corporeal
+targeting involves physically sending a spell to a target; for example, a icy
+projectile, a bolt of lightning, or a fireball would all use corporeal
+targeting.
+
+The corporeal targets are as follows:
+\begin{itemize}
+    \item \textbf{Strike:} Choosing "strike" has no effect on mana cost. A
+        strike spell applies its effects to a target in melee range if the
+        caster succeeds on a skill check of the spell's school contested against
+        the target's defence check. Spells with a strike target do not provoke
+        opportunity attacks.
+    \item \textbf{Missile:} "Missile" is chosen with a range in feet. For every
+        5 ft. of range, a missile spell increases the mana cost by 1. A missile
+        spell applies its effects to a target within the specified range if the
+        caster succeeds on a skill check of the spell's school contested
+        against the target's defence check.
+    \item \textbf{Explosion:} "Explosion" is chosen with a shape (cone, sphere, or
+        cube) and the size of that shape. The mana cost of the spell is multiplied
+        by the diameter or length of the shape in 5 ft. squares. The caster makes a skill check of the spell's school
+        once. Targets within the area are then affected by the spell unless
+        they can succeed on their contested defence skill check. Defenders
+        cannot parry. Defenders suffer half the spell's effect instead of
+        bypassing it if they are not standing on the edge of the shape.
+    \item \textbf{Chain:} "Chain" is chosen with a range in feet, and a number
+        of targets. Every 5 ft. of range increases the mana cost by 1, and the
+        mana cost is then multiplied by the number of targets. The spell acts
+        like a missile spell against its first target. Then it jumps to the
+        closest creature or similarly conductive target - with ties broken
+        randomly - and acts like a missile spell again. This repeats for the
+        number of targets chosen.
+\end{itemize}
+
+Incorporeal targeting, on the other hand, governs spells with a non-physical
+effect. You simply cast the spell and it automatically reaches its target (though
+targets may be able to make rolls to resist the effect). This includes magic
+such as mind-control. The incorporeal targets are: self, touch, ranged, or
+area.
+
+The incorporeal targets are as follows:
+\begin{itemize}
+    \item \textbf{Self:} Choosing "self" has no effect on mana cost. A self
+        spell applies its effects to the caster.
+    \item \textbf{Touch:} Choosing "touch" has no effect on mana cost. A touch
+        spell applies its effects to a target in melee range.
+    \item \textbf{Ranged:} "Ranged" is chosen with a range in feet. For every
+        5 ft. of range, a ranged spell increases its mana cost by 1. A ranged
+        spell applies its effects to a target within the specified range.
+    \item \textbf{Area:} "Area" is chosen with a shape (cone, sphere, or cube)
+        and the size of that shape. The mana cost of the spell is multiplied
+        by the diameter or length of the shape in 5 ft. squares. The spell
+        applies to all targets caught within the shape.
+\end{itemize}
+
+When you have multiple spell effects, you may only choose one target. You are
+also not allowed to mix spells with corporeal and incorporeal targeting.
+
+There is also a third (but less common) type of targeting: summoning. Summoning
+targets a location in which to create an object, creature, or substance, and
+the mana cost is calculated in the same way as ranged targeting.
+
+\subsection{Duration}
+
+\subsection{Casting Time}
+TODO: this is old
+\begin{table*}[ht]
+    \unclassedrowcolors
+    \begin{tabularx}{\textwidth}{l X l X l X}
+        \textbf{Casting Time} & \textbf{Mana Cost} & \textbf{Casting Time} & \textbf{Mana Cost} & \textbf{Casting Time} & \textbf{Mana Cost} \\
+        1 round  & $\times$0.95 & 1 minute   & $\times$0.5  & 1 hour  & $\times$0.25 \\
+        2 rounds & $\times$0.9  & 2 minutes  & $\times$0.45 & 2 hours & $\times$0.2  \\
+        3 rounds & $\times$0.85 & 3 minutes  & $\times$0.4  & 3 hours & $\times$0.15 \\
+        4 rounds & $\times$0.8  & 5 minutes  & $\times$0.35 & 4 hours & $\times$0.1  \\
+        5 rounds & $\times$0.75 & 10 minutes & $\times$0.3  & 8 hours & $\times$0.05 \\
+        6 rounds & $\times$0.7  & & & & \\
+        7 rounds & $\times$0.65 & & & & \\
+        8 rounds & $\times$0.6  & & & & \\
+        9 rounds & $\times$0.55 & & & & \\
+    \end{tabularx}
+    \caption{Spellcrafting Casting Time}
+    \label{tab:spellcrafting-casting-time}
+\end{table*}
+The default casting time of a spell is one action. This casting time
+can be increased to any length of time listed in table
+\ref{tab:spellcrafting-casting-time} in exchange for a reduced mana cost.
+
+If a spell has spell effects with triggers, that spell can be cast
+instantly - even out of turn - when the trigger condition is met. If a
+spell is cast in response to a trigger like this, only spell effects
+that have the same trigger are applied. This also means spell effects
+with no trigger are skipped.
+
