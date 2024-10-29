@@ -159,30 +159,30 @@
 
     By default each character can only make one opportunity attack per round.
 
-    \section{Critical Hits}\label{combat:critical-hits}
-    Critical hits represent especially well-made attacks, e.g. at a weak point
-    or a chink in an opponent's armor.
+    \section{Critical Hits}\label{combat:critical-hits}\index{critical hit}
+    Critical hits represent especially successful attacks: those where luck and
+    skill align to deal a devastating blow to an opponent e.g. striking a weak
+    spot or finding a chink in armor.
 
-    To make a critical hit, a character must first score a critical threat on
-    an attack. An attack scores a critical threat if the natural roll (i.e. the
-    number displayed on the d20 itself without modifiers) is within the
-    weapon's critical range. Most weapons have a critical range of 20, in which
-    case only a natural 20 scores a critical threat. Other critical ranges are
+    To make a critical hit, a character must first score a critical
+    threat\index{critical threat} on an attack. An attack scores a critical
+    threat if the natural roll (i.e. the number displayed on the d20 itself
+    without modifiers) is within the weapon's critical range. Most weapons
+    have a critical range of 20, in which case only a natural 20 scores a
+    critical threat. Other critical ranges are listed in table
+    \ref{tab:weapons} on page \pageref{tab:weapons}.
+
+    On a critical threat, attacks automatically hit. If they would have hit
+    anyway, they also bypass armor.
+
+    Immediately after scoring a critical threat, and before rolling damage, a
+    character makes a second attack check, but the target keeps their existing
+    check. If the new attack check is a hit against the defence check, the
+    critical threat is upgraded to a critical hit.
+
+    A critical hit is an automatic hit, bypasses armor, and deals increased
+    damage. Once a character confirms a critical hit, they roll for damage
+    as normal, but multiply the result (of the entire damage formula including
+    modifiers) by the weapon's critical damage multiplier. Multipliers are
     listed in table \ref{tab:weapons} on page \pageref{tab:weapons}.
-
-    On a critical threat, an attack that would have missed instead hits
-    and is reduced by armor. An attack that would have hit anyway bypasses
-    armor. An attack that would have bypassed armor anyway instead becomes a
-    critical hit.
-
-    A critical hit has its damage is multiplied by the weapon's damage
-    multiplier. The multiplier is applied to each term of the damage
-    formula individually, rolling dice multiple times if need be. For example,
-    a damage formula of 1d8 + 4 with a critical multiplier of $\times$2 would
-    become 2d8 + 8 on a critical hit.
-
-    For the purposess of calculating critical hits, an attack is
-    considered to "bypass armor" if the attack roll is strictly greater than
-    the defence roll plus cover rating, or just the defence roll if the armor
-    does not have any reduction for the weapon's damage type.
 \end{multicols*}
