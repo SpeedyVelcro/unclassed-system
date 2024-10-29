@@ -75,17 +75,19 @@
     for the weapon skill they are using, or a free hand if they are using
     the hand-to-hand skill. The process of attacking is as follows:
     \begin{itemize}
-        \item Attacker makes an attack roll (weapon skill check)
-        \item Defender makes a defence roll (dodge, block, or parry check)
-        \item If the attack roll is less than or equal to the defense roll, the
-                attack fails. Otherwise, subtract the defense roll from the
-                attack roll.
-        \item If the remainder of the attack roll is less than or equal to the
-                defender's armor rating, the armor's damage reduction will be
-                subtracted from the attack damage.
-        \item Roll for damage
-        \item Subtract damage reduction if applicable
-        \item Apply damage
+        \item Attacker makes an attack check (weapon skill check)
+        \item Defender makes a defence check (dodge, block, or parry check)
+        \item If the attack check is greater than or equal to the defence
+            check, it hits.
+        \item If the attack check is greater than or equal to the defender's
+            cover rating\index{cover rating} (granted by their armor), then
+            the attack also bypasses armor\index{armor}.
+        \item If the attack hit, roll for damage.
+        \item Subtract any resistances\index{resistance} from the damage based
+            on the weapon's damage type. Only subtract resistance from armor
+            if the attack did \textit{not} bypass armor.
+        \item Apply the damage, if any. Attacks cannot deal negative
+            damage.
     \end{itemize}
 
     Attacks made with a one-hand weapon being wielded in an off-hand take a -4
