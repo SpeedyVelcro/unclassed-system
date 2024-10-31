@@ -67,3 +67,67 @@
 
 % Subsection title formatting (reduced space)
 \titlespacing{\subsection}{0pt}{5pt}{0pt}
+
+% Statblock definition (this is a big one)
+% Parameter 1: Name
+% Parameter 2: Level
+% Parameter 3: Section 1 (Attributes, left col)
+% Parameter 4: Section 1 (Attributes, right col)
+% Parameter 5: Section 2 (Basic stats)
+% Parameter 6: Section 3 (Defence)
+% Parameter 7: Section 4 (Skills and features)
+% Parameter 8: Section 5 (Actions (includes spells))
+% Parameter 9: Section 6 (Other (equipment, etc.))
+\newcommand{\statblock}[9]
+{
+    % No first-line indentation in the stat block
+    \setlength{\parindent}{0pt}
+
+    % Title / Level
+    {\normalfont\huge\bfseries #1}
+    \hfill
+    {\normalfont\Large\bfseries Level #2}
+    % TODO: level is a two-line high minipage with XP earned on second line,
+    % with text justified to right.
+
+    \hrule
+
+    % Attributes
+    \begin{minipage}{.45\linewidth}#3\end{minipage}
+    \hfill
+    \begin{minipage}{.45\linewidth}#4\end{minipage}
+
+    \hrule
+
+    % Basic stats
+    #5
+
+    \hrule
+
+    % Defence
+    #6
+
+    \hrule
+
+    % Skills and features
+    #7
+
+    \hrule
+
+    % Actions (includes spells)
+    #8
+
+    \hrule
+
+    % Other (equipment, etc.)
+    #9
+
+    \hrule
+}
+
+% Some notes on why stat blocks are the way they are:
+% - With all skills being written out as e.g. Vision (SEN), and most unexpected
+%   usages of skills being untrained ones, you should be able to quickly
+%   calculate untrained skills by just taking the ATT. This is why only trained
+%   or modified skills are listed, and attributes get top-billing (plus
+%   attributes look nice)
