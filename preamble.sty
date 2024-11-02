@@ -15,6 +15,8 @@
 \usepackage[a4paper]{geometry}
 \usepackage[table]{xcolor}
 \usepackage{enumitem}
+\usepackage{siunitx} % For thousand ',' separation with \num
+\usepackage{varwidth} % Minipage that shrinks to content
 
 \setmainfont{Open Sans}
 
@@ -86,9 +88,27 @@
     % Title / Level
     {\normalfont\huge\bfseries #1}
     \hfill
-    {\normalfont\Large\bfseries Level #2}
-    % TODO: level is a two-line high minipage with XP earned on second line,
-    % with text justified to right.
+    \begin{varwidth}{.9\linewidth}
+        \raggedleft
+        \normalfont\small\bfseries
+        \sisetup{
+            mode=text,
+            group-separator={,},
+            reset-text-family=false,
+            reset-text-series=false,
+            reset-text-shape=false
+        }
+        Level \num{#2} \\
+        \sisetup{
+            mode=text,
+            group-separator={,},
+            reset-text-family=false,
+            reset-text-series=false,
+            reset-text-shape=false,
+            evaluate-expression
+        }
+        \num{#2 * 60} XP
+    \end{varwidth}
 
     \hrule
 
@@ -131,3 +151,11 @@
 %   calculate untrained skills by just taking the ATT. This is why only trained
 %   or modified skills are listed, and attributes get top-billing (plus
 %   attributes look nice)
+% - Attributes are in two columns that you set independently so you can always
+%   put each attribute in the same place quite easily (makes it easier to
+%   read). i.e. physical attributes on the left, mental attributes on the
+%   right, and all the special attributes below that across both columns.
+% - Went through a bunch of effort to figure out how to format arbitrarily
+%   large levels and XP counts. This way if you want to make a statblock for
+%   a god and give them a really high level, like 1,000,000,000 or something,
+%   you can.
