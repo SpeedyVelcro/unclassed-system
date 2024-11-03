@@ -77,9 +77,11 @@
 % Parameter 4: Section 1 (Attributes, right col)
 % Parameter 5: Section 2 (Basic stats)
 % Parameter 6: Section 3 (Defence)
-% Parameter 7: Section 4 (Skills and features)
-% Parameter 8: Section 5 (Actions (includes spells))
-% Parameter 9: Section 6 (Other (equipment, etc.))
+% Parameter 7: Section 4 (Skills)
+% Parameter 8: Section 4 (Features)
+% Parameter 9: Section 5 (Actions (includes spells))
+% Parameter 10: Section 6 (Other (equipment, etc.))
+% TODO: figure out how to use 10 parameters
 \newcommand{\statblock}[9]
 {
     % No first-line indentation in the stat block
@@ -130,17 +132,21 @@
     \hrule
 
     % Skills and features
-    #7
+    \begin{multicols}{2}
+        #7
+    \end{multicols}
 
-    \hrule
-
-    % Actions (includes spells)
     #8
 
     \hrule
 
-    % Other (equipment, etc.)
+    % Actions (includes spells)
     #9
+
+    \hrule
+
+    % Other (equipment, etc.)
+    #10
 
     \hrule
 }
