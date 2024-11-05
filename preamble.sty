@@ -71,15 +71,19 @@
 \titlespacing{\subsection}{0pt}{5pt}{0pt}
 
 % Statblocks
-% vspace found above and below rules
-\newcommand{\statblockrulespace}{\vspace{4pt}}
 % Stat block horizontal rule separator
-\newcommand{\statblockrule}{\hrule}
+\newcommand{\statblocksepspace}{4pt}
+\newcommand{\statblocksep}
+{
+    \vspace{\statblocksepspace}
+    \hrule
+    \vspace{\statblocksepspace}
+}
 
-% Statblock header (name and level)
+% Statblock environment
 % Parameter 1: Name
 % Parameter 2: Level
-\newcommand{\statblockhead}[2]
+\newenvironment{statblock}[2]
 {
     \vspace{6pt}
 
@@ -110,9 +114,19 @@
         }
         \num{#2 * 60} XP
     \end{varwidth}
+    \vspace{4pt}
+    \rule{\linewidth}{1.5pt}
 
-    \statblockrulespace
-    \statblockrule
+    \vspace{4pt}
+}
+{
+    % Not really sure why but I need to do this malarkey to have the rule
+    % aligned properly and have the right amount of space
+    \\
+    \vspace{-12pt} \\
+    \rule{\linewidth}{1.5pt}
+
+    \vspace{6pt}
 }
 % Stat block stats section
 % Parameter 1: Atributes, left col
@@ -120,8 +134,6 @@
 % Parameter 3: Basic stats (health, speed, level, species, type, background)
 \newcommand{\statblockstats}[3]
 {
-    \statblockrulespace
-
     % Attributes
     \begin{minipage}{.45\linewidth}#1\end{minipage}
     \hfill
@@ -130,9 +142,6 @@
     \vspace{4pt}
 
     #3
-
-    \statblockrulespace
-    \statblockrule
 }
 
 % Stat block skills, feats, & features section
@@ -140,33 +149,24 @@
 % Parameter 2: Feats and features
 \newcommand{\statblockskillsfeats}[2]
 {
-    \statblockrulespace
-
+    \statblocksep
+    % Not sure why I get the extra space, but I need this negative vspace to
+    % get rid of it.
+    \vspace{-14pt}
     \begin{multicols}{2}
         #1
     \end{multicols}
-
+    \vspace{-8pt}
     #2
-
-    \statblockrulespace
-    \statblockrule
 }
 
 % Stat block section
 % Parameter 1: Section contents
 \newcommand{\statblocksec}[1]
 {
-    \statblockrulespace
-
+    \statblocksep
     #1
-
-    \statblockrulespace
-    \statblockrule
 }
-
-% Stat block foot. Use after end of stat block. At the moment, literally just
-% the bottom vertical spacing
-\newcommand{\statblockfoot}{\vspace{6pt}}
 
 % Aliases
 % Defence
