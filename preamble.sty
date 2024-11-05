@@ -70,20 +70,19 @@
 % Subsection title formatting (reduced space)
 \titlespacing{\subsection}{0pt}{5pt}{0pt}
 
-% Statblock definition (this is a big one)
+% Statblocks
+% vspace found above and below rules
+\newcommand{\statblockrulespace}{\vspace{4pt}}
+% Stat block horizontal rule separator
+\newcommand{\statblockrule}{\hrule}
+
+% Statblock header (name and level)
 % Parameter 1: Name
 % Parameter 2: Level
-% Parameter 3: Section 1 (Attributes, left col)
-% Parameter 4: Section 1 (Attributes, right col)
-% Parameter 5: Section 2 (Basic stats)
-% Parameter 6: Section 3 (Defence)
-% Parameter 7: Section 4 (Skills)
-% Parameter 8: Section 4 (Features)
-% Parameter 9: Section 5 (Actions (includes spells))
-% Parameter 10: Section 6 (Other (equipment, etc.))
-% TODO: figure out how to use 10 parameters
-\newcommand{\statblock}[9]
+\newcommand{\statblockhead}[2]
 {
+    \vspace{6pt}
+
     % No first-line indentation in the stat block
     \setlength{\parindent}{0pt}
 
@@ -112,48 +111,74 @@
         \num{#2 * 60} XP
     \end{varwidth}
 
-    \hrule
+    \statblockrulespace
+    \statblockrule
+}
+% Stat block stats section
+% Parameter 1: Atributes, left col
+% Parameter 2: Attributes, right col
+% Parameter 3: Basic stats (health, speed, level, species, type, background)
+\newcommand{\statblockstats}[3]
+{
+    \statblockrulespace
 
     % Attributes
-    \begin{minipage}{.45\linewidth}#3\end{minipage}
+    \begin{minipage}{.45\linewidth}#1\end{minipage}
     \hfill
-    \begin{minipage}{.45\linewidth}#4\end{minipage}
+    \begin{minipage}{.45\linewidth}#2\end{minipage}
+    
+    \vspace{4pt}
 
-    \hrule
+    #3
 
-    % Basic stats
-    #5
+    \statblockrulespace
+    \statblockrule
+}
 
-    \hrule
+% Stat block skills, feats, & features section
+% Parameter 1: Skills
+% Parameter 2: Feats and features
+\newcommand{\statblockskillsfeats}[2]
+{
+    \statblockrulespace
 
-    % Defence
-    #6
-
-    \hrule
-
-    % Skills and features
     \begin{multicols}{2}
-        #7
+        #1
     \end{multicols}
 
-    #8
+    #2
 
-    \hrule
-
-    % Actions (includes spells)
-    #9
-
-    \hrule
-
-    % Other (equipment, etc.)
-    #10
-
-    \hrule
+    \statblockrulespace
+    \statblockrule
 }
+
+% Stat block section
+% Parameter 1: Section contents
+\newcommand{\statblocksec}[1]
+{
+    \statblockrulespace
+
+    #1
+
+    \statblockrulespace
+    \statblockrule
+}
+
+% Stat block foot. Use after end of stat block. At the moment, literally just
+% the bottom vertical spacing
+\newcommand{\statblockfoot}{\vspace{6pt}}
+
+% Aliases
+% Defence
+\newcommand{\statblockdef}{\statblocksec}
+% Actions (attacks, spells, etc.)
+\newcommand{\statblockact}{\statblocksec}
+% Inventory
+\newcommand{\statblockinv}{\statblocksec}
 
 % Some notes on why stat blocks are the way they are:
 % - With all skills being written out as e.g. Vision (SEN), and most unexpected
-%   usages of skills being untrained ones, you should be able to quickly
+%   usages of skills being ones with no untrained modifier, you should be able to quickly
 %   calculate untrained skills by just taking the ATT. This is why only trained
 %   or modified skills are listed, and attributes get top-billing (plus
 %   attributes look nice)
@@ -165,3 +190,6 @@
 %   large levels and XP counts. This way if you want to make a statblock for
 %   a god and give them a really high level, like 1,000,000,000 or something,
 %   you can.
+% - LaTeX doesn't support more than 9 arguments, so stat blocks are split into
+%   commands for the header, sections, and also a few sections with special
+%   formatting
