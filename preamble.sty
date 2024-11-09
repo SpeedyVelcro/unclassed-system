@@ -193,3 +193,23 @@
 % - LaTeX doesn't support more than 9 arguments, so stat blocks are split into
 %   commands for the header, sections, and also a few sections with special
 %   formatting
+
+% Property
+% A "property" is part of a feature, item, spell, species, background etc. with
+% a name and a description or statistic.
+\newcommand{\unclassedprop}[2]
+{
+    \noindent
+    \textbf{#1:} #2
+}
+
+% Individual skill
+% Parameter 1: Skill name
+% Parameter 2: Total modifier
+% Parameter 3: Skill points
+% Parameter 4: Potential
+\newcommand{\unclassedskill}[4]
+{
+    \unclassedprop{#1}{#2 (#3/#4)}
+}
+
