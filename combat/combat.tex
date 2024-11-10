@@ -1,8 +1,53 @@
-\chapter{Combat}\label{combat}
+\chapter{Combat}\label{combat}\index{combat}
 
 \begin{multicols*}{2}
 
-    \section{Rounds, Turns, and Actions}\index{round}\index{turn}\index{action}
+    \section{Passage of Time in Combat}
+    While the passage of time in the Unclassed System is usually reasonably
+    free-form and determined by the GM, stricter rules are applied to make
+    sense of the flurry of activity that occurs during combat.
+
+    Combat starts at the GMs discretion. Usually it should start as soon as
+    any character attempts a hostile act towards another character. For
+    example, the GM might declare that an NPC "reaches for their sword" and
+    combat begins. They cannot actually draw their sword until their first
+    turn in combat, but trying to draw their sword triggers combat.
+
+    A player might attempt a hostile act towards another character, but it is
+    still up to the GM to start combat. If for example, a player declares that
+    they attack an NPC with their sword, the GM might narrate that "You begin
+    to reach for your for your sword, and around you everyone springs into
+    action", and combat begins. The player cannot actually draw their sword
+    and attack until their turn (other characters may be able to react first
+    if they have better initiative), and the GM should explain this to the
+    player if they are unclear that they have not attacked yet.
+
+    Combat also ends at the GMs discretion. Usually, this is when no immediate
+    threat remains to any of the characters, such as when all of their foes
+    have been killed.
+
+    \subsection{Initiative}\index{initiative}
+    The first thing all characters must do when entering combat is to make an
+    initiative skill check. Initiative represents a character's reaction time,
+    and how quickly they can spring into action and make the first blow. As
+    initiative is such an iconic precursor to combat across RPGs, the GM will
+    often signal combat has started by simply saying "everyone roll for
+    initiative".
+
+    The order of turns in combat is determined by each character's initiative
+    skill check. Characters take turns starting from the highest initiative
+    and going to the lowest. Where two or more characters have the same
+    initiative, ties are broken by the following heirarchy:
+    \begin{itemize}
+        \item Player characters and their allies go first
+        \item Characters with the highest initiative modifier go first
+        \item Characters who are still tied make another initiative check,
+            following the tie-breaking steps again if necessary..
+            This is not used as their actual initiative, but is just for
+            comparison.
+    \end{itemize}
+
+    \subsection{Rounds and Turns}\index{round}\index{turn}
 
     \begin{table*}[ht]
         \unclassedrowcolors
@@ -30,44 +75,51 @@
     \end{table*}
 
     Combat in the Unclassed System is turn-based; each round, characters take
-    turns in a specific order determined by initiative. Each character can
-    take a default of 1 \textonehalf\ actions during their turn.
+    turns in a specific order determined by initiative, and they can perform
+    a specific number of actions each turn.
+
+    One round represents 6 seconds of combat; the turn system is an
+    abstraction of this time. Although, in game terms, characters take turns to
+    act, all the turns in a round are considered, in a narrative sense, to
+    happen at roughly the same time. The order of turns is simply a
+    representation of who reacts faster.
+
+    \subsection{Actions}\index{action}
+    Each character can take a default of 1 \textonehalf\ actions during
+    their turn.
 
     Notice the extra \textonehalf\ action. Most characters will make 1 important
     action per turn - such as attacking or casting a spell - and then make a
     smaller \textonehalf\ action - such as moving half their speed or drawing a
-    weapon. Actions can be done in any order, for example a character may first
+    weapon. The length of various activities is listed on table
+    \ref{tab:combat-actions}.
+
+    Actions can be done in any order, for example a character may first
     take a \textonehalf\ action to draw their sword and then take 1 action to
-    attack. Any combination of actions can be taken up to a character's
-    allottment of actions for that turn. For example, it is perfectly valid
-    to take no actions or to take 3 separate \textonehalf\ actions in a turn.
+    attack. A character can also combine any number of actions and
+    \textonehalf\ actions up to their allotment for that turn. A character
+    could, for example, use three \textonehalf\ actions in a turn instead of
+    an action and a \textonehalf\ action. An example of this might be stowing
+    away a crossbow, drawing a sword, and moving half their speed towards an
+    opponent.
 
-    The length of various actions is listed on table \ref{tab:combat-actions}.
+    Some activities are called "free actions"\index{free action}. These are
+    activities that you can carry out on your turn, but do not require any
+    actions to use.
 
-    One round represents 6 seconds of combat, however the turn system is an
-    abstraction of this time. Although in game terms characters take turns to
-    act, all the turns in a round are considered, in a narrative sense, to have
-    some overlap. The order of turns is simply a representation of who's fast
-    enough to make the first serious impact in combat.
+    \subsection{Reactions}\index{reaction}
+    Reactions are a special kind of action that you can use out of your turn
+    under specific circumstances. The most common reaction seen in combat is
+    the opportunity attack (pg. \pageref{combat:opportunity-attacks}). A
+    reaction details a specific trigger, and characters can only use a reaction
+    when the trigger condition is fulfilled.
 
-    \section{Initiative}
-    The order of turns in combat is determined by initiative. Each character
-    involved in combat makes an initiative check at the start of combat by
-    rolling 1d20 and adding their initiative modifier. By default, a
-    character's initiative modifier is DEX + SEN, representing both the acrity
-    of their senses and the speed at which their body reacts.
+    A character can, by default, use only one reaction per round, measured
+    from the start of their turn to the start of their turn next round.
 
-    Characters act in turn starting from the highest initiative and going to
-    the lowest. Where two or more characters have the same initiative, ties
-    are broken by the following heirarchy:
-    \begin{itemize}
-        \item Player characters and their allies go first
-        \item Characters with the highest initiative modifier go first
-        \item Characters who are still tied make another initiative check,
-            following the tie-breaking steps again if necessary..
-            This is not used as their actual initiative, but is just for
-            comparison.
-    \end{itemize}
+    Some reactions are called "free reactions"\index{free reaction}. These
+    reactions can be used by characters as many times per round as they want,
+    without using up their allotment of actions per round.
 
     \section{Attacking}\label{combat:attacking}
     A character (the attacker) can use 1 action to attack another character
@@ -137,6 +189,21 @@
     move 4 times their speed by sprinting. A character cannot move a distance
     greater than they can sprint in a turn by using multiple actions to move.
 
+
+    Moving from a space in melee range of another creature to a space further
+    away from that creature provokes an opportunity attack. Only one such
+    movement provokes an opportunity attack per other creature per turn.
+
+    \section{Opportunity Attacks}\label{combat:opportunity-attacks}\index{opportunity-attack}
+    Certain activities create an opening that opponents can capitalise on to
+    make make an attack. These activities trigger opportunity attacks, and
+    are marked on table \ref{tab:combat-actions}.
+
+    When a character attempts an activity that triggers an opportunity attack,
+    other characters within range are first given the chance to use a reaction
+    to perform an opportunity attack with a melee weapon they are wielding.
+    Opportunity attacks are otherwise exactly the same as a regular attack.
+
     Moving provokes opportunity attacks if and only if moving \textit{away}
     from other creatures. The opportunity attack is provoked only at the
     point where the moving character is moving from a space in melee range of
@@ -144,22 +211,13 @@
     results in the moving character becoming prone or grappled, that character
     immediately stops moving.
 
-    Moving from a space in melee range of another creature to a space further
-    away from that creature provokes an opportunity attack. Only one such
-    movement provokes an opportunity attack per other creature per turn.
-
-    \section{Opportunity Attacks}\label{combat:opportunity-attacks}
-    Certain actions trigger opportunity attacks. When a character (the
-    defender) makes such an action in melee range of another character (the
-    attacker), the attacker may choose to make an opportunity attack. If they
-    do, the attacker immediately makes an attack with a wielded melee weapon
-    of choice against the defender. This attack takes place \textit{before}
-    the defender carries out the action that triggered the opportunity attack.
+    A character cannot make multiple opportunity attacks against the same
+    character per round (measured from the start of their turn to the start
+    of their next turn), but can make as many opportunity attacks as they have
+    reactions against multiple different characters.
 
     Certain combat skills can be used in place of an opportunity attack. These
     skills are grapple, trip, and disarm.
-
-    By default each character can only make one opportunity attack per round.
 
     \section{Critical Hits}\label{combat:critical-hits}\index{critical hit}
     Critical hits represent especially successful attacks: those where luck and
