@@ -131,15 +131,14 @@
         \item Defender makes a defence check (dodge, block, or parry check)
         \item If the attack check is greater than or equal to the defence
             check, it hits.
-        \item If the attack check is greater than or equal to the defender's
-            cover rating\index{cover rating} (granted by their armor), then
-            the attack also bypasses armor\index{armor}.
+        \item If the attack check is greater than or equal to the defence check
+            plus the defender's cover rating\index{cover rating} (granted by
+            their armor), then the attack also bypasses armor\index{armor}.
         \item If the attack hit, roll for damage.
         \item Subtract any resistances\index{resistance} from the damage based
             on the weapon's damage type. Only subtract resistance from armor
             if the attack did \textit{not} bypass armor.
-        \item Apply the damage, if any. Attacks cannot deal negative
-            damage.
+        \item Apply the damage, if any. Attacks cannot deal negative damage.
     \end{itemize}
 
     Attacks made with a one-hand weapon being wielded in an off-hand take a -4
@@ -148,11 +147,12 @@
     Most characters' main-hand is their right hand. An unarmed attack with an
     off-hand fist does not have such a penalty.
 
-    A two-handed weapon does not have an off-hand penalty unless you choose to
-    equip it backwards for some reason.
+    A two-handed weapon does not have an off-hand penalty unless a character
+    chooses to equip it backwards for some reason, or if a creature with an
+    unusual configuration of hands uses only off-hands to wield it.
 
     \subsection{Dual-wielding}\label{combat:dual-wielding}
-    A character can use 1 \textonehalf\ actions to make a dual-wielding
+    A character can use 1 {\textonehalf} actions to make a dual-wielding
     attack. A dual-wielding attack is made with two separate weapons - or a
     double-ended weapons - that are currently equipped. This can include
     natural weapons that aren't being used to wield a weapon. In a
@@ -180,7 +180,7 @@
     \section{Moving}\label{combat:moving}
     During combat, a character can use 1 action to move a distance up to their
     speed rounded down to a multiple of 5 ft. (but always at least 5 ft.).
-    Alternatively, they can use a \textonehalf\ action to move a distance up
+    Alternatively, they can use a {\textonehalf} action to move a distance up
     to half their speed rounded in the same way.
 
     A character can also cover large distances in a turn by sprinting.
@@ -188,7 +188,6 @@
     not yet spent any of their action allottment. By default, a character can
     move 4 times their speed by sprinting. A character cannot move a distance
     greater than they can sprint in a turn by using multiple actions to move.
-
 
     Moving from a space in melee range of another creature to a space further
     away from that creature provokes an opportunity attack. Only one such
@@ -227,18 +226,16 @@
     To make a critical hit, a character must first score a critical
     threat\index{critical threat} on an attack. An attack scores a critical
     threat if the natural roll (i.e. the number displayed on the d20 itself
-    without modifiers) is within the weapon's critical range. Most weapons
-    have a critical range of 20, in which case only a natural 20 scores a
-    critical threat. Other critical ranges are listed in table
-    \ref{tab:weapons} on page \pageref{tab:weapons}.
+    without modifiers) is within the weapon's critical range. Critical ranges
+    are listed in table \ref{tab:weapons} on page \pageref{tab:weapons}.
 
-    On a critical threat, attacks automatically hit. If they would have hit
-    anyway, they also bypass armor.
+    On a critical threat, attacks automatically hit, but they don't necessarily
+    bypass armor.
 
-    Immediately after scoring a critical threat, and before rolling damage, a
-    character makes a second attack check, but the target keeps their existing
-    check. If the new attack check is a hit against the defence check, the
-    critical threat is upgraded to a critical hit.
+    Immediately after scoring a critical threat, and before rolling damage, the
+    attacker confirms the critical hit by rolling another d20 with no modifers.
+    If this roll also falls within the critical range, the critical threat is
+    upgraded to a critical hit.
 
     A critical hit is an automatic hit, bypasses armor, and deals increased
     damage. Once a character confirms a critical hit, they roll for damage
