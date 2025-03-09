@@ -124,6 +124,20 @@ targets a location in which to create an object, creature, or substance, and
 the mana cost is calculated in the same way as ranged targeting.
 
 \subsection{Duration}
+Each spell effect has a duration for which the effect lasts. When designing a
+spell, a spell efect's duration can be adjusted to any number of rounds,
+minutes, hours, or days. Adjusting a spell effect's duration in this way is
+done by multiplying its base duration, and the spell effect's mana cost is
+multiplied by the same amount.
+
+Instantaneous spell effects can't be adjusted to last longer, unless they also
+list another duration. In this case, the spell becomes instantaneous if, after
+adjustment, it is 1 round in duration.
+
+Every spell effect applied to a spell must have the same duration. The only
+exception to this is that you can mix together spell effects that are
+instantaneous, and spell effects of one other duration. The duration of spell
+effects can be adjusted using the previous method to meet this requirement.
 
 \subsection{Casting Time}
 % For those mathematically brave enough to craft spells that take longer than
