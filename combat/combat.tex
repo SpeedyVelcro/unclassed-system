@@ -59,13 +59,10 @@
             Cast self spell (or touch spell on self) & Varies & Yes \\
             Close door & \textonehalf\ action & No \\
             Draw weapon or take out item & \textonehalf\ action & No \\
-            Drink potion & 1 action & Yes \\
+            Drink potion & \textonehalf\ action & Yes \\
             Drop weapon or item & Free action & No \\
-            Dual-wield attack & 1 \textonehalf\ action & No \\
             Go prone & \textonehalf\ action & No \\
             Get up from prone & \textonehalf\ action & Yes \\
-            Move half of speed & \textonehalf\ action & Varies \\
-            Move full speed & 1 action & Varies \\
             Open door & \textonehalf\ action & Yes \\
             Sheathe weapon or stow item & \textonehalf\ action & Yes \\
             Sprint & Full turn & Varies \\
@@ -85,27 +82,48 @@
     representation of who reacts faster.
 
     \subsection{Actions}\index{action}
-    Each character can take a default of 1 \textonehalf\ actions during
-    their turn.
+    By default, a character can use a body part to perform 1 action per turn.
+    For example, a character with a "fighter" style of build might use their
+    right hand's action to attack with a sword, while leaving their left hand
+    unused because they are holding a shield. A wizard might use their right
+    hand to cast a spell, while leaving their left hand unused because they
+    don't need an extra hand in that moment. Meanwhile, a character with a
+    "berserker" style build focused around dual-wielding might perform an
+    attack with their right hand and an attack with their left hand.
 
-    Notice the extra \textonehalf\ action. Most characters will make 1 important
-    action per turn - such as attacking or casting a spell - and then make a
-    smaller \textonehalf\ action - such as moving half their speed or drawing a
-    weapon. The length of various activities is listed on table
+    A character's allotment of actions is tracked per body part, enabling
+    multitasking. A duelist running low on health, for example, might attack
+    with a rapier held in their right hand, while using an
+    action to take a potion out of their pack and quaff it. Usually,
+    performing an action with another hand applies a penalty to attacks (see
+    the rules for attacking, pg. \pageref{combat:attacking}) so the duelist
+    would find it harder to hit their opponent while splitting their attention
+    between their potion and their weapon.
+
+    Moving is not an action, but notably interacts any action a character takes
+    using their feet (see pg. \pageref{combat:movement}). A rogue making a
+    daring escape might attack a pursuer with a dagger held in their right
+    hand, while opening a door with their left hand. In this case, the rogue
+    has left their feet unused so that they can be used for movement, however
+    if the feet decides to move, they may incur a penalty on their attack due
+    to a lack of sure footing. Meanwhile, a monk who kicks an opponent will
+    find their movement that turn severely limited, as they have spent most of
+    their turn with one foot in the air.
+
+    Some actions are less significant than attacking, and leave a character
+    free to perform another small action. This is the action
+    cost\index{action cost} and is typically listed as a fraction. A character
+    can take 2 separate \textonehalf\ actions whenever they could perform 1
+    action, for example. Action costs are listed in table
     \ref{tab:combat-actions}.
 
-    Actions can be done in any order, for example a character may first
-    take a \textonehalf\ action to draw their sword and then take 1 action to
-    attack. A character can also combine any number of actions and
-    \textonehalf\ actions up to their allotment for that turn. A character
-    could, for example, use three \textonehalf\ actions in a turn instead of
-    an action and a \textonehalf\ action. An example of this might be stowing
-    away a crossbow, drawing a sword, and moving half their speed towards an
-    opponent.
-
-    Some activities are called "free actions"\index{free action}. These are
-    activities that you can carry out on your turn, but do not require any
-    actions to use.
+    Some actions have no cost. These are called free
+    actions\index{free action}, and can be performed as many times as a
+    character wants during a turn between any other actions. Performing a free
+    action does not count as having performed an action for mechanics that
+    would be affected. For example, a character performing a free action with
+    their left hand would not incur a penalty on an attack made with their
+    right hand.
 
     \subsection{Reactions}\index{reaction}
     Reactions are a special kind of action that you can use out of your turn
@@ -119,13 +137,14 @@
 
     Some reactions are called "free reactions"\index{free reaction}. These
     reactions can be used by characters as many times per round as they want,
-    without using up their allotment of actions per round.
+    without using up their allotment of reactions per round.
 
     \section{Attacking}\label{combat:attacking}
     A character (the attacker) can use 1 action to attack another character
     (the defender). The attacker must have the appropriate weapon equipped
-    for the weapon skill they are using, or a free hand if they are using
-    the hand-to-hand skill. The process of attacking is as follows:
+    for the weapon skill they are using, or a free hand (or other body part)
+    if they are using the hand-to-hand skill. The process of attacking is as
+    follows:
     \begin{itemize}
         \item Attacker makes an attack check (weapon skill check)
         \item Defender makes a defence check (dodge, block, or parry check)
@@ -142,58 +161,76 @@
     \end{itemize}
 
     Attacks made with a one-hand weapon being wielded in an off-hand take a -4
-    penalty to the weapon skill check. An off-hand is considered to be any hand
-    other than a character's main-hand, as specified during character creation.
-    Most characters' main-hand is their right hand. An unarmed attack with an
-    off-hand fist does not have such a penalty.
+    handedness penalty to the weapon skill check. An off-hand is considered to
+    be any hand other than a character's main-hand, as specified during
+    character creation. Most characters' main-hand is their right hand.
+    An unarmed attack with an off-hand fist does not have such a penalty.
 
     A two-handed weapon does not have an off-hand penalty unless a character
     chooses to equip it backwards for some reason, or if a creature with an
     unusual configuration of hands uses only off-hands to wield it.
 
-    \subsection{Dual-wielding}\label{combat:dual-wielding}
-    A character can use 1 {\textonehalf} actions to make a dual-wielding
-    attack. A dual-wielding attack is made with two separate weapons - or a
-    double-ended weapons - that are currently equipped. This can include
-    natural weapons that aren't being used to wield a weapon. In a
-    dual-wielding attack, a character simply makes a separate attack with each
-    weapon.
+    \subsection{Multitasking}\label{combat:multitasking}\index{multitasking}
+    When attacking, the attacker takes a -4 multitasking penalty for each other
+    action performed simultaneously using other body parts (scaling with the
+    action cost, so -2 for each \textonehalf\ action). For example, a character
+    trying to dual-wield\index{dual-wielding} weapons might make an attack
+    with a sword wielded in their right hand, at the same time as making an
+    attack with a dagger wielded in their left hand. The attack with their
+    sword would take a -4 multitasking penalty and, assuming they are
+    right-handed, the attack with their dagger would take a -4 multitasking
+    penalty \textit{and} a -4 handedness penalty.
 
-    An attacker with three or more equipped weapons may be able to make a
-    triple, quadruple, or even greater multi-wield attack. For such an attack,
-    follow the rules for a dual-wielding attack and add an extra cost of a
-    \textonehalf\ action for each extra attack that is made.
+    If an attacker can take 2 or more actions per turn per body part (usually
+    because they have taken a feat), they can avoid multitasking penalties by
+    timing their actions. Multitasking penalties only apply if they overlap.
+    For example, a rogue trying to make an escape may be able to make two
+    actions per turn with each body part. With their right hand, they attack
+    a pursuer with their dagger. With their left hand, they want to open a
+    door, but doing so would incur a multitasking penalty. Instead, they skip
+    1 action with their left hand, and then perform a \textonehalf\ action to
+    open the door after the attack action has completed. This incurs no
+    multitasking penalty on the attack.
 
     \subsection{Exotic wields}
     Two-handed weapons can be wielded one-handed. A two-handed melee weapon
-    wielded one-handed has a -4 penalty to the attack roll in a character's
-    main hand, and a -6 penalty in their off-hand. Two-handed ranged weapons
-    cannot be wielded one-handed with only one hand or body part.
+    wielded one-handed has a -4 handedness penalty to the attack roll in a
+    character's main hand, and a -6 handedness penalty in their off-hand.
+    Two-handed ranged weapons cannot be wielded one-handed with only one hand
+    or body part.
 
     Weapons can be wielded with body parts other than hands. If the body part
     can conceivably "grip" the weapon if enough force were applied (e.g. teeth,
-    feet, or two body parts in combination such as elbows or knees) apply a -5
-    penalty multiplied by the weapon's weight in lb. and rounded to a whole
-    number in the negative direction. For two-handed weapons, double this
-    penalty unless one of the body parts is a hand.
+    feet, or two body parts in combination such as elbows or knees) apply a -3
+    handedness penalty multiplied by the weapon's weight in lb. and rounded to
+    a whole number in the negative direction. For two-handed weapons, double
+    this penalty unless one of the body parts is a hand.
 
     \section{Moving}\label{combat:moving}
-    During combat, a character can use 1 action to move a distance up to their
-    speed rounded down to a multiple of 5 ft. (but always at least 5 ft.).
-    Alternatively, they can use a {\textonehalf} action to move a distance up
-    to half their speed rounded in the same way.
+    During combat, a character can move a distance up to their speed each turn
+    as long as they do not take any actions using their feet that turn.
 
-    A character can also cover large distances in a turn by sprinting.
-    Sprinting costs the entire turn, and can only be done if the character has
-    not yet spent any of their action allottment. By default, a character can
-    move 4 times their speed by sprinting. A character cannot move a distance
-    greater than they can sprint in a turn by using multiple actions to move.
+    A character that takes any actions using their feet is limited to moving
+    5 ft. in a turn.
+
+    A character can cover larger distances in a turn by sprinting. Usually,
+    this allows a character to move up to twice their speed in a turn.
+    Sprinting requires a character to engage their entire body, so can only be
+    done if no actions are performed using any body part in a turn.
 
     Moving from a space in melee range of another creature to a space further
-    away from that creature provokes an opportunity attack. Only one such
-    movement provokes an opportunity attack per other creature per turn.
+    away from that creature provokes an opportunity attack (pg.
+    \pageref{combat:opportunity-attacks}). Only one such movement provokes an
+    opportunity attack from each creature in a turn, regardless of the number
+    of reactions that creature has.
 
-    \section{Opportunity Attacks}\label{combat:opportunity-attacks}\index{opportunity-attack}
+    \subsection{Exotic Movement}
+    Characters with exotic configurations of legs can move up to half their
+    speed in a turn if some of their feet are engaged in actions, but at least
+    2 are available. If all - or all but one - of their feet are engaged in actions,
+    they can move up to 5 ft. as usual.
+
+    \section{Opportunity Attacks}\label{combat:opportunity-attacks}\index{opportunity attack}
     Certain activities create an opening that opponents can capitalise on to
     make make an attack. These activities trigger opportunity attacks, and
     are marked on table \ref{tab:combat-actions}.
@@ -204,9 +241,10 @@
     Opportunity attacks are otherwise exactly the same as a regular attack.
 
     Moving provokes opportunity attacks if and only if moving \textit{away}
-    from other creatures. The opportunity attack is provoked only at the
-    point where the moving character is moving from a space in melee range of
-    the provoked character to a space further away. If the opportunity attack
+    from other creatures, and moving more than 5 ft. in a turn. The opportunity
+    attack is provoked only at the point where the moving character is moving
+    from a space in melee range of the provoked character to a space further
+    away. If the opportunity attack
     results in the moving character becoming prone or grappled, that character
     immediately stops moving.
 
