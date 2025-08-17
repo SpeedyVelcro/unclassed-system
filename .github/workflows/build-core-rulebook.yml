@@ -6,10 +6,10 @@ jobs:
     name: Build
     runs-on: ubuntu-24.04
     steps:
-      - run: apt-get update
-      - run: apt-get install -y texlive-base texlive-xetex fonts-open-sans
+      - run: sudo apt-get update
+      - run: sudo apt-get install -y texlive-base texlive-xetex fonts-open-sans
       - run: |
-          tlmgr update \
+          sudo tlmgr update \
             import \
             textcomp \
             titlesec \
