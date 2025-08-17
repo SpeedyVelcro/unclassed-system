@@ -11,7 +11,7 @@ jobs:
       # On debian-based systems, tlmgr runs in user mode so needs this init step.
       - run: sudo tlmgr init-usertree
       # Ubuntu has an older TeXLive install; point tlmgr to an older repo.
-      - run: sudo tlmgr repository ftp://tug.org/historic/systems/texlive/2023/tlnet-final
+      - run: sudo tlmgr repository add ftp://tug.org/historic/systems/texlive/2023/tlnet-final
       - run: |
           sudo tlmgr update \
             import \
