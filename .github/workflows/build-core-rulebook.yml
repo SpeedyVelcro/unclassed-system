@@ -1,0 +1,24 @@
+name: Build Core Rulebook
+run-name: Build core rulebook from ${{ github.ref }}
+on: push
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update
+      # TODO: Installing TeXLive full seems very wasteful, can we get a more
+      # minimal installation?
+      - run: |
+          sudo apt-get install -y \
+            texlive-latex-extra \
+            texlive-xetex \
+            texlive-science \
+            fonts-open-sans
+      - run: make
+      - name: Upload core rulebook as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: core-rulebook
+          path: "./The Unclassed System Core Rulebook.pdf"
