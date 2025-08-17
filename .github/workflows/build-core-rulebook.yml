@@ -6,6 +6,7 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - run: sudo apt-get update
       # TODO: Installing TeXLive full seems very wasteful, can we get a more
       # minimal installation?
