@@ -4,35 +4,12 @@ on: push
 jobs:
   build:
     name: Build
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
     steps:
       - run: sudo apt-get update
-      - run: sudo apt-get install -y texlive-base texlive-xetex fonts-open-sans
-      # On debian-based systems, tlmgr runs in user mode so needs this init step.
-      - run: sudo tlmgr init-usertree
-      # Ubuntu has an older TeXLive install; point tlmgr to an older repo.
-      - run: sudo tlmgr option repository ftp://tug.org/historic/systems/texlive/2023/tlnet-final
-      - run: |
-          sudo tlmgr install \
-            import \
-            textcomp \
-            titlesec \
-            makecell \
-            imakeidx \
-            glossaries \
-            hyperref \
-            fontspec \
-            tocbibind \
-            blindtext \
-            caption \
-            multicol \
-            tabularx \
-            xltabular \
-            geometry \
-            xcolor \
-            enumitem \
-            siunitx \
-            varwidth
+      # TODO: Installing TeXLive full seems very wasteful, can we get a more
+      # minimal installation?
+      - run: sudo apt-get install -y texlive-latex-extra texlive-xetex fonts-open-sans
       - run: make
       - name: Upload core rulebook as artifact
         uses: actions/upload-artifact@v4
