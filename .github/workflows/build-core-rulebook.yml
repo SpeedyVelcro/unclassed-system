@@ -1,6 +1,6 @@
 name: Build Core Rulebook
 run-name: Build core rulebook from ${{ github.ref }}
-on: pull_request
+on: push
 jobs:
   build:
     name: Build
