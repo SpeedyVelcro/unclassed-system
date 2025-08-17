@@ -1,6 +1,6 @@
 name: Build Core Rulebook
 run-name: Build core rulebook from ${{ github.ref }}
-on: push
+on: [push]
 jobs:
   build:
     name: Build
@@ -9,26 +9,26 @@ jobs:
       - run: apt-get update
       - run: apt-get install -y texlive-base texlive-xetex fonts-open-sans
       - run: |
-        tlmgr update \
-          import \
-          textcomp \
-          titlesec \
-          makecell \
-          imakeidx \
-          glossaries \
-          hyperref \
-          fontspec \
-          tocbibind \
-          blindtext \
-          caption \
-          multicol \
-          tabularx \
-          xltabular \
-          geometry \
-          xcolor \
-          enumitem \
-          siunitx \
-          varwidth
+          tlmgr update \
+            import \
+            textcomp \
+            titlesec \
+            makecell \
+            imakeidx \
+            glossaries \
+            hyperref \
+            fontspec \
+            tocbibind \
+            blindtext \
+            caption \
+            multicol \
+            tabularx \
+            xltabular \
+            geometry \
+            xcolor \
+            enumitem \
+            siunitx \
+            varwidth
       - run: make
       - name: Upload core rulebook as artifact
         uses: actions\upload-artifact@v4
