@@ -8,6 +8,7 @@ jobs:
     steps:
       - run: sudo apt-get update
       - run: sudo apt-get install -y texlive-base texlive-xetex fonts-open-sans
+      - run: tlmgr init-usertree
       - run: |
           sudo tlmgr update \
             import \
