@@ -10,6 +10,7 @@ all: version
 
 version:
 	-mkdir inputs
+	-rm inputs/version.txt
 	if [[ ! -z "${VERSION_STRING}" ]]; then echo "${VERSION_STRING}" > inputs/version.txt; fi
 
 clean: clean-version
