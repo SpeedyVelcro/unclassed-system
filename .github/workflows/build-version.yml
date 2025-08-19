@@ -1,0 +1,11 @@
+name: Build Core Rulebook Version
+run-name: Build core rulebook ${{ github.ref_name }}
+on:
+  push:
+    tags:
+      - "v[0-9]+.[0-9]+.[0-9]+**"
+jobs:
+  build-version:
+    uses: ./.github/workflows/build.yml
+    with:
+      version-string: ${{ github.ref }}

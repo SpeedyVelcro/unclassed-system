@@ -1,6 +1,12 @@
 name: Build Core Rulebook
-run-name: Build core rulebook from ${{ github.ref }}
-on: push
+on:
+  workflow_call:
+    inputs:
+      version-string:
+        required: false
+        type: string
+env:
+  VERSION_STRING: ${{ inputs.version-string }}
 jobs:
   build:
     name: Build
@@ -22,3 +28,4 @@ jobs:
         with:
           name: core-rulebook
           path: "./The Unclassed System Core Rulebook.pdf"
+
