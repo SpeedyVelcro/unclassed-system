@@ -1,3 +1,6 @@
+# Input files
+inputs/version.txt
+
 # Intermediate files
 main.acn
 main.acr
