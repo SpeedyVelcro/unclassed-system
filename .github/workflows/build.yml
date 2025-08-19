@@ -21,7 +21,7 @@ jobs:
             texlive-xetex \
             texlive-science \
             fonts-open-sans
-      - run: VERSION_STRING=${{ inputs.version-string }} make -e
+      - run: VERSION_STRING="${{ inputs.version-string }}" make
       - name: Upload core rulebook as artifact
         uses: actions/upload-artifact@v4
         with:
