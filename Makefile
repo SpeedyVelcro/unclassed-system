@@ -1,14 +1,16 @@
+VERSION_SPACE_POSTFIX = `if [[ ! -z "${VERSION_STRING}" ]]; then echo " ${VERSION_STRING}"; else echo ""; fi`
+
 all: version
 	xelatex main
 	makeindex main
 	makeglossaries main
 	xelatex main
 	xelatex main
-	mv main.pdf "The Unclassed System Core Rulebook.pdf"
+	mv main.pdf "The Unclassed System Core Rulebook${VERSION_SPACE_POSTFIX}.pdf"
 
 version:
 	-mkdir inputs
-	if [[ ! -z "${VERSION_STRING}" ]]; then echo ${VERSION_STRING} > inputs/version.txt; fi
+	if [[ ! -z "${VERSION_STRING}" ]]; then echo "${VERSION_STRING}" > inputs/version.txt; fi
 
 clean: clean-version
 	-rm *.acn
