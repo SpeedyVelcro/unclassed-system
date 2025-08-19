@@ -2,8 +2,17 @@
 
 \usepackage{preamble}
 
+\IfFileExists{./inputs/version.txt}
+{
+    \newcommand{\unclassedversion}{\input{./inputs/version.txt}}
+}
+{
+    \newcommand{\unclassedversion}{local build}
+}
+
 \title{The Unclassed System Core Rulebook}
 \author{SwiftVector}
+\date{\unclassedversion} % TODO: probably not the right placec for this
 
 \import{./}{glossary}
 \import{./}{acronyms}

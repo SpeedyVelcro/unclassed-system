@@ -1,6 +1,11 @@
 name: Build Core Rulebook
-run-name: Build core rulebook from ${{ github.ref }}
-on: push
+on:
+  workflow_call:
+    inputs:
+      version-string:
+        required: false
+        type: string
+        default: "pipeline"
 jobs:
   build:
     name: Build
@@ -16,9 +21,10 @@ jobs:
             texlive-xetex \
             texlive-science \
             fonts-open-sans
-      - run: make
+      - run: VERSION_STRING="${{ inputs.version-string }}" make
       - name: Upload core rulebook as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: core-rulebook
-          path: "./The Unclassed System Core Rulebook.pdf"
+          name: "core-rulebook-${{ inputs.version-string }}"
+          path: "./The Unclassed System Core Rulebook*.pdf"
+

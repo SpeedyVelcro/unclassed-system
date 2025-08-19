@@ -1,0 +1,14 @@
+name: Build Core Rulebook for Commit
+run-name: Build core rulebook from commit ${{ github.sha }}
+on:
+  push:
+    # Only run on commits, not tags
+    branches:
+      - "**"
+    tags-ignore:
+      - "**"
+jobs:
+  build-commit:
+    uses: ./.github/workflows/build.yml
+    with:
+      version-string: ${{ github.sha }}
