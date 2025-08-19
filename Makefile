@@ -1,3 +1,4 @@
+SHELL := /bin/bash
 VERSION_SPACE_POSTFIX = `if [[ ! -z "${VERSION_STRING}" ]]; then echo " ${VERSION_STRING}"; else echo ""; fi`
 
 all: version
