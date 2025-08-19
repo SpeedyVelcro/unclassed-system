@@ -21,7 +21,8 @@ jobs:
             texlive-xetex \
             texlive-science \
             fonts-open-sans
-      - run: VERSION_STRING="${{ inputs.version-string }}" make
+      - run: echo "VERSION_STRING=${{ github.event.inputs.version-string }}" >> $GITHUB_ENV
+      - run: make
       - name: Upload core rulebook as artifact
         uses: actions/upload-artifact@v4
         with:
