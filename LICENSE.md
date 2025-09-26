@@ -3,7 +3,7 @@ The Unclassed System Core Rulebook is dual-licensed under the MIT License and
 CC BY 4.0. You may choose which license terms to use.
 
 ## MIT License
-Copyright © 2024 SwiftVector
+Copyright © 2024 SpeedyVelcro
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the “Software”), to deal
@@ -24,8 +24,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ## CC BY 4.0.
-Copyright © 2024 SwiftVector
+Copyright © 2024 SpeedyVelcro
 
-The Unclassed System Core Rulebook © SwiftVector 2024 is licensed under
+The Unclassed System Core Rulebook © SpeedyVelcro 2024 is licensed under
 CC BY 4.0. To view a copy of this license, visit
 https://creativecommons.org/licenses/by/4.0/
