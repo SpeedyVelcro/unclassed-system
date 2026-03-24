@@ -1,15 +1,271 @@
 \chapter{Magic}\index{magic}\label{magic}
 
 \begin{multicols*}{2}
-    Insert a brief explanation of magic...
+    Magic is a supernatural force accessible in many settings that
+    allows characters and creatures to effect the world around them.
+    It is the domain of wizards and witches; of mages and sorcerers. If
+    you can picture in your mind's eye an old man in a pointy hat
+    whispering an incantation and hurling a fireball at his enemies,
+    you already have a pretty good idea of what magic is.
+
+    The Unclassed System provides a magic subsystem that should map
+    fairly easily onto most fictional settings. It uses a familiar
+    resource - mana points (MP)\index{mana points} - governed by an
+    attribute\index{attributes} - SOR\index{sorcery} (pg. \label{sorcery}) -
+    that expresses your ability to draw on the magical energy of the
+    setting. By expending mana points, you can cast spells with
+    powerful supernatural effects.
+
+    The magic subsystem is not to be confused with the subsystems for
+    religion and psionics. Although these three systems all govern the
+    usage of powerful supernatural effects, they have distinct flavors
+    and - in the spirit of the Unclassed system - distinct mechanics
+    to represent those flavors. While magic draws on the power of
+    the world and uses a simple mana-and-spell system common to
+    settings with magic, psionics focuses on the ability of the mind
+    (and is therefore more ability-based) while religion is predicated
+    on your relationship with a specific supernatural force or being
+    from which you derive your power. You can envision magic as being
+    more knowledge-and-study-based for characters that are more
+    INT-focused\index{intelligence} or based on innate magical talent
+    for more SOR-focused\index{sorcery} characters.
+
+    Of course, if your GM is running a campaign in a setting with a
+    more specific magic system (such as vancian spellcasting), these
+    rules will likely prove insufficient. In that case, you should
+    ignore this section and instead use a custom magic system, or a
+    magic system from a world guide for your setting. Your GM will
+    advise you if this is necessary.
+
+    \section{Magic Rules}
+    All characters - provided they have at least 1 MP and affordable
+    spells to cast - can use magic. They can uses their MP to cast
+    spells both in and out of combat, but the particulars of how
+    they cast each spell depends on the statistics and rules of the
+    spell itself.
     
-    \section{Spell List}
+    \subsection{Mana Points}\label{mana points}\label{maximum mana points}\index{mana points}\index{maximum mana points}
+    Mana points (MP) are a well of innate magical energy each character
+    has which can be expended to cast spells. A character can have
+    a number of MP up to their maximum MP, and can drain their MP as
+    low as zero but no further.
+
+    Whenever a character casts a spell, that spell will list an MP
+    cost. A character can only cast a spell if they have at least as
+    much MP as the cost, in which case they lose that amount of MP
+    the instant they begin casting the spell.
+
+    \subsubsection{Recovering Mana}
+    Whenever a character rests, they recover all their MP up to their
+    maximum MP. You may also encounter various items and abilities
+    that can restore MP without having to rest.
+
+    \subsection{Casting Spells}
+    Although this section may appear quite large and intimidating,
+    casting a spell is ultimately very simple. To cast a spell, after
+    expending the required MP, the character makes the skill check for
+    the school listed in the spell's description. The spell description
+    then explains the effect of the spell, how your skill check
+    affects it, and any further rolls you need to make.
+
+    That is all for the general case, but the rest of this section
+    covers the specifics and edge cases. Many spell descriptions
+    re-iterate these rules in simple terms, and you will only need
+    to refer here for the specifics of their terminology.
+
+    The character that casts a spell is referred to as the "caster".
+
+    \subsubsection{Prerequisites}
+    Aside from the basic MP cost, there are several other requirements
+    for spellcasting. These depend on the spell, and are generally
+    listed at the top of the spell description with its other
+    statistics.
+
+    \unclassedprop{Gestures}
+    {
+        Some spells require you to make physical gestures.
+        Vocalizations are also included in this category. Any appendage
+        (or voice) required by a spell must be otherwise free for the
+        casting time of the spell. Taking any other action with an
+        appendage (or voice) required by a spell will immediately
+        stop casting as if it had been successfully countered.
+        Common entries under gestures include "vocal", "one hand",
+        and/or "two hands".
+    }
+    \unclassedprop{Materials}
+    {
+        Some spells require materials. These are items that the caster
+        must hold or manipulate in order to cast the spell. You require
+        a free hand to handle materials, but you can also use any hand
+        that is being used for gestures. Materials are not consumed
+        when the spell is cast.
+    }
+    \unclassedprop{Materials (Consumed)}
+    {
+        Occasionally, some spells consume materials when they are cast.
+        These materials are handled like normal, but when the spell is
+        successfully cast, the material instantly disappears. If the
+        spell is countered before casting, you do not waste the
+        material, but you also do not get the material back if it is
+        countered after casting.
+    }
+    \unclassedprop{Casting Time}
+    {
+        Spells take varying amounts of time to cast, and their effects
+        only take place once the spell is cast. The most common casting
+        time is 1 action, in which case there isn't much to track as
+        you simply cast the action and complete the spell during your
+        turn, provided you have an action to spend. Longer casting
+        times, however, will spill over across rounds. In that case,
+        all involved appendages will be occupied until the same moment
+        in the turn the specified number of rounds later, at which
+        point the spell will finish casting.
+    }
+
+    \subsubsection{Skill Check/Spell Power}\label{spell power}\index{skill check}
+    The caster makes a skill check of the school corresponding to the
+    spell they are casting. The spell description will often call for
+    this skill check as a reminder (e.g. "the caster makes an illusion
+    skill check") near the beginning of the spell's description. This
+    skill check should be noted and retained for the combined casting
+    time and duration of the spell, as it becomes the spell power,
+    which is used for later calculations.
+
+    A spell's description may state that those characters affected
+    by a spell can make a skill check to avoid and/or reduce its
+    affects. If so, the target of this skill check will usually be
+    the spell power (a.k.a. the caster's skill check).
+
+    \subsubsection{Spell Properties}
+    While the description often contains most of what you need to know
+    about a spell's effects, there are several properties that are so
+    common among spells that they will be listed as properties near
+    the beginning of the description for convenient reference.
+
+    \unclassedprop{Duration}
+    {
+        Spell effects are applied for the spell's duration. If this is
+        instantaneous, they have some instant effect (such as damage),
+        and then you can forget about the spell. For longer durations,
+        usually some buff is applied until the same time during a turn
+        that the spell was cast a certain number of rounds away. If you
+        see a spell effect that would usually be instantaneous but it
+        lasts for 2 or more rounds, then it is applied at the same time
+        every round for that number of rounds (that number includes the
+        first instance, which is why 1 round isn't any different from
+        instantaneous).
+    }
+    \unclassedprop{School}
+    {
+        The school is the skill that a caster uses in their skill check
+        when they cast the spell. For most spells, this is the only
+        skill check the caster needs to make, but the full description
+        will specify any exceptions.
+    }
+    \unclassedprop{Spell Power}
+    {
+        Usually the spell power is just the caster's skill check, but
+        in some cases spells will specify a modifier (typed as a 
+        "spell power" modifier) to modify the skill check and therefore
+        the spell power.
+    }
+    \unclassedprop{Damage}
+    {
+        For relatively simple damage-dealing spells, the amount of
+        damage and the damage type may be listed as a property at the
+        start of the spell.
+    }
+    \unclassedprop{Attack}
+    {
+        If a spell is a magic attack, this property will be present
+        and will simply read "yes". If it is not present, the spell
+        likely has bespoke rules for how it takes effect on targets.
+    }
+    \unclassedprop{Targets}
+    {
+        This property will list the valid targets for the spell. For
+        magic attacks, this will likely be melee, ranged, or area. For
+        other kinds of spells this will likely be self, touch, ranged,
+        or area. Note that for "touch" the valid targets are the same
+        as "melee", with the exception that you don't have to make a
+        successful magic attack (instead there are likely to be bespoke
+        rules about skill contests).
+    }
+    \unclassedprop{Range}
+    {
+        Ranged spells have a range specified in feet. For magic
+        attacks, the rules are similar to those for ranged weapons,
+        with range not being a hard limit, but rather an incremental
+        penalty on the skill check for each multiple of the range the
+        target exceeds.
+    }
+    \unclassedprop{Shape}
+    {
+        Area spells will specify the size and shape of the area of
+        effect (e.g. "30 ft. sphere" or "50 ft. cube"). For regular
+        shapes, the measurement is the diameter or length. More complex
+        shapes will have further details.
+    }
+    \unclassedprop{Spell Effect(s)}
+    {
+        The "spell effects" property can generally be ignored during
+        normal gameplay. Spells in the Unclassed system are all backed
+        by a sophisticated crafting system. This property lets you know
+        how the spell was created using the "Designing Spells" rules.
+        It is mostly just for interest if the GM or advanced players
+        want to reverse engineer spells out-of-game to see how they
+        were constructed.
+    }
+
+    \subsubsection{Magic Attacks}
+    If the spell's description calls for a magic attack, the caster
+    still makes the usual skill check, but as well as setting the spell
+    power, the skill check also acts as an attack contested against
+    the target's defense check in the usual way (pg.
+    \ref{combat:attacking}). % TODO: The rules on area attacks are
+    % also iterated there.
+
+    \subsection{Countering Spells}
+    Some items, spells, or abilities allow characters to counter a
+    spell cast by another character. Countering a spell while it is
+    being cast stops the caster's casting short and prevents the spell
+    from ever taking effect. Countering a spell after it has been cast,
+    during the duration of its effects, will end the spell and any
+    effects it is conferring. Either way, the MP cost is not refunded
+    to the caster unless allowed by some other ability they have.
+
+    A counter will either specify a spell power - in which case when
+    the counter is used any spell that has that spell power or less is
+    successfully countered - or call for a skill check. In the latter
+    case, if the skill check is greater than or equal to the spell
+    power, the spell is successfully countered.
+
+    Unless otherwise stated, unsuccessful spells have no effect on
+    the targeted spell.
+
+    \subsection{Perceiving Spells}
+    Spells carry immense power, and are thus almost instantly noticed
+    by anyone nearby. The casting process often looks and sounds
+    extremely dramatic, and consequently the caster's enemies will
+    almost certainly want to dispatch the caster quickly.
+    
+    It is up to the GM whether combat opponents in a setting are wont
+    to "gank the wizard" once revealed, but even then, you can imagine
+    that there are some spells you might want to cast discretely even
+    out of combat.
+
+    It is therefore useful to know the limits of perceiving spells. How
+    spells are perceived depends on the details of the spell. Gestures
+    make a spell easily perceivable during casting - physical gestures
+    by sight, and vocal gestures by sound. But even if you can use
+    those gestures, the effects of a spell are still likely to be
+    visible. If this is not explicitly stated in the spell, it will
+    take some common sense on the part of the GM to make a ruling.
+    
+    \import{./}{spell-list}
     
     \import{./}{designing-spells}
 	
-    \section{Spell Effect List}
-    \import{./spell-effects}{fire-damage}
-    \import{./spell-effects}{glow}
-    \import{./spell-effects}{shield}
+    \import{./}{spell-effect-list}
 
 \end{multicols*}
