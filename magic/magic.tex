@@ -143,79 +143,63 @@
     the beginning of the description for convenient reference.
 
     \unclassedprop{Duration}
-    {
-        Spell effects are applied for the spell's duration. If this is
-        instantaneous, they have some instant effect (such as damage),
-        and then you can forget about the spell. For longer durations,
-        usually some buff is applied until the same time during a turn
-        that the spell was cast a certain number of rounds away. If you
-        see a spell effect that would usually be instantaneous but it
-        lasts for 2 or more rounds, then it is applied at the same time
-        every round for that number of rounds (that number includes the
-        first instance, which is why 1 round isn't any different from
-        instantaneous).
-    }
+    {Spell effects are applied for the spell's duration. If this is
+    instantaneous, they have some instant effect (such as damage),
+    and then you can forget about the spell. For longer durations,
+    usually some buff is applied until the same time during a turn
+    that the spell was cast a certain number of rounds away. If you
+    see a spell effect that would usually be instantaneous but it
+    lasts for 2 or more rounds, then it is applied at the same time
+    every round for that number of rounds (that number includes the
+    first instance, which is why 1 round isn't any different from
+    instantaneous).} \\
     \unclassedprop{School}
-    {
-        The school is the skill that a caster uses in their skill check
-        when they cast the spell. For most spells, this is the only
-        skill check the caster needs to make, but the full description
-        will specify any exceptions.
-    }
+    {The school is the skill that a caster uses in their skill check
+    when they cast the spell. For most spells, this is the only
+    skill check the caster needs to make, but the full description
+    will specify any exceptions.} \\
     \unclassedprop{Spell Power}
-    {
-        Usually the spell power is just the caster's skill check, but
-        in some cases spells will specify a modifier (typed as a 
-        "spell power" modifier) to modify the skill check and therefore
-        the spell power.
-    }
+    {Usually the spell power is just the caster's skill check, but
+    in some cases spells will specify a modifier (typed as a 
+    "spell power" modifier) to modify the skill check and therefore
+    the spell power.} \\
     \unclassedprop{Damage}
-    {
-        For relatively simple damage-dealing spells, the amount of
-        damage and the damage type may be listed as a property at the
-        start of the spell.
-    }
+    {For relatively simple damage-dealing spells, the amount of
+    damage and the damage type may be listed as a property at the
+    start of the spell. All spells have an additional "magical"
+    damage type with the "and" relationship, but it usually isn't
+    stated in order to save space.} \\
     \unclassedprop{Attack}
-    {
-        If a spell is a magic attack, this property will be present
-        and will simply read "yes". If it is not present, the spell
-        likely has bespoke rules for how it takes effect on targets.
-    }
+    {If a spell is a magic attack, this property will be present
+    and will simply read "yes". If it is not present, the spell
+    likely has bespoke rules for how it takes effect on targets.} \\
     \unclassedprop{Targets}
-    {
-        This property will list the valid targets for the spell. For
-        magic attacks, this will likely be melee, ranged, or area. For
-        other kinds of spells this will likely be self, touch, ranged,
-        or area. Note that for "touch" the valid targets are the same
-        as "melee", with the exception that you don't have to make a
-        successful magic attack (instead there are likely to be bespoke
-        rules about skill contests).
-    }
+    {This property will list the valid targets for the spell. For
+    magic attacks, this will likely be melee, ranged, or area. For
+    other kinds of spells this will likely be self, touch, ranged,
+    or area. Note that for "touch" the valid targets are the same
+    as "melee", with the exception that you don't have to make a
+    successful magic attack (instead there are likely to be bespoke
+    rules about skill contests).} \\
     \unclassedprop{Range}
-    {
-        Ranged spells have a range specified in feet. For magic
-        attacks, the rules are similar to those for ranged weapons,
-        with range not being a hard limit, but rather an incremental
-        penalty on the skill check for each multiple of the range the
-        target exceeds.
-    }
+    {Ranged spells have a range specified in feet. For magic
+    attacks, the rules are similar to those for ranged weapons,
+    with range not being a hard limit, but rather an incremental
+    penalty on the skill check for each multiple of the range the
+    target exceeds.} \\
     \unclassedprop{Shape}
-    {
-        Area spells will specify the size and shape of the area of
-        effect (e.g. "30 ft. sphere" or "50 ft. cube"). For regular
-        shapes, the measurement is the diameter or length. More complex
-        shapes will have further details.
-    }
+    {Area spells will specify the size and shape of the area of
+    effect (e.g. "30 ft. sphere" or "50 ft. cube"). For regular
+    shapes, the measurement is the diameter or length. More complex
+    shapes will have further details.} \\
     \unclassedprop{Spell Effect(s)}
-    {
-        The "spell effects" property can generally be ignored during
-        normal gameplay. Spells in the Unclassed system are all backed
-        by a sophisticated crafting system. This property lets you know
-        how the spell was created using the "Designing Spells" rules.
-        It is mostly just for interest if the GM or advanced players
-        want to reverse engineer spells out-of-game to see how they
-        were constructed.
-    }
+    {The "spell effects" property can generally be ignored during
+    normal gameplay. Spells in the Unclassed system are all backed
+    by a sophisticated crafting system. This property lets you know
+    how the spell was created using the "Designing Spells" rules.
+    It is mostly just for interest if the GM or advanced players
+    want to reverse engineer spells out-of-game to see how they
+    were constructed.}
 
     \subsubsection{Magic Attacks}
     If the spell's description calls for a magic attack, the caster
