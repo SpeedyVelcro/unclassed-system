@@ -37,14 +37,13 @@
     magic system from a world guide for your setting. Your GM will
     advise you if this is necessary.
 
-    \section{Magic Rules}
     All characters - provided they have at least 1 MP and affordable
     spells to cast - can use magic. They can uses their MP to cast
     spells both in and out of combat, but the particulars of how
     they cast each spell depends on the statistics and rules of the
     spell itself.
     
-    \subsection{Mana Points}\label{mana points}\label{maximum mana points}\index{mana points}\index{maximum mana points}
+    \section{Mana Points}\label{mana points}\label{maximum mana points}\index{mana points}\index{maximum mana points}
     Mana points (MP) are a well of innate magical energy each character
     has which can be expended to cast spells. A character can have
     a number of MP up to their maximum MP, and can drain their MP as
@@ -55,12 +54,31 @@
     much MP as the cost, in which case they lose that amount of MP
     the instant they begin casting the spell.
 
-    \subsubsection{Recovering Mana}
+    \subsection{Starting Mana}
+    A character's maximum MP is calculated using their mana die - a
+    dice denomination used to roll mana gained on level up - and their
+    SOR attribute. A character's mana die will be determined by which
+    Manawell feats they take (pg. \pageref{feat:manawell}), or 1d4 if
+    none at all. Thus, you should calculated MP after you have
+    finished assigning attributes and feats.
+
+    When creating a character, you start with full MP up to your
+    maximum MP. The maximum MP of a level 1 character is equal to the
+    maximum roll of their mana die (e.g. 4 for 1d4, 6 for 1d6, etc.)
+    plus their SOR. As an example, a character with with a mana die
+    of 1d8 and a SOR of 4 would start with 12 MP and 12 maximum MP.
+
+    For characters starting higher than level 1, set the starting MP
+    for level 1 and then follow the advancement rules (pg.
+    \pageref{advancement}) to increase the character's MP as if
+    levelling up normally.
+
+    \subsection{Recovering Mana}
     Whenever a character rests, they recover all their MP up to their
     maximum MP. You may also encounter various items and abilities
     that can restore MP without having to rest.
 
-    \subsection{Casting Spells}
+    \section{Casting Spells}
     Although this section may appear quite large and intimidating,
     casting a spell is ultimately very simple. To cast a spell, after
     expending the required MP, the character makes the skill check for
@@ -75,7 +93,7 @@
 
     The character that casts a spell is referred to as the "caster".
 
-    \subsubsection{Prerequisites}
+    \subsection{Prerequisites}
     Aside from the basic MP cost, there are several other requirements
     for spellcasting. These depend on the spell, and are generally
     listed at the top of the spell description with its other
@@ -114,7 +132,7 @@
     in the turn the specified number of rounds later, at which
     point the spell will finish casting.}
 
-    \subsubsection{Skill Check/Spell Power}\label{spell power}\index{skill check}
+    \subsection{Skill Check/Spell Power}\label{spell power}\index{skill check}
     The caster makes a skill check of the school corresponding to the
     spell they are casting. The spell description will often call for
     this skill check as a reminder (e.g. "the caster makes an illusion
@@ -128,7 +146,7 @@
     affects. If so, the target of this skill check will usually be
     the spell power (a.k.a. the caster's skill check).
 
-    \subsubsection{Spell Properties}
+    \subsection{Spell Properties}
     While the description often contains most of what you need to know
     about a spell's effects, there are several properties that are so
     common among spells that they will be listed as properties near
@@ -193,7 +211,7 @@
     want to reverse engineer spells out-of-game to see how they
     were constructed.}
 
-    \subsubsection{Magic Attacks}
+    \subsection{Magic Attacks}
     If the spell's description calls for a magic attack, the caster
     still makes the usual skill check, but as well as setting the spell
     power, the skill check also acts as an attack contested against
@@ -201,7 +219,7 @@
     \pageref{combat:attacking}). % TODO: State that the rules on area attacks are
     % also iterated there (once they are).
 
-    \subsection{Countering Spells}
+    \section{Countering Spells}
     Some items, spells, or abilities allow characters to counter a
     spell cast by another character. Countering a spell while it is
     being cast stops the caster's casting short and prevents the spell
@@ -219,7 +237,7 @@
     Unless otherwise stated, unsuccessful spells have no effect on
     the targeted spell.
 
-    \subsection{Perceiving Spells}
+    \section{Perceiving Spells}
     Spells carry immense power, and are thus almost instantly noticed
     by anyone nearby. The casting process often looks and sounds
     extremely dramatic, and consequently the caster's enemies will
