@@ -66,11 +66,19 @@ The corporeal targets are as follows:
         the target's defence check. Spells with a melee target do not provoke
         opportunity attacks.
     \item \textbf{Missile:} "Missile" is chosen with a range in feet. For every
-        5 ft. of range excluding the first, a missile spell increases
-        the mana cost by ¼. A missile spell applies its effects to a
+        5 ft. of range including the first, a missile spell increases
+        the mana cost by ½. A missile spell applies its effects to a
         target within the specified range if the caster succeeds on a
         skill check of the spell's school contested against the
         target's defence check.
+        % NB: The design intention of including the first five feet in
+        % the range cost calculation is to encourage neat multiples of
+        % 10 for range, and to add a slight extra premium over melee
+        % so it's a bigger decision to take a spell ranged (otherwise in
+        % some situations, it would be effectively free if you are
+        % already on e.g. 2.5 cost, if the first 5 feet was free, you
+        % might as well make it a 10 ft. range spell just to use up the
+        % extra 0.5 cost that would get rounded up anyway)
         % TODO: Move all this malarkey to shared rules on area attacks in the
         % combat section, because most of it will also apply to grenade-type
         % weapons.
@@ -109,8 +117,8 @@ The incorporeal targets are as follows:
     \item \textbf{Touch:} Choosing "touch" has no effect on mana cost. A touch
         spell applies its effects to a target in melee range.
     \item \textbf{Ranged:} "Ranged" is chosen with a range in feet. For every
-        5 ft. of range excluding the first, a ranged spell increases
-        its mana cost by ¼. A ranged spell applies its effects to a
+        5 ft. of range including the first, a ranged spell increases
+        its mana cost by ½. A ranged spell applies its effects to a
         target within the specified range.
     \item \textbf{Area:} "Area" is chosen with a shape (cone, sphere, or cube)
         and the size of that shape. The mana cost of the spell is multiplied
