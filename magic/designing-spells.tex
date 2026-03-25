@@ -21,11 +21,8 @@
 This section contains advanced rules for designing spells. GMs may use these
 rules as guidelines when creating their own spells, and players may craft
 spells designed using this rules using the spellcrafting skill. (p.g.
-\pageref{skill:spellcrafting}).
-
-All spells in the spell list where created using these rules. The mana cost was
-then adjusted (usually halved) to reflect that the most popular spells are the
-ones crafted by powerful wizards to be as efficient as possible.
+\pageref{skill:spellcrafting}). All spells in the spell list where
+created using these rules.
 
 To design a minimal spell, you must choose at least one spell effect, specify
 a target, and set the mana cost accordingly. There are additional decisions
@@ -63,16 +60,25 @@ targeting.
 
 The corporeal targets are as follows:
 \begin{itemize}
-    \item \textbf{Strike:} Choosing "strike" has no effect on mana cost. A
-        strike spell applies its effects to a target in melee range if the
+    \item \textbf{Melee:} Choosing "Melee" has no effect on mana cost. A
+        melee spell applies its effects to a target in melee range if the
         caster succeeds on a skill check of the spell's school contested against
-        the target's defence check. Spells with a strike target do not provoke
+        the target's defence check. Spells with a melee target do not provoke
         opportunity attacks.
     \item \textbf{Missile:} "Missile" is chosen with a range in feet. For every
-        5 ft. of range, a missile spell increases the mana cost by 1. A missile
-        spell applies its effects to a target within the specified range if the
-        caster succeeds on a skill check of the spell's school contested
-        against the target's defence check.
+        5 ft. of range including the first, a missile spell increases
+        the mana cost by ½. A missile spell applies its effects to a
+        target within the specified range if the caster succeeds on a
+        skill check of the spell's school contested against the
+        target's defence check.
+        % NB: The design intention of including the first five feet in
+        % the range cost calculation is to encourage neat multiples of
+        % 10 for range, and to add a slight extra premium over melee
+        % so it's a bigger decision to take a spell ranged (otherwise in
+        % some situations, it would be effectively free if you are
+        % already on e.g. 2.5 cost, if the first 5 feet was free, you
+        % might as well make it a 10 ft. range spell just to use up the
+        % extra 0.5 cost that would get rounded up anyway)
         % TODO: Move all this malarkey to shared rules on area attacks in the
         % combat section, because most of it will also apply to grenade-type
         % weapons.
@@ -87,12 +93,15 @@ The corporeal targets are as follows:
         a successful dodge). Defenders suffer half the spell's effect instead
         of bypassing it if they block.
     \item \textbf{Chain:} "Chain" is chosen with a range in feet, and a number
-        of targets. Every 5 ft. of range increases the mana cost by 1, and the
+        of targets. Every 5 ft. of range increases the mana cost by ¼, and the
         mana cost is then multiplied by the number of targets. The spell acts
         like a missile spell against its first target. Then it jumps to the
-        closest creature or similarly conductive target - with ties broken
+        closest creature or similarly conductive target - with preference
+        to creatures that haven't been hit yet and ties broken
         randomly - and acts like a missile spell again. This repeats for the
-        number of targets chosen.
+        number of targets chosen. If a target makes a successful
+        defence roll, the chain attack forfeits that target, but still
+        goes on to the next one. 
 \end{itemize}
 
 Incorporeal targeting, on the other hand, governs spells with a non-physical
@@ -108,11 +117,12 @@ The incorporeal targets are as follows:
     \item \textbf{Touch:} Choosing "touch" has no effect on mana cost. A touch
         spell applies its effects to a target in melee range.
     \item \textbf{Ranged:} "Ranged" is chosen with a range in feet. For every
-        5 ft. of range, a ranged spell increases its mana cost by 1. A ranged
-        spell applies its effects to a target within the specified range.
+        5 ft. of range including the first, a ranged spell increases
+        its mana cost by ½. A ranged spell applies its effects to a
+        target within the specified range.
     \item \textbf{Area:} "Area" is chosen with a shape (cone, sphere, or cube)
         and the size of that shape. The mana cost of the spell is multiplied
-        by the diameter (for spheres) or length of the shape in 5 ft. squares.
+        by the diameter (for spheres) or length of the shape in 5 ft. increments.
         The spell applies to all targets caught within the shape.
 \end{itemize}
 
